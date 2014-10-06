@@ -6,7 +6,7 @@ return array(
 	'DB_HOST'=>'localhost',
 	'DB_NAME'=>'ak911',
 	'DB_USER'=>'root',
-	'DB_PWD'=>'741@abc',
+	'DB_PWD'=>'',
 	'DB_PORT'=>'3306',
 	'DB_PREFIX'=>'xt_',
 //	'DB_FIELDS_CACHE'   => true,//设置是否启用数据库字段缓存
