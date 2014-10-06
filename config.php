@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 return array(
     'URL_MODEL'=>1, // 如果你的环境不支持PATHINFO 请设置为3
 	//'URL_PATHINFO_MODEL'=>2,
