@@ -11,4 +11,4 @@ return array(
 	'DB_PREFIX'=>'xt_',
 //	'DB_FIELDS_CACHE'   => true,//设置是否启用数据库字段缓存
 )
-?>
+?> 
