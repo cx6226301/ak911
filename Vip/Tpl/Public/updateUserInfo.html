@@ -6,27 +6,27 @@
     <div class="c_p5"><div class="tips">请认真修改自己的个人信息。</div></div>
         <table width="100%" border="0" cellpadding="3" cellspacing="0">
           <form method='post' id="form1" action="__URL__/userInfoSave" >
-          <tr>
+          <tr style="display:none">
             <td colspan="3" style="height:5px;"></td>
             </tr>
-          <tr>
+          <tr style="display:none">
             <td width="25%" align="right">所属报单中心：</td>
             <td width="25%"><input name="UserID" type="text" id="UserID" value="{$vo['shop_name']}" style="background-color:#ddd;" readonly="readonly" class="ipt" /></td>
             <td width="50%">&nbsp;</td>
             </tr>
-          <tr>
+          <tr style="display:none">
             <td width="25%" align="right">推荐人：</td>
             <td width="25%"><input name="UserID2" type="text" id="UserID2" value="{$vo['re_name']}" style="background-color:#ddd;" readonly="readonly" class="ipt" /></td>
             <td width="50%">&nbsp;</td>
             </tr>
-          <tr>
+          <tr style="display:none">
             <td align="right">接点人：</td>
             <td><input name="UserID3" type="text" id="UserID3" value="{$vo['father_name']}" style="background-color:#ddd;" readonly="readonly"  class="ipt"/></td>
             <td>&nbsp;</td>
             </tr>
         <empty name="User_namex">
         <else/>
-        <tr>
+        <tr style="display:none">
         <td align="right">{$User_namex}：</td>
           <td><input name="UserID" type="text" id="UserID" value="{$vo['user_id']}" style="background-color:#ddd;" readonly="readonly" class="ipt"/></td>
           <td>&nbsp;</td>
@@ -49,8 +49,8 @@
             </tr>
           <tr>
             <td align="right">开户银行：</td>
-            <td>{$b_bank['bank_name']}
-                <select name="BankName" id="BankName" style="display:none">
+            <td>
+                <select name="BankName" id="BankName">
                   <volist name='bank' id='voo'>
                      <eq name='bank[$key]' value="$b_bank['bank_name']">
                        <option value="{$bank[$key]}" selected="selected">{$bank[$key]}</option>
@@ -64,27 +64,27 @@
           </tr>
           <tr>
             <td align="right"><span id="bank_id">银行卡号</span>：</td>
-            <td><input name="BankCard" type="text" id="BankCard" value="{$vo['bank_card']}" class="ipt" maxlength="19" style="background-color:#ddd;" readonly="readonly"/></td>
+            <td><input name="BankCard" type="text" id="BankCard" value="{$vo['bank_card']}" class="ipt" maxlength="19" /></td>
             <td></td>
             </tr>
           <tr>
             <td align="right">开户姓名：</td>
-            <td><input name="UserName" type="text" id="UserName" value="{$vo['user_name']}" class="ipt" style="background-color:#ddd;" readonly="readonly"/></td>
+            <td><input name="UserName" type="text" id="UserName" value="{$vo['user_name']}" class="ipt"/></td>
             <td></td>
             </tr>
           <tr>
             <td align="right">开户省份：</td>
-            <td><input name="BankProvince" id="BankProvince" type="text" value="{$vo['bank_province']}" class="ipt" style="background-color:#ddd;" readonly="readonly"/></td>
+            <td><input name="BankProvince" id="BankProvince" type="text" value="{$vo['bank_province']}" class="ipt"/></td>
             <td></td>
           </tr>
           <tr>
             <td align="right">开户城市：</td>
-            <td><input name="BankCity" id="BankCity" type="text" value="{$vo['bank_city']}" class="ipt" style="background-color:#ddd;" readonly="readonly"/></td>
+            <td><input name="BankCity" id="BankCity" type="text" value="{$vo['bank_city']}" class="ipt"/></td>
             <td></td>
           </tr>
           <tr>
             <td align="right">详细开户地址：</td>
-            <td><input name="BankAddress" type="text" id="BankAddress" value="{$vo['bank_address']}" class="ipt" style="background-color:#ddd;" readonly="readonly"/></td>
+            <td><input name="BankAddress" type="text" id="BankAddress" value="{$vo['bank_address']}" class="ipt"/></td>
             <td></td>
             </tr>
           <tr>
@@ -92,7 +92,7 @@
             </tr>
           <tr>
             <td align="right">身份证号：</td>
-            <td><input name="UserCode" type="text" id="UserCode" value="{$vo['user_code']}" class="ipt" style="background-color:#ddd;" readonly="readonly"/></td>
+            <td><input name="UserCode" type="text" id="UserCode" value="{$vo['user_code']}" class="ipt"/></td>
             <td></td>
             </tr>
           <tr>

@@ -1,0 +1,854 @@
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000896s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000994s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [8] Undefined variable: get CommonAction.class.php 第 159 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 159 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.006688s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.022555s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.004914s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.004312s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.006907s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000864s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT * FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000328s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: UPDATE `xt_fck` SET `day_feng`=0,_times=1412611200 WHERE _times !=1412611200 [ RunTime:0.000280s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_bonus` [ RunTime:0.004617s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT SUM(b1) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000306s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT SUM(b2) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000193s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT SUM(b3) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000246s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT SUM(b4) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000228s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT SUM(b5) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000186s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT SUM(b6) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000183s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT `s2`,`i4`,`str29`,`str4`,`str5`,`str1` FROM `xt_fee` LIMIT 1   [ RunTime:0.000181s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_msg` [ RunTime:0.003541s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT COUNT(*) AS tp_count FROM `xt_msg` WHERE ( `isid` = '1' ) AND ( `s_uid` = '1' ) AND ( `is_read` = 0 ) LIMIT 1   [ RunTime:0.000215s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT `prem` FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000198s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT * FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000334s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT `s11` FROM `xt_fee` LIMIT 1   [ RunTime:0.000168s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007064s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_xiaof` [ RunTime:0.003479s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | SQL: SELECT `id`,`user_id`,`agent_cf`,`re_path` FROM `xt_fck` WHERE is_pay>0 and agent_cf>=5|5|5|5|5  [ RunTime:0.000280s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | NOTIC: [2] Invalid argument supplied for foreach() IndexAction.class.php 第 146 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Run LocationTemplate Behavior [ RunTime:0.001103s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.001178s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Run ParseTemplate Behavior [ RunTime:0.013347s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.013429s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Run ContentReplace Behavior [ RunTime:0.000653s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Run TokenBuild Behavior [ RunTime:0.000572s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000421s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000626s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002466s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000554s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.000624s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run CheckRoute Behavior [ RunTime:0.000918s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001054s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000698s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000772s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.009003s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000336s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.006968s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000289s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [8] Undefined index: name PublicAction.class.php 第 259 行.
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SHOW COLUMNS FROM `xt_form` [ RunTime:0.003435s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT COUNT(*) AS tp_count FROM `xt_form` WHERE ( `status` = 1 ) AND ( `title` LIKE '%%' ) LIMIT 1   [ RunTime:0.014310s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT * FROM `xt_form` WHERE ( `status` = 1 ) AND ( `title` LIKE '%%' ) ORDER BY baile desc,id desc LIMIT 0,20   [ RunTime:0.000451s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SHOW COLUMNS FROM `xt_msg` [ RunTime:0.003463s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT COUNT(*) AS tp_count FROM `xt_msg` WHERE ( `isid` = '1' ) AND ( `s_uid` = '1' ) AND ( `is_read` = 0 ) LIMIT 1   [ RunTime:0.000278s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run LocationTemplate Behavior [ RunTime:0.000911s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.000987s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ParseTemplate Behavior [ RunTime:0.012411s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.012556s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ContentReplace Behavior [ RunTime:0.000802s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run TokenBuild Behavior [ RunTime:0.000665s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000730s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000992s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003516s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.001006s ]
+[ 2014-10-07T09:12:04+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.001155s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | INFO: Run CheckRoute Behavior [ RunTime:0.000793s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | INFO: Tag[ route_check ] --END-- [ RunTime:0.000887s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000766s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000849s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.006854s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000298s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.004718s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000276s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/codys/Urlsz/9 | NOTIC: [8] Undefined index: Urlsz FckAction.class.php 第 794 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run CheckRoute Behavior [ RunTime:0.000737s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ route_check ] --END-- [ RunTime:0.000828s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000693s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000766s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.006767s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000315s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005175s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000316s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | SQL: SHOW COLUMNS FROM `xt_bonus` [ RunTime:0.004027s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined index: cid FckAction.class.php 第 239 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | SQL: SELECT COUNT(*) AS tp_count FROM `xt_bonus` WHERE ( `uid` = '1' ) LIMIT 1   [ RunTime:0.000359s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined index: FanNowDate FckAction.class.php 第 266 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | SQL: SELECT * FROM `xt_bonus` WHERE ( `uid` = '1' ) ORDER BY id desc LIMIT 0,10   [ RunTime:0.000362s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 0 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 1 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 2 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 3 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 4 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 5 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 6 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 7 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 8 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 9 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 10 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 11 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 12 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 13 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 14 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 15 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 16 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 17 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 18 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 19 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 20 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined index: b21 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 21 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined index: b22 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 22 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined index: b23 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 23 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined index: b24 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 24 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | NOTIC: [8] Undefined offset: 25 FckAction.class.php 第 279 行.
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | SQL: SELECT `s18` FROM `xt_fee` LIMIT 1   [ RunTime:0.000238s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run LocationTemplate Behavior [ RunTime:0.001035s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ view_template ] --END-- [ RunTime:0.001116s ]
+[ 2014-10-07T09:12:08+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run ParseTemplate Behavior [ RunTime:0.018005s ]
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ view_parse ] --END-- [ RunTime:0.018093s ]
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run ContentReplace Behavior [ RunTime:0.000555s ]
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run TokenBuild Behavior [ RunTime:0.000681s ]
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000450s ]
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run ShowRuntime Behavior [ RunTime:0.000639s ]
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002528s ]
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Run ShowPageTrace Behavior [ RunTime:0.000548s ]
+[ 2014-10-07T09:12:09+08:00 ] /ak911/index.php/Fck/financeTable | INFO: Tag[ view_end ] --END-- [ RunTime:0.000617s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run CheckRoute Behavior [ RunTime:0.001400s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001571s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001312s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001451s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.008630s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000349s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005153s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000306s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SHOW COLUMNS FROM `xt_history` [ RunTime:0.003699s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SELECT `s13` FROM `xt_fee` LIMIT 1   [ RunTime:0.000280s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SELECT COUNT(*) AS tp_count FROM `xt_history` WHERE pdt >=1262275200 and pdt <=1412611199 and uid=1  and action_type+0<=10 or action_type>=25 LIMIT 1   [ RunTime:0.017282s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SELECT * FROM `xt_history` WHERE pdt >=1262275200 and pdt <=1412611199 and uid=1  and action_type+0<=10 or action_type>=25 ORDER BY id desc LIMIT 0,10   [ RunTime:0.000459s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | SQL: SELECT `s18` FROM `xt_fee` LIMIT 1   [ RunTime:0.000209s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run LocationTemplate Behavior [ RunTime:0.000934s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ view_template ] --END-- [ RunTime:0.001035s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run ParseTemplate Behavior [ RunTime:0.017767s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ view_parse ] --END-- [ RunTime:0.017871s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run ContentReplace Behavior [ RunTime:0.000470s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run TokenBuild Behavior [ RunTime:0.000598s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000414s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run ShowRuntime Behavior [ RunTime:0.000707s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002385s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Run ShowPageTrace Behavior [ RunTime:0.000593s ]
+[ 2014-10-07T09:12:10+08:00 ] /ak911/index.php/Fck/financeShow/RDT/1262275200/PDT/1412611199/cid/0 | INFO: Tag[ view_end ] --END-- [ RunTime:0.000666s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000799s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000944s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [8] Undefined variable: get CommonAction.class.php 第 159 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 159 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.008356s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000345s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005425s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000271s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.006881s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000840s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT * FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000295s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: UPDATE `xt_fck` SET `day_feng`=0,_times=1412611200 WHERE _times !=1412611200 [ RunTime:0.000216s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_bonus` [ RunTime:0.005825s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT SUM(b1) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000270s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT SUM(b2) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000186s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT SUM(b3) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000149s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT SUM(b4) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000146s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT SUM(b5) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000161s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] trim() expects parameter 1 to be string, array given Db.class.php 第 549 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT SUM(b6) AS tp_sum FROM `xt_bonus` WHERE ( `uid` = '1' ) AND ( (`e_date` > 1412611200) AND (`e_date` < 1412697600)  ) LIMIT 1   [ RunTime:0.000213s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT `s2`,`i4`,`str29`,`str4`,`str5`,`str1` FROM `xt_fee` LIMIT 1   [ RunTime:0.000183s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_msg` [ RunTime:0.004126s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT COUNT(*) AS tp_count FROM `xt_msg` WHERE ( `isid` = '1' ) AND ( `s_uid` = '1' ) AND ( `is_read` = 0 ) LIMIT 1   [ RunTime:0.000196s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT `prem` FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000167s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT * FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000278s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT `s11` FROM `xt_fee` LIMIT 1   [ RunTime:0.000127s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007446s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SHOW COLUMNS FROM `xt_xiaof` [ RunTime:0.005529s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | SQL: SELECT `id`,`user_id`,`agent_cf`,`re_path` FROM `xt_fck` WHERE is_pay>0 and agent_cf>=5|5|5|5|5  [ RunTime:0.000322s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | NOTIC: [2] Invalid argument supplied for foreach() IndexAction.class.php 第 146 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Run LocationTemplate Behavior [ RunTime:0.001122s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.001210s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Run ParseTemplate Behavior [ RunTime:0.015879s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015967s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Run ContentReplace Behavior [ RunTime:0.000703s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Run TokenBuild Behavior [ RunTime:0.001023s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000496s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000654s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003143s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000603s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.000673s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run CheckRoute Behavior [ RunTime:0.001227s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001376s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000946s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001072s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.011015s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000301s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005613s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000335s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | NOTIC: [8] Undefined index: name PublicAction.class.php 第 259 行.
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SHOW COLUMNS FROM `xt_form` [ RunTime:0.004175s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT COUNT(*) AS tp_count FROM `xt_form` WHERE ( `status` = 1 ) AND ( `title` LIKE '%%' ) LIMIT 1   [ RunTime:0.000355s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT * FROM `xt_form` WHERE ( `status` = 1 ) AND ( `title` LIKE '%%' ) ORDER BY baile desc,id desc LIMIT 0,20   [ RunTime:0.000367s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SHOW COLUMNS FROM `xt_msg` [ RunTime:0.004032s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | SQL: SELECT COUNT(*) AS tp_count FROM `xt_msg` WHERE ( `isid` = '1' ) AND ( `s_uid` = '1' ) AND ( `is_read` = 0 ) LIMIT 1   [ RunTime:0.000199s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run LocationTemplate Behavior [ RunTime:0.000758s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.000833s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ParseTemplate Behavior [ RunTime:0.011002s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.011117s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ContentReplace Behavior [ RunTime:0.000430s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run TokenBuild Behavior [ RunTime:0.000560s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000407s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000843s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002469s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000811s ]
+[ 2014-10-07T09:25:51+08:00 ] /ak911/index.php/Public/News/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.000904s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run CheckRoute Behavior [ RunTime:0.000711s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ route_check ] --END-- [ RunTime:0.000806s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000553s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000628s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007275s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000389s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005038s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000315s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined index: RID FckAction.class.php 第 1381 行.
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined index: FID FckAction.class.php 第 1382 行.
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined index: TPL FckAction.class.php 第 1383 行.
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `user_id`,`is_agent`,`agent_cash` FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000281s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `user_id`,`is_agent` FROM `xt_fck` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000216s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `user_id`,`is_agent` FROM `xt_fck` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000220s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '156222' ) LIMIT 1   [ RunTime:0.000183s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '618884' ) LIMIT 1   [ RunTime:0.000156s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '578701' ) LIMIT 1   [ RunTime:0.000161s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '234747' ) LIMIT 1   [ RunTime:0.000173s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '360897' ) LIMIT 1   [ RunTime:0.000148s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '484741' ) LIMIT 1   [ RunTime:0.000156s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '188357' ) LIMIT 1   [ RunTime:0.000145s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '493475' ) LIMIT 1   [ RunTime:0.000144s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '943502' ) LIMIT 1   [ RunTime:0.000146s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '144934' ) LIMIT 1   [ RunTime:0.000147s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.004025s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT * FROM `xt_product`  [ RunTime:0.000354s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `s2`,`s9`,`i4`,`str29`,`str99` FROM `xt_fee` LIMIT 1   [ RunTime:0.000234s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined variable: Level FckAction.class.php 第 1483 行.
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run LocationTemplate Behavior [ RunTime:0.000854s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_template ] --END-- [ RunTime:0.000934s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run ParseTemplate Behavior [ RunTime:0.030078s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_parse ] --END-- [ RunTime:0.030195s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run ContentReplace Behavior [ RunTime:0.000525s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run TokenBuild Behavior [ RunTime:0.000706s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000435s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run ShowRuntime Behavior [ RunTime:0.000636s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002498s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Run ShowPageTrace Behavior [ RunTime:0.000579s ]
+[ 2014-10-07T09:25:55+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_end ] --END-- [ RunTime:0.000653s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run CheckRoute Behavior [ RunTime:0.001223s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ route_check ] --END-- [ RunTime:0.001382s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000981s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001113s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.006570s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000375s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.004915s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000320s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined index: RID FckAction.class.php 第 1381 行.
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined index: FID FckAction.class.php 第 1382 行.
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined index: TPL FckAction.class.php 第 1383 行.
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `user_id`,`is_agent`,`agent_cash` FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000247s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `user_id`,`is_agent` FROM `xt_fck` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000174s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `user_id`,`is_agent` FROM `xt_fck` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000165s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '780630' ) LIMIT 1   [ RunTime:0.000145s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '757476' ) LIMIT 1   [ RunTime:0.000137s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '300912' ) LIMIT 1   [ RunTime:0.000130s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '358837' ) LIMIT 1   [ RunTime:0.000138s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '527395' ) LIMIT 1   [ RunTime:0.000153s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '661126' ) LIMIT 1   [ RunTime:0.000129s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '880001' ) LIMIT 1   [ RunTime:0.000142s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '535827' ) LIMIT 1   [ RunTime:0.000133s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '750527' ) LIMIT 1   [ RunTime:0.000127s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `ID` FROM `xt_fck` WHERE ( `UserID` = '288800' ) LIMIT 1   [ RunTime:0.000132s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SHOW COLUMNS FROM `xt_product` [ RunTime:0.003527s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT * FROM `xt_product`  [ RunTime:0.000344s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | SQL: SELECT `s2`,`s9`,`i4`,`str29`,`str99` FROM `xt_fee` LIMIT 1   [ RunTime:0.000234s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | NOTIC: [8] Undefined variable: Level FckAction.class.php 第 1483 行.
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run LocationTemplate Behavior [ RunTime:0.000850s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_template ] --END-- [ RunTime:0.000935s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run ParseTemplate Behavior [ RunTime:0.018646s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_parse ] --END-- [ RunTime:0.018738s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run ContentReplace Behavior [ RunTime:0.000489s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run TokenBuild Behavior [ RunTime:0.000714s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000416s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run ShowRuntime Behavior [ RunTime:0.000692s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002511s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Run ShowPageTrace Behavior [ RunTime:0.000576s ]
+[ 2014-10-07T09:27:12+08:00 ] /ak911/index.php/Fck/users | INFO: Tag[ view_end ] --END-- [ RunTime:0.000646s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Run CheckRoute Behavior [ RunTime:0.000701s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Tag[ route_check ] --END-- [ RunTime:0.000797s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000581s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000659s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [8] Undefined index: Urlsz PublicAction.class.php 第 630 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run CheckRoute Behavior [ RunTime:0.000674s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ route_check ] --END-- [ RunTime:0.000769s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000584s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000657s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007731s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000897s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run LocationTemplate Behavior [ RunTime:0.000960s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_template ] --END-- [ RunTime:0.001036s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | NOTIC: [8] Undefined variable: wt2 a80a5ef19d3c9787c8869ed252d1215b.php 第 79 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run ParseTemplate Behavior [ RunTime:0.009203s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_parse ] --END-- [ RunTime:0.009277s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run ContentReplace Behavior [ RunTime:0.000567s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run TokenBuild Behavior [ RunTime:0.000732s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000481s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run ShowRuntime Behavior [ RunTime:0.000722s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002707s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Run ShowPageTrace Behavior [ RunTime:0.000575s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_end ] --END-- [ RunTime:0.000642s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | INFO: Run CheckRoute Behavior [ RunTime:0.001265s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001398s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000942s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001069s ]
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:27:53+08:00 ] /ak911/index.php/Public/verify/ | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Run CheckRoute Behavior [ RunTime:0.001050s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001145s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000851s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000921s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [8] Undefined index: Urlsz PublicAction.class.php 第 630 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run CheckRoute Behavior [ RunTime:0.001058s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ route_check ] --END-- [ RunTime:0.001168s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000853s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000922s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007279s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000309s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005646s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000308s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined index: name PublicAction.class.php 第 259 行.
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT * FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000794s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `s4`,`s10` FROM `xt_fee` LIMIT 1   [ RunTime:0.000208s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run LocationTemplate Behavior [ RunTime:0.001172s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_template ] --END-- [ RunTime:0.001246s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ParseTemplate Behavior [ RunTime:0.009230s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_parse ] --END-- [ RunTime:0.009320s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ContentReplace Behavior [ RunTime:0.000635s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run TokenBuild Behavior [ RunTime:0.000616s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000440s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ShowRuntime Behavior [ RunTime:0.000671s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002562s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ShowPageTrace Behavior [ RunTime:0.000604s ]
+[ 2014-10-07T09:28:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_end ] --END-- [ RunTime:0.000676s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run CheckRoute Behavior [ RunTime:0.001306s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ route_check ] --END-- [ RunTime:0.001479s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001056s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001193s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007292s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000365s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005531s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000286s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined index: name PublicAction.class.php 第 259 行.
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT * FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000802s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `s4`,`s10` FROM `xt_fee` LIMIT 1   [ RunTime:0.000216s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run LocationTemplate Behavior [ RunTime:0.000812s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_template ] --END-- [ RunTime:0.000888s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ParseTemplate Behavior [ RunTime:0.008511s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_parse ] --END-- [ RunTime:0.008600s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ContentReplace Behavior [ RunTime:0.000409s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run TokenBuild Behavior [ RunTime:0.000567s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000410s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ShowRuntime Behavior [ RunTime:0.000637s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002216s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ShowPageTrace Behavior [ RunTime:0.000560s ]
+[ 2014-10-07T09:29:42+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_end ] --END-- [ RunTime:0.000630s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Run CheckRoute Behavior [ RunTime:0.000672s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Tag[ route_check ] --END-- [ RunTime:0.000764s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000511s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000580s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/codys/Urlsz/2 | NOTIC: [8] Undefined index: Urlsz PublicAction.class.php 第 630 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run CheckRoute Behavior [ RunTime:0.000666s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ route_check ] --END-- [ RunTime:0.000758s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000509s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000577s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.008051s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000935s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run LocationTemplate Behavior [ RunTime:0.000960s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_template ] --END-- [ RunTime:0.001038s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | NOTIC: [8] Undefined variable: wt2 a80a5ef19d3c9787c8869ed252d1215b.php 第 79 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run ParseTemplate Behavior [ RunTime:0.008788s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_parse ] --END-- [ RunTime:0.008861s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run ContentReplace Behavior [ RunTime:0.000520s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run TokenBuild Behavior [ RunTime:0.000626s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000419s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run ShowRuntime Behavior [ RunTime:0.000649s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002405s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Run ShowPageTrace Behavior [ RunTime:0.000575s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/password | INFO: Tag[ view_end ] --END-- [ RunTime:0.000662s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | INFO: Run CheckRoute Behavior [ RunTime:0.001302s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001409s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000649s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000735s ]
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:40+08:00 ] /ak911/index.php/Public/verify/ | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run CheckRoute Behavior [ RunTime:0.001340s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ route_check ] --END-- [ RunTime:0.001514s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001042s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001177s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007383s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000429s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.006130s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000413s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [8] Undefined index: DLTZURL02 FckAction.class.php 第 13 行.
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SELECT `wt1`,`da1` FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000312s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [8] Undefined index: action FckAction.class.php 第 20 行.
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run LocationTemplate Behavior [ RunTime:0.000890s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ view_template ] --END-- [ RunTime:0.000976s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run ParseTemplate Behavior [ RunTime:0.007665s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ view_parse ] --END-- [ RunTime:0.007755s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run ContentReplace Behavior [ RunTime:0.000399s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run TokenBuild Behavior [ RunTime:0.000635s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000416s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run ShowRuntime Behavior [ RunTime:0.000636s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002279s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run ShowPageTrace Behavior [ RunTime:0.000548s ]
+[ 2014-10-07T09:30:41+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ view_end ] --END-- [ RunTime:0.000616s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run CheckRoute Behavior [ RunTime:0.000694s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ route_check ] --END-- [ RunTime:0.000787s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000540s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000620s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007447s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000438s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005519s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000274s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | NOTIC: [8] Undefined index: DLTZURL02 FckAction.class.php 第 13 行.
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Fck/yanzheng | SQL: SELECT `wt1`,`da1` FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000220s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run CheckRoute Behavior [ RunTime:0.000685s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --END-- [ RunTime:0.000777s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000510s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000582s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007671s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.001019s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `bank_name` FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000299s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005691s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `s2`,`s9`,`i4`,`str29`,`str99` FROM `xt_fee` LIMIT 1   [ RunTime:0.000292s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run LocationTemplate Behavior [ RunTime:0.000884s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --END-- [ RunTime:0.000965s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ParseTemplate Behavior [ RunTime:0.015583s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015671s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ContentReplace Behavior [ RunTime:0.000521s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run TokenBuild Behavior [ RunTime:0.000717s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000463s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowRuntime Behavior [ RunTime:0.000657s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002562s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowPageTrace Behavior [ RunTime:0.000578s ]
+[ 2014-10-07T09:30:43+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --END-- [ RunTime:0.000649s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run CheckRoute Behavior [ RunTime:0.000730s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --END-- [ RunTime:0.000836s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000612s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000692s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007433s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000890s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `bank_name` FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000194s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005466s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `s2`,`s9`,`i4`,`str29`,`str99` FROM `xt_fee` LIMIT 1   [ RunTime:0.000304s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run LocationTemplate Behavior [ RunTime:0.000920s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --END-- [ RunTime:0.001006s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ParseTemplate Behavior [ RunTime:0.015482s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015572s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ContentReplace Behavior [ RunTime:0.000478s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run TokenBuild Behavior [ RunTime:0.000747s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000487s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowRuntime Behavior [ RunTime:0.000661s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002581s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowPageTrace Behavior [ RunTime:0.000566s ]
+[ 2014-10-07T09:32:26+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --END-- [ RunTime:0.000635s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run CheckRoute Behavior [ RunTime:0.001827s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --END-- [ RunTime:0.001993s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001187s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001318s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007725s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000893s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `bank_name` FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000195s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005665s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `s2`,`s9`,`i4`,`str29`,`str99` FROM `xt_fee` LIMIT 1   [ RunTime:0.000281s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run LocationTemplate Behavior [ RunTime:0.000950s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --END-- [ RunTime:0.001026s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ParseTemplate Behavior [ RunTime:0.015544s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015632s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ContentReplace Behavior [ RunTime:0.000541s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run TokenBuild Behavior [ RunTime:0.000658s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000422s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowRuntime Behavior [ RunTime:0.000645s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002458s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowPageTrace Behavior [ RunTime:0.000543s ]
+[ 2014-10-07T09:32:59+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --END-- [ RunTime:0.000611s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run CheckRoute Behavior [ RunTime:0.001800s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --END-- [ RunTime:0.002002s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000972s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001052s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007057s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.001018s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `bank_name` FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000217s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005758s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `s2`,`s9`,`i4`,`str29`,`str99` FROM `xt_fee` LIMIT 1   [ RunTime:0.000272s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run LocationTemplate Behavior [ RunTime:0.001100s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --END-- [ RunTime:0.001178s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ParseTemplate Behavior [ RunTime:0.015939s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --END-- [ RunTime:0.016024s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ContentReplace Behavior [ RunTime:0.000630s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run TokenBuild Behavior [ RunTime:0.000651s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000463s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowRuntime Behavior [ RunTime:0.000777s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002735s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowPageTrace Behavior [ RunTime:0.000587s ]
+[ 2014-10-07T09:33:09+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --END-- [ RunTime:0.000657s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run CheckRoute Behavior [ RunTime:0.000999s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --END-- [ RunTime:0.001102s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000880s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000955s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007012s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000936s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `bank_name` FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000231s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005310s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `s2`,`s9`,`i4`,`str29`,`str99` FROM `xt_fee` LIMIT 1   [ RunTime:0.000276s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run LocationTemplate Behavior [ RunTime:0.001139s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --END-- [ RunTime:0.001223s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ParseTemplate Behavior [ RunTime:0.016181s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --END-- [ RunTime:0.016272s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ContentReplace Behavior [ RunTime:0.000560s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run TokenBuild Behavior [ RunTime:0.000673s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000444s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowRuntime Behavior [ RunTime:0.000661s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002548s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowPageTrace Behavior [ RunTime:0.000588s ]
+[ 2014-10-07T09:33:25+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --END-- [ RunTime:0.000666s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run CheckRoute Behavior [ RunTime:0.001624s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ route_check ] --END-- [ RunTime:0.001806s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001443s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001593s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007953s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000862s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `bank_name` FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000223s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005821s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | SQL: SELECT `s2`,`s9`,`i4`,`str29`,`str99` FROM `xt_fee` LIMIT 1   [ RunTime:0.000489s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run LocationTemplate Behavior [ RunTime:0.001059s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_template ] --END-- [ RunTime:0.001143s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ParseTemplate Behavior [ RunTime:0.015762s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015855s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ContentReplace Behavior [ RunTime:0.000538s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run TokenBuild Behavior [ RunTime:0.000668s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000445s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowRuntime Behavior [ RunTime:0.000665s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002527s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Run ShowPageTrace Behavior [ RunTime:0.000572s ]
+[ 2014-10-07T09:33:57+08:00 ] /ak911/index.php/Public/updateUserInfo | INFO: Tag[ view_end ] --END-- [ RunTime:0.000646s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Run CheckRoute Behavior [ RunTime:0.001137s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Tag[ route_check ] --END-- [ RunTime:0.001248s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000791s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000873s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/codys/Urlsz/3 | NOTIC: [8] Undefined index: Urlsz PublicAction.class.php 第 630 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ route_check ] --START--
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run CheckRoute Behavior [ RunTime:0.000857s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ route_check ] --END-- [ RunTime:0.000959s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ app_begin ] --START--
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000728s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000806s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007371s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000433s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005658s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000414s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | NOTIC: [8] Undefined index: name PublicAction.class.php 第 259 行.
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT * FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000952s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | SQL: SELECT `s4`,`s10` FROM `xt_fee` LIMIT 1   [ RunTime:0.000275s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_template ] --START--
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run LocationTemplate Behavior [ RunTime:0.001051s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_template ] --END-- [ RunTime:0.001139s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_parse ] --START--
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ParseTemplate Behavior [ RunTime:0.009078s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_parse ] --END-- [ RunTime:0.009174s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_filter ] --START--
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ContentReplace Behavior [ RunTime:0.000489s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run TokenBuild Behavior [ RunTime:0.000581s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000448s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ShowRuntime Behavior [ RunTime:0.000654s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002384s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_end ] --START--
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Run ShowPageTrace Behavior [ RunTime:0.000607s ]
+[ 2014-10-07T09:34:13+08:00 ] /ak911/index.php/Public/pprofile | INFO: Tag[ view_end ] --END-- [ RunTime:0.000687s ]
