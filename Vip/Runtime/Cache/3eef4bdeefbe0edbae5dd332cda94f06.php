@@ -1,5 +1,36 @@
-<tagLib name="html" />
-<include file="../Public/header" />
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo ($System_namex); ?></title>
+<link href="__PUBLIC__/Css/body.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="__PUBLIC__/Css/menu.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="__PUBLIC__/Css/main.css" rel="stylesheet" media="all" type="text/css" />
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/Base.js\"></sc"+"ript>")</script>
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/prototype.js\"></sc"+"ript>")</script>
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/mootools.js\"></sc"+"ript>")</script>
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/Ajax/ThinkAjax.js\"></sc"+"ript>")</script>
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/Form/CheckForm.js\"></sc"+"ript>")</script>
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/common.js\"></sc"+"ript>")</script>
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/Util/ImageLoader.js\"></sc"+"ript>")</script>
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/myfocus-1.0.4.min.js\"></sc"+"ript>")</script>
+<script type="text/javascript">document.write("<scr"+"ipt src=\"__PUBLIC__/Js/all.js\"></sc"+"ript>")</script>
+<script language="JavaScript">
+ifcheck = true;
+function CheckAll(form)
+{
+	for (var i=0;i<form.elements.length-2;i++)
+	{
+		var e = form.elements[i];
+		e.checked = ifcheck;
+	}
+	ifcheck = ifcheck == true ? false : true;
+}
+</script>
+</head>
+<body onLoad="loadBar(0)">
+
 <style>
 .tab_l3{font-size:14px;}
 </style>
@@ -16,20 +47,20 @@
                   <td align="left">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr class="bor">
-                        <th width="35%" height="30" align="left">金币账户：<span style="color:#F00;">{$game_m}</span></th>
+                        <th width="35%" height="30" align="left">金币账户：<span style="color:#F00;"><?php echo ($game_m); ?></span></th>
                         </tr>
                         
                       <tr class="bor">
-                        <th height="30" align="left">股票持有数量：<span style="color:#F00;">{$live_gp}</span> 股</th>
+                        <th height="30" align="left">股票持有数量：<span style="color:#F00;"><?php echo ($live_gp); ?></span> 股</th>
                       </tr>
                       <tr class="bor">
-                        <th height="30" align="left">正出售数量：<span style="color:#F00;">{$gping_num}</span> 股</th>
+                        <th height="30" align="left">正出售数量：<span style="color:#F00;"><?php echo ($gping_num); ?></span> 股</th>
                       </tr>
                       <tr class="bor">
-                    <th height="30" align="left">当前股价：<span style="color:blue;">{$one_price}</span> /股</th>
+                    <th height="30" align="left">当前股价：<span style="color:blue;"><?php echo ($one_price); ?></span> /股</th>
                   </tr>
                   <tr class="bor">
-                    <th height="30" align="left">距下次涨价需交易：<span style="color:#F00;">{$cha}</span>股 </th>
+                    <th height="30" align="left">距下次涨价需交易：<span style="color:#F00;"><?php echo ($cha); ?></span>股 </th>
                   </tr>
                     </table>
                   </td>
@@ -45,12 +76,12 @@
                   </tr>
                   <tr>
                     <td height="40" align="right">当前价格：</td>
-                    <td align="left" style="padding-left:10px;"><font color='red'>{$one_price}</font>
+                    <td align="left" style="padding-left:10px;"><font color='red'><?php echo ($one_price); ?></font>
                       /个</td>
                   </tr>
                   <tr>
                     <td height="40" align="right">卖出价格：</td>
-                    <td align="left" style="padding-left:10px;"><input name="one_price" type="text" id="one_price"  maxlength="20" value="{$one_price}" onblur="value=value.replace(/[^0-9.]/g,'');tot_price();" />
+                    <td align="left" style="padding-left:10px;"><input name="one_price" type="text" id="one_price"  maxlength="20" value="<?php echo ($one_price); ?>" onblur="value=value.replace(/[^0-9.]/g,'');tot_price();" />
                         /个&nbsp;&nbsp;<font color="red" id="one_prices"></font></td>
                   </tr>
                   <tr>
@@ -64,10 +95,9 @@
                   <tr>
                     <td height="40" align="right">&nbsp;</td>
                     <td align="left" style="padding-left:10px;"><eq name="close_gp" value="0">
-                        <if condition="($open eq 0) and ($is_boss eq 0)"><span style="color:#F00">尚未拆分</span>
-                        <elseif condition="($gp_kg eq 1) and ($is_boss eq 0)"/><span style="color:#F00">股市交易已关闭</span>
-                        <else/><input type="submit" name="button2" id="button2" value="确认求购" class="btn1" />
-                        </if>
+                        <?php if(($open == 0) and ($is_boss == 0)): ?><span style="color:#F00">尚未拆分</span>
+                        <?php elseif(($gp_kg == 1) and ($is_boss == 0)): ?><span style="color:#F00">股市交易已关闭</span>
+                        <?php else: ?><input type="submit" name="button2" id="button2" value="确认求购" class="btn1" /><?php endif; ?>
 
                       <input name="cPP" type="hidden" id="cPP" value="122" />
                       <input name="PID" type="hidden" id="PID" /></td>
@@ -90,31 +120,27 @@
           <th width="10%"><span>状态</span></th>
 		  <th width="13%"><span>功能/说明</span></th>
         </tr>
-<volist name="list" id="vo">
-        <tr align='center'>
-          <td height="25" nowrap="nowrap">{$vo.add_time|date='Y-m-d H:i:s',###}</td>
-          <td>{$vo.all_nums}</td>
-		  <td>{$vo['all_nums']-$vo['only_nums']}</td>
-		  <td>{$vo.only_nums}</td>
-		  <td><font color='blue' ><b>{$vo.one_price}</b></font></td>
-          <td>{$vo.price}</td>
-          <td>{$vo['all_nums']*$vo['one_price']-$vo['only_nums']*$vo['one_price']}</td>
+<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr align='center'>
+          <td height="25" nowrap="nowrap"><?php echo (date('Y-m-d H:i:s',$vo["add_time"])); ?></td>
+          <td><?php echo ($vo["all_nums"]); ?></td>
+		  <td><?php echo ($vo['all_nums']-$vo['only_nums']); ?></td>
+		  <td><?php echo ($vo["only_nums"]); ?></td>
+		  <td><font color='blue' ><b><?php echo ($vo["one_price"]); ?></b></font></td>
+          <td><?php echo ($vo["price"]); ?></td>
+          <td><?php echo ($vo['all_nums']*$vo['one_price']-$vo['only_nums']*$vo['one_price']); ?></td>
           <td>
-          <eq name="vo.is_cancel" value="1"><span style="color:#0F0">交易撤销</span></eq>
-          <eq name="vo.is_cancel" value="0">
-          <eq name="vo.ispay" value="1">交易完成<else /><span style="color:#F00">等待交易</span></eq>
-          </eq>
+          <?php if(($vo["is_cancel"]) == "1"): ?><span style="color:#0F0">交易撤销</span><?php endif; ?>
+          <?php if(($vo["is_cancel"]) == "0"): if(($vo["ispay"]) == "1"): ?>交易完成<?php else: ?><span style="color:#F00">等待交易</span><?php endif; endif; ?>
           </td>
 		  <td>
-                      <eq name="vo.ispay" value="0"><a href="__URL__/delsellGP/id/{$vo.id}/">撤销</a><else/><eq name="vo.is_cancel" value="1">返还{$vo.only_nums}股<else/><font color='green'>交易已成功</font></eq></eq>
+                      <?php if(($vo["ispay"]) == "0"): ?><a href="__URL__/delsellGP/id/<?php echo ($vo["id"]); ?>/">撤销</a><?php else: if(($vo["is_cancel"]) == "1"): ?>返还<?php echo ($vo["only_nums"]); ?>股<?php else: ?><font color='green'>交易已成功</font><?php endif; endif; ?>
           
           </td>
-        </tr>
-        </volist>
+        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </table>
         <table width="100%" border="0" cellspacing="0" cellpadding="5" class="tab3">
           <tr>
-            <td>{$page}</td>
+            <td><?php echo ($page); ?></td>
           </tr>
         </table>
           </td>

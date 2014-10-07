@@ -362,9 +362,13 @@ class GupiaoAction extends CommonAction {
             $fck = M('fck');
             $this->check_gpopen();
 
-            $fee_rs = M('fee')->field('gp_one,fgq,open')->find(1);
+            $fee_rs = M('fee')->field('gp_one,fgq,open,gpzjgl,zjyl,cha_zjyl')->find(1);
 
             //当前股价
+            $zjyl = $fee_rs['zjyl'];
+            $cha_zjyl = $fee_rs['cha_zjyl'];
+            $gpzjgl = $fee_rs['gpzjgl'];
+            $cha = $gpzjgl - ($zjyl - $cha_zjyl);
             $one_price = $fee_rs['gp_one'];
             $open = $fee_rs['open'];
             $gp_fxnum = $fee_rs['gp_fxnum']; //涨价数量
@@ -419,6 +423,7 @@ class GupiaoAction extends CommonAction {
             $game_m = $user_rs['agent_zz']; //剩余的电子股交易账户余额
             $this->assign('game_m', $game_m);
             $this->assign('fgq', $fgq1);
+            $this->assign('cha', $cha);
             $this->assign('one_price', $one_price);
             $this->assign('live_gp', $gp_info[0]); //剩余的电子股
             $this->assign('gping_num', $gping_num); //正在求购的电子股
@@ -440,7 +445,12 @@ class GupiaoAction extends CommonAction {
         $gp_sell = M('gp_sell');
         $fck = M('fck');
 
-        $fee_rs = M('fee')->field('gp_one')->find();
+        $fee_rs = M('fee')->field('gp_one,zjyl,cha_zjyl,gpzjgl')->find();
+
+        $zjyl = $fee_rs['zjyl'];
+        $cha_zjyl = $fee_rs['cha_zjyl'];
+        $gpzjgl = $fee_rs['gpzjgl'];
+        $cha = $gpzjgl - ($zjyl - $cha_zjyl);
         //当前股价
         $one_price = $fee_rs['gp_one'];
 
@@ -462,7 +472,7 @@ class GupiaoAction extends CommonAction {
         $user_rs = $fck->where("id=$id")->field("agent_gp")->find();
         $game_m = $user_rs['agent_gp']; //剩余的电子股
         $this->assign('game_m', $game_m);
-
+        
         $this->assign('one_price', $one_price);
         $this->assign('list', $list);
 
@@ -497,8 +507,14 @@ class GupiaoAction extends CommonAction {
 
         $this->check_gpopen();
 
-        $fee_rs = M('fee')->field('gp_one,fgq,open')->find();
+        $fee_rs = M('fee')->field('gp_one,fgq,open,gp_kg,zjyl,cha_zjyl,gpzjgl')->find();
+
+        $zjyl = $fee_rs['zjyl'];
+        $cha_zjyl = $fee_rs['cha_zjyl'];
+        $gpzjgl = $fee_rs['gpzjgl'];
+        $cha = $gpzjgl - ($zjyl - $cha_zjyl);
         $open = $fee_rs['open'];
+        $gp_kg = $fee_rs['gp_kg'];
         //当前股价
         $one_price = $fee_rs['gp_one'];
         //电子股的信息
@@ -512,7 +528,8 @@ class GupiaoAction extends CommonAction {
 
         $where = 'type=1 and id>0 and uid=' . $id;
         $field = '*';
-
+        
+        
         $count = $GPmj->where($where)->field($field)->count(); //总页数
         $listrows = 15; //每页显示的记录数
         $Page = new ZQPage($count, $listrows, 1);
@@ -521,7 +538,7 @@ class GupiaoAction extends CommonAction {
         $this->assign('page', $show); //分页变量输出到模板
 
         $list = $GPmj->where($where)->field($field)->order('add_time desc')->page($Page->getPage() . ',' . $listrows)->select();
-        $user_rs = $fck->where("id=$id")->field("agent_zz,pdt,agent_use")->find();
+        $user_rs = $fck->where("id=$id")->field("agent_zz,pdt,agent_use,is_boss")->find();
         $game_m = $user_rs['agent_zz']; //剩余的金币
         $agent_use = $user_rs['agent_use']; //剩余的奖金
 
@@ -533,11 +550,14 @@ class GupiaoAction extends CommonAction {
             $fgq = $time1 - $time;
             $fgq1 = ceil($fgq / 60 / 60 / 24);
         }
+        $this->assign('cha', $cha);
         $this->assign("fgq", $fgq1);
         $this->assign('game_m', $game_m);
         $this->assign('open', $open);
         $this->assign('one_price', $one_price);
         $this->assign('jjb', $agent_use);
+        $this->assign('is_boss', $user_rs['is_boss']);
+        $this->assign('gp_kg', $gp_kg);
         $this->assign('live_gp', $gp_info[0]); //剩余的电子股
         $this->assign('gping_num', $gping_num); //正在出售的电子股
         $this->assign('list', $list);
@@ -1176,20 +1196,20 @@ class GupiaoAction extends CommonAction {
             $where['ispay'] = array('eq', 0);
             $inout_rs = $inout->where($where)->order("add_time asc")->select();  //获取 条件一致的出售信息
             foreach ($inout_rs as $rs) {
-                $ispay='';
-                $ispays='';
-                if ( round($bmoney,0) < round($rs['only_nums'],0)) {
+                $ispay = '';
+                $ispays = '';
+                if (round($bmoney, 0) < round($rs['only_nums'], 0)) {
                     $nums = round($bmoney, 0);
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
                     $ispay = ",ispay=1";
                     $ss = 1;
-                }else if ( round($bmoney,0) == round($rs['only_nums'],0)) {
+                } else if (round($bmoney, 0) == round($rs['only_nums'], 0)) {
                     $nums = round($bmoney, 0);
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
                     $ispays = ",ispay=1";
-                    $ispay=",ispay=1";
+                    $ispay = ",ispay=1";
                     $ss = 1;
                 } else {
                     $nums = round($rs['only_nums'], 0);
@@ -1199,12 +1219,12 @@ class GupiaoAction extends CommonAction {
                 }
                 $end_money = round($end_money, 2);
                 $rss = $fck->where("id=" . $rs['uid'])->field('user_id')->find();
-                
+
                 $inout->execute("update __TABLE__ set only_nums=only_nums-{$nums}{$ispays}  where id={$rs['id']}");  //先处理对应的出售信息
 //                $fck->addencAdd($rs['uid'], $rss['user_id'], -$sui, 6);
                 $fck->addencAdd($rs['uid'], $rss['user_id'], $end_money, 18); //添加奖金和记录
-                $fck->query("UPDATE __TABLE__ SET `b18`=b18+{$end_money} where `id`=" .$rs['uid']);
-                $b25=0;
+                $fck->query("UPDATE __TABLE__ SET `b18`=b18+{$end_money} where `id`=" . $rs['uid']);
+                $b25 = 0;
                 $fck->guanli($end_money, $rs['user_id'], $rs['uid']);
                 $fck->jj_zhuanhuan($end_money, $b25);
                 $fck->query("UPDATE __TABLE__ SET `b8`=b8+" . $end_money . ",b25=b25+{$b25} where `id`=" . $rs['uid']);
@@ -1213,7 +1233,7 @@ class GupiaoAction extends CommonAction {
 
                 $inout->execute("update __TABLE__ set only_nums=only_nums-{$nums}{$ispay} where id={$in_rs['id']}");  //再处理对应的自己的求购信息
                 $fck->execute("update __TABLE__ set live_gupiao=live_gupiao+{$nums} where id={$in_rs['uid']}");
-                
+
                 $bmoney = $bmoney - $nums;
 //                $fck->addencAdd($in_rs['uid'], $rss['user_id'], -$end_money, 22);
                 $this->jyl_AC($nums);
@@ -1229,22 +1249,22 @@ class GupiaoAction extends CommonAction {
             $where['ispay'] = array('eq', 0);
             $inout_rs = $inout->where($where)->order("add_time asc")->select();  //获取 条件一致的购买信息
             foreach ($inout_rs as $rs) {
-                $ispay='';
-                $ispays='';
-                if (round($bmoney,0) < round($rs['only_nums'],0)) {
+                $ispay = '';
+                $ispays = '';
+                if (round($bmoney, 0) < round($rs['only_nums'], 0)) {
                     $nums = $bmoney;
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
                     $ispay = ",ispay=1";
                     $ss = 1;
-                }else if (round($bmoney,0) == round($rs['only_nums'],0)) {
+                } else if (round($bmoney, 0) == round($rs['only_nums'], 0)) {
                     $nums = $bmoney;
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
                     $ispay = ",ispay=1";
                     $ispays = ",ispay=1";
                     $ss = 1;
-                }else {
+                } else {
                     $nums = $rs['only_nums'];
                     $end_money = $nums * $one_price * (1 - $gp_perc);  //获得真实金额
                     $sui = $nums * $one_price * $gp_perc;  //交易手续费
@@ -1255,8 +1275,8 @@ class GupiaoAction extends CommonAction {
                 $fck->execute("update __TABLE__ set live_gupiao=live_gupiao+{$nums} where id={$rs['uid']}");
                 $inout->execute("update __TABLE__ set only_nums=only_nums-{$nums}{$ispay} where id={$in_rs['id']}");  //再处理对应的出售信息
                 $fck->addencAdd($rs['uid'], $rss['user_id'], $end_money, 18); //添加奖金和记录
-                $fck->query("UPDATE __TABLE__ SET `b18`=b18+{$end_money} where `id`=" .$rs['uid']);
-                $b25=0;
+                $fck->query("UPDATE __TABLE__ SET `b18`=b18+{$end_money} where `id`=" . $rs['uid']);
+                $b25 = 0;
                 $fck->guanli($end_money, $rs['user_id'], $rs['uid']);
                 $fck->jj_zhuanhuan($end_money, $b25);
                 $fck->query("UPDATE __TABLE__ SET `b8`=b8+" . $end_money . ",b25=b25+{$b25} where `id`=" . $rs['uid']);
@@ -1277,33 +1297,34 @@ class GupiaoAction extends CommonAction {
         if ($nums > 0) {
             $fee = M('fee');
             $fee->execute("update __TABLE__ set zjyl=zjyl+{$nums} where id=1");
-            $fee_rs=$fee->field('zjyl,cha_zjyl,zl,gpzjgl,zhang_one')->find();
-            $zjyl=$fee_rs['zjyl'];
-            $cha_zjyl=$fee_rs['cha_zjyl'];
-            $zl=$fee_rs['zl'];
-            $zhang_one=$fee_rs['zhang_one'];
-            $gpzjgl=$fee_rs['gpzjgl'];
-            $a=1;
-            if($zjyl>=$cha_zjyl+$gpzjgl){
-                $c=$zjyl-$cha_zjyl;//105000
-                if(floor($c/$gpzjgl)>1){
-                    $a=floor($c/$gpzjgl);
+            $fee_rs = $fee->field('zjyl,cha_zjyl,zl,gpzjgl,zhang_one')->find();
+            $zjyl = $fee_rs['zjyl'];
+            $cha_zjyl = $fee_rs['cha_zjyl'];
+            $zl = $fee_rs['zl'];
+            $zhang_one = $fee_rs['zhang_one'];
+            $gpzjgl = $fee_rs['gpzjgl'];
+            $a = 1;
+            if ($zjyl >= $cha_zjyl + $gpzjgl) {
+                $c = $zjyl - $cha_zjyl; //105000
+                if (floor($c / $gpzjgl) > 1) {
+                    $a = floor($c / $gpzjgl);
                 }
-                $l=$a*$zhang_one;
-                $count=$a*$gpzjgl;
+                $l = $a * $zhang_one;
+                $count = $a * $gpzjgl;
                 $fee->execute("update __TABLE__ set gp_one=gp_one+{$l},cha_zjyl=cha_zjyl+{$count},zhang_nums=zhang_nums+{$a} where id=1");
-                $fee_rs1=$fee->find();
-                if($fee_rs1['cha_zjyl']>=$fee_rs1['zl']){//拆分
-                    if($fee_rs1['open']==0){
-                        $open=',open=1';
+                $fee_rs1 = $fee->find();
+                if ($fee_rs1['cha_zjyl'] >= $fee_rs1['zl']) {//拆分
+                    if ($fee_rs1['open'] == 0) {
+                        $open = ',open=1';
                     }
                     $fee->execute("update __TABLE__ set zl=zl*2,gpzjgl=gpzjgl*2,gp_one=gp_one/2{$open} where id=1");
-                    $fck=M('fck');
+                    $fck = M('fck');
                     $fck->execute("update __TABLE__ set live_gupiao=live_gupiao*2");
                 }
             }
-            }
+        }
     }
+
     //购买处理(原)
     public function buyGP1() {
         if (empty($_SESSION[C('USER_AUTH_KEY')])) {

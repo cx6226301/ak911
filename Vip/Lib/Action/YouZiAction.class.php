@@ -4820,7 +4820,7 @@ class YouZiAction extends CommonAction {
 			$sql .= "peng_num=0,re_f4=0,agent_cf=0,wlf_money=0,live_gupiao=1000000,rifenhong=1,cpzj=4800";
 
 			$model->execute("UPDATE __TABLE__ SET " . $sql );
-                        $model24->execute('UPDATE __TABLE__ set str6=0,gp_one=1,zjyl=0,cha_zjyl=0,zl=1000000,zhang_one=0.1,gpzjgl=100000,zhang_nums=0 where id=1;');
+                        $model24->execute('UPDATE __TABLE__ set open=0,str6=0,gp_one=1,zjyl=0,cha_zjyl=0,zl=1000000,zhang_one=0.1,gpzjgl=100000,zhang_nums=0 where id=1;');
 
 			for($i=1; $i<=2; $i++){ //fck1 ~ fck5 表 (清空只留公司)
 				$fck_other = M ('fck'. $i);

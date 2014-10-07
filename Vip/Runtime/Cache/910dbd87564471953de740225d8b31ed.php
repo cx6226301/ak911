@@ -32,7 +32,7 @@
         <li><a onclick="javascript:qiehuan(1);javascript:SetUrl('__APP__/Public/News');" id="mynav1" class="nav_on">首页</a><s></s></li>
         <li><a onclick="javascript:qiehuan(2);" id="mynav2" class="nav_on">会员信息</a><s></s></li>
         <li><a onclick="javascript:qiehuan(3);" id="mynav3" class="nav_on">财务管理</a><s></s></li>
-        <!--<li><a onclick="javascript:qiehuan(8);" id="mynav8" class="nav_on">股票市场</a><s></s></li>-->
+        <li><a onclick="javascript:qiehuan(8);" id="mynav8" class="nav_on">股票市场</a><s></s></li>
         <li><a onclick="javascript:qiehuan(4);" id="mynav4" class="nav_on">团队信息</a><s></s></li>
         <li><a onclick="javascript:qiehuan(5);" id="mynav5" class="nav_on">公司公告</a><s></s></li>
         <li><a onclick="javascript:qiehuan(6);" id="mynav6" class="nav_on">我要留言</a><s></s></li>
