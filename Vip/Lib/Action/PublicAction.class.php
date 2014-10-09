@@ -894,14 +894,13 @@ class PublicAction extends CommonAction {
 	public function send_email($user_id,$username,$userpass,$useremail)
 	{
 
-		require_once "stemp/class.phpmailer.php";
+		require_once "./stemp/class.phpmailer.php";
 		require_once "stemp/class.smtp.php";
 
 		$arra=array();
 		$arra[0]=$userpass[0];
 		$arra[1]=$userpass[1];
 
-		$mail = new PHPMailer();
 		//$address = $_POST['address'];
 		//$address = "119515301@qq.com";
 		$mail    = new PHPMailer();
@@ -909,9 +908,9 @@ class PublicAction extends CommonAction {
 		$mail->IsSMTP();                  // send via SMTP
 		$mail->Host  = "smtp.163.com";   // SMTP servers
 		$mail->SMTPAuth = true;           // turn on SMTP authentication
-		$mail->Username = "yuyangtaoyecn";     // SMTP username     注意：普通邮件认证不需要加 @域名
-		$mail->Password = "yuyangtaoyecn666";          // SMTP password
-		$mail->From  = "yuyangtaoyecn@163.com";        // 发件人邮箱
+		$mail->Username = "woaini6226301@163.com";     // SMTP username     注意：普通邮件认证不需要加 @域名
+		$mail->Password = "qq344168949";          // SMTP password
+		$mail->From  = "woaini6226301@163.com";        // 发件人邮箱
 		$mail->FromName =  "商务会员管理系统";    // 发件人
 		$mail->CharSet  = "utf-8";              // 这里指定字符集！
 		$mail->Encoding = "base64";

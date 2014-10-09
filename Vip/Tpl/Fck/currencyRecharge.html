@@ -39,45 +39,45 @@ function CheckForm(){
       <td colspan="4" style=" height:5px;"><hr></td>
       </tr>
     <tr>
-      <td align="right">电子账户余额：</td>
+      <td align="right">报单币余额：</td>
       <td colspan="2"><span class="hong">{$frs['agent_cash']}</span></td>
       </tr>
-	<tr style="display:none">
-      <td align="right">开通币余额：</td>
-      <td colspan="2"><span class="hong">{$frs['agent_kt']}</span></td>
+	<tr>
+      <td align="right">奖金余额：</td>
+      <td colspan="2"><span class="hong">{$frs['agent_use']}</span></td>
       </tr>
     <form name="form1" method="post" action="__URL__/currencyRechargeAC" onSubmit="{return CheckForm();}">
     <tr>
-	  <td align="right">购买电子币数量：</td>
+	  <td align="right">购买数量：</td>
 	  <td width="40%"><input name="ePoints" type="text" id="ePoints" maxlength="9" class="ipt" onkeyup="javascript:Null_Int(this.name)" onfocus="notice('0','')"  onblur="notice('0','none')"/></td>
-	  <td width="40%"><div id="ePoints1" class="info"><div id="0" class="focus_r" style="display:none;"><div class="msg_tip">请输入你要购买的电子币数量。</div></div></div></td>
+	  <td width="40%"><div id="ePoints1" class="info"><div id="0" class="focus_r" style="display:none;"><div class="msg_tip">请输入你要购买的数量。</div></div></div></td>
     </tr>
     <tr>
 	  <td align="right">购买类型：</td>
 	  <td>
       <select name="stype">
-      <option value="0">充值电子币</option>
-      <!--<option value="1">充值开通币</option>-->
+      <option value="0">充值报单币</option>
+      <option value="1">充值奖金币</option>
       </select></td>
 	  <td></td>
     </tr>
-    <tr>
+    <tr style="display:none">
       <td align="right">已汇款数额：</td>
 	  <td ><input name="_money" type="text" id="_money" class="ipt" onkeyup="javascript:Null_Int(this.name)" onfocus="notice('1','')"  onblur="notice('1','none')" />
       </td><td><div id="_money1" class="info"><div id="1" class="focus_r" style="display:none;"><div class="msg_tip">请输入你汇款数额。</div></div></div></td>
     </tr>
-    <tr>
+    <tr style="display:none">
       <td align="right">已汇款到账号：</td>
 	  <td ><input name="_num" type="text" id="_num" class="ipt" onkeyup="javascript:Null_Int(this.name)" onfocus="notice('2','')"  onblur="notice('2','none')" />
       </td><td><div id="_num1" class="info"><div id="2" class="focus_r" style="display:none;"><div class="msg_tip">请输入你要汇款到的账号。</div></div></div></td>
     </tr>
-    <tr>
+    <tr style="display:none">
       <td align="right" width="20%">汇款时间：</td>
 	  <td colspan="2" width="80%">
       	  <input name="_year" size="5" type="text" id="_year" value={$nowdate['0']}  /> 年
       	  <input name="_month" size="5" type="text" id="_month" value={$nowdate['1']} /> 月
           <input name="_date" size="5" type="text" id="_date" value={$nowdate['2']}  /> 日
-          <input name="_hour" size="5" type="text" id="_hour" /> 时&nbsp;<span class="hong">(请输入汇款时间)</span>
+          <input name="_hour" size="5" type="text" id="_hour" value="0" /> 时&nbsp;<span class="hong">(请输入汇款时间)</span>
       </td>
     </tr>
     <tr>
@@ -97,7 +97,7 @@ function CheckForm(){
 	<thead>
 		<tr>
 			<th><span>{$User_namex}</span></th>
-			<th><span>购买电子币数量</span></th>
+			<th><span>购买数量</span></th>
 			<th><span>充值类型</span></th>
 			<th><span>购买时间</span></th>
             <th><span>汇款数额</span></th>
@@ -109,7 +109,7 @@ function CheckForm(){
 	<tr align="center">
         <td>{$vo['user_id']}</td>
         <td>{$vo['epoint']}</td>
-        <td><eq name="vo.stype" value="0">充入电子币<else/>充入开通币</eq></td>
+        <td><eq name="vo.stype" value="0">充入报单币<else/>充入奖金币</eq></td>
         <td>{$vo.rdt|date='Y-m-d H:i:s',###}</td>
         <td>{$vo['huikuan']}</td>
         <td>{$vo['zhuanghao']}</td>

@@ -12,6 +12,17 @@ class TestAction extends CommonAction {
         $this->_clearing();
         echo "<p style='text-align:center; margin-top:50px;color:blue'>日分红成功!</p>";
     }
+    
+    public function x(){
+        $time=time();
+        $y=date("Y",$time);
+        $m=date("m",$time);
+        $d=date("d",$time);
+        $new= mktime(0, 0, 0, $m, $d, $y);
+        $new=$new-7*24*60*60;
+        echo date("Y-m-d H:i:s",$new);
+        
+    }
 
     public function ss() {
         $fck = D('Fck');

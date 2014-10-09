@@ -4589,7 +4589,10 @@ class YouZiAction extends CommonAction {
 						//提交事务
 						if($stype==0){
 							$fck->execute("update __TABLE__ set `agent_cash`=agent_cash+". $vo['epoint']. ",`cz_epoint`=cz_epoint+". $vo['epoint'] ." where `id`=". $vo['uid']);
-						}else{
+						}else if($stype==1){
+							$fck->execute("update __TABLE__ set `agent_use`=agent_use+". $vo['epoint']. ",`cz_epoint`=cz_epoint+". $vo['epoint'] ." where `id`=". $vo['uid']);
+						}
+                                                else{
 							$fck->execute("update __TABLE__ set `agent_kt`=agent_kt+". $vo['epoint']. ",`cz_epoint`=cz_epoint+". $vo['epoint'] ." where `id`=". $vo['uid']);
 						}
 						$chongzhi->execute("UPDATE `xt_chongzhi` set `is_pay`=1 ,`pdt`=$nowdate  where `id`=". $vo['id']);

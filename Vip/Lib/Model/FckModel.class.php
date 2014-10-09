@@ -419,6 +419,7 @@ class FckModel extends CommonModel {
     }
 
     public function rifenhong() {
+        set_time_limit(0);
         $fee = M('fee');
         $fee_rs = $fee->field('s12')->find(1);
         $s12 = $fee_rs['s12'] / 100;  //日分红
@@ -685,7 +686,16 @@ class FckModel extends CommonModel {
     public function quanhuizong() {
 
         $this->execute('UPDATE __TABLE__ SET b2=0,b3=0,b4=0,b5=0,b6=0,b7=0,b8=0,b9=0 where is_fenh=1');
-
+        $history=M('history');
+        $bonus=M('bonus');
+        $time=time();
+        $y=date("Y",$time);
+        $m=date("m",$time);
+        $d=date("d",$time);
+        $new= mktime(0, 0, 0, $m, $d, $y);
+        $new=$new-7*24*60*60;
+        $history->where("pdt<{$new}")->delete();
+        $bonus->where("e_date<{$new}")->delete();
         $this->execute('UPDATE __TABLE__ SET agent_zz=agent_zz+b25 where b25<>0');
         $this->execute('UPDATE __TABLE__ SET `b0`=b1+b2+b3+b4+b5+b6+b7+b8+b9');
     }

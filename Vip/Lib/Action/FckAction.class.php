@@ -1823,7 +1823,7 @@ class FckAction extends CommonAction {
                 }
             }
             $AgentUseThree = $vo2['agent_cash'];
-            if ($select == 4) {
+            if ($select == 4|| $select == 5) {
                 if ($AgentUseThree < $ePoints) {            //判断报单币余额
                     $this->error('报单币不足!');
                     exit;
@@ -1846,6 +1846,10 @@ class FckAction extends CommonAction {
             if ($select == 4) {
                 $fck->execute("update __TABLE__ Set `agent_cash`=agent_cash-" . $ePoints . " where `id`=" . $ID);
                 $fck->execute("update __TABLE__ Set `agent_zz`=agent_zz+" . $ePoints . " where `id`=" . $vo['id']);
+            }
+            if ($select == 5) {
+                $fck->execute("update __TABLE__ Set `agent_cash`=agent_cash-" . $ePoints . " where `id`=" . $ID);
+                $fck->execute("update __TABLE__ Set `agent_cash`=agent_cash+" . $ePoints . " where `id`=" . $vo['id']);
             }
 
 
@@ -3279,30 +3283,30 @@ class FckAction extends CommonAction {
             $_hour = trim($_POST['_hour']);  //小时
 
 
-            if (empty($_money) || !is_numeric($_money)) {
-                $this->error('请输入数字或金额不能为空!');
-                exit;
-            }
-            if (empty($_num) || !is_numeric($_num)) {
-                $this->error('请输入数字或账号不能为空!');
-                exit;
-            }
-            if (empty($_year) || !is_numeric($_year)) {
-                $this->error('请输入数字或年不能为空!');
-                exit;
-            }
-            if (empty($_month) || !is_numeric($_month)) {
-                $this->error('请输入数字或月不能为空!');
-                exit;
-            }
-            if (empty($_date) || !is_numeric($_date)) {
-                $this->error('请输入数字或日不能为空!');
-                exit;
-            }
-            if (empty($_hour) || !is_numeric($_hour)) {
-                $this->error('请输入数字或小时不能为空!');
-                exit;
-            }
+//            if (empty($_money) || !is_numeric($_money)) {
+//                $this->error('请输入数字或金额不能为空!');
+//                exit;
+//            }
+//            if (empty($_num) || !is_numeric($_num)) {
+//                $this->error('请输入数字或账号不能为空!');
+//                exit;
+//            }
+//            if (empty($_year) || !is_numeric($_year)) {
+//                $this->error('请输入数字或年不能为空!');
+//                exit;
+//            }
+//            if (empty($_month) || !is_numeric($_month)) {
+//                $this->error('请输入数字或月不能为空!');
+//                exit;
+//            }
+//            if (empty($_date) || !is_numeric($_date)) {
+//                $this->error('请输入数字或日不能为空!');
+//                exit;
+//            }
+//            if (empty($_hour) || !is_numeric($_hour)) {
+//                $this->error('请输入数字或小时不能为空!');
+//                exit;
+//            }
 
 
             //$nowdate = strtotime(date('c'));
@@ -3324,12 +3328,12 @@ class FckAction extends CommonAction {
                 //提交事务
                 $chongzhi->commit();
                 $bUrl = __URL__ . '/currencyRecharge';
-                $this->_box(1, '电子币充值成功，请等待后台审核！', $bUrl, 1);
+                $this->_box(1, '充值成功，请等待后台审核！', $bUrl, 1);
                 exit;
             } else {
                 //事务回滚：
                 $chongzhi->rollback();
-                $this->error('货币充值失败');
+                $this->error('充值失败');
                 exit;
             }
         } else {

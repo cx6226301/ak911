@@ -46,7 +46,9 @@ function yhServer(Ful){
               <option value="1"> 佣金 转给 其它会员 </option>
               <option value="2"> 佣金 转 金币 </option>
               <option value="3"> 佣金 转 报单币 </option>
+              <option value="5"> 报单币 转给 其它会员 </option>
 			  <option value="4"> 报单币 转 金币 </option>
+                          
               
             </select>
             </td>
@@ -94,6 +96,7 @@ function yhServer(Ful){
         	<eq name="vo['type']" value="2">佣金转金币账户<else/></eq>
         	<eq name="vo['type']" value="3">佣金转报单币<else/></eq>
         	<eq name="vo['type']" value="4">报单币转金币<else/></eq>
+                <eq name="vo['type']" value="5">报单币转给其它会员<else/></eq>
         </td>
         <td>{$vo['sm']}</td>
 	</tr>
@@ -109,7 +112,7 @@ function yhServer(Ful){
 </html>
 <script language="javascript">
 function Selev(o){
-	if(o==1){document.getElementById('Selev').style.display = '';}
+	if(o==1||o==5){document.getElementById('Selev').style.display = '';}
 	if(o==2||o==3||o==4){document.getElementById('Selev').style.display = 'none';}
 }
 new TableSorter("tb1");
