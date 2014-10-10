@@ -12,22 +12,18 @@ class TestAction extends CommonAction {
         $this->_clearing();
         echo "<p style='text-align:center; margin-top:50px;color:blue'>日分红成功!</p>";
     }
-    
-    public function x(){
-        $time=time();
-        $y=date("Y",$time);
-        $m=date("m",$time);
-        $d=date("d",$time);
-        $new= mktime(0, 0, 0, $m, $d, $y);
-        $new=$new-7*24*60*60;
-        echo date("Y-m-d H:i:s",$new);
-        
+
+    public function x() {
+        $ss='ss';
+        $fp = fopen("./123.txt", "w");
+        fwrite($fp, $ss . " ");
+        fclose($fp);
     }
 
     public function ss() {
         $fck = D('Fck');
-        $fck_rs=$fck->where("re_id in (select id from xt_fck where re_id=1)")->field('user_id')->find();
-        echo $fck->get_f4(1,3);
+        $fck_rs = $fck->where("re_id in (select id from xt_fck where re_id=1)")->field('user_id')->find();
+        echo $fck->get_f4(1, 3);
     }
 
     public function xxxx($user_id) {

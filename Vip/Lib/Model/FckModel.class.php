@@ -187,7 +187,7 @@ class FckModel extends CommonModel {
             $ul = $s1[$ss] / 100;
             $pri = $ul * $s9[0]; //
             $money = $NumS * $pri; //对碰奖 奖金
-            $is_fenh=$vo['is_fenh'];
+            $is_fenh = $vo['is_fenh'];
 //            if ($feng >= $s5[$ss]) {          //取消封顶
 //                $money = 0;
 //            } else {
@@ -199,18 +199,17 @@ class FckModel extends CommonModel {
 
             $this->query('UPDATE __TABLE__ SET `shangqi_l`=' . $Ls . ',`shangqi_r`=' . $Rs . ',`benqi_l`=0,`benqi_r`=0,peng_num=peng_num+' . $NumS . ' where `id`=' . $vo['id']);
 
-            if ($money > 0&&$is_fenh==0) {
+            if ($money > 0 && $is_fenh == 0) {
                 $this->addencAdd($vo['id'], $vo['user_id'], $money, 13); //添加奖金和记录
-				$this->xinren($vo['re_path'], $vo['user_id'], $vo['id'], $money);
+                $this->xinren($vo['re_path'], $vo['user_id'], $vo['id'], $money);
                 $this->query("UPDATE __TABLE__ SET `b13`=b13+{$money} where `id`=" . $vo['id']);
-                $b25=0;
+                $b25 = 0;
                 $this->guanli($money, $vo['user_id'], $vo['id']);
                 $this->jj_zhuanhuan($money, $b25);
                 $this->query("UPDATE __TABLE__ SET `b3`=b3+" . $money . ",day_feng=day_feng+" . $money . ",b25=b25+{$b25} where `id`=" . $vo['id']);
                 $this->addencAdd($vo['id'], $vo['user_id'], $money, 3); //添加奖金和记录
                 $this->addencAdd($vo['id'], $vo['user_id'], $b25, 25); //添加奖金和记录
                 //培育+互助
-                
             }
         }
     }
@@ -234,12 +233,12 @@ class FckModel extends CommonModel {
             $end_money = $s151 * $money / $f41 * $rs['f4'];
             $this->addencAdd($rs['id'], $user_id, $end_money, 14); //添加奖金和记录
             $this->query("UPDATE __TABLE__ SET `b14`=b14+{$end_money} where `id`=" . $rs['id']);
-            $b25=0;
+            $b25 = 0;
             $this->guanli($end_money, $rs['user_id'], $rs['id']);
             $this->jj_zhuanhuan($end_money, $b25);
             $this->execute("update __TABLE__ SET b4=b4+{$end_money},b25=b25+{$b25} where id={$rs['id']}");
             $this->addencAdd($rs['id'], $user_id, $end_money, 4);
-			$this->addencAdd($rs['id'], $user_id, $b25, 25);
+            $this->addencAdd($rs['id'], $user_id, $b25, 25);
             if ($f42 > 0) {
                 $i = 1; //第二层
                 $where2['re_id'] = $rs['id'];
@@ -251,7 +250,7 @@ class FckModel extends CommonModel {
                     $end_money = $s152 * $money / $f42 * $rs2['f4'];
                     $this->addencAdd($rs2['id'], $user_id, $end_money, 14); //添加奖金和记录
                     $this->query("UPDATE __TABLE__ SET `b14`=b14+{$end_money} where `id`=" . $rs2['id']);
-                    $b25=0;
+                    $b25 = 0;
                     $this->guanli($end_money, $rs2['user_id'], $rs2['id']);
                     $this->jj_zhuanhuan($end_money, $b25);
                     $this->execute("update __TABLE__ SET b4=b4+{$end_money},b25=b25+{$b25} where id={$rs2['id']}");
@@ -268,7 +267,7 @@ class FckModel extends CommonModel {
                             $end_money = $s153 * $money / $f43 * $rs3['f4'];
                             $this->addencAdd($rs3['id'], $user_id, $end_money, 14); //添加奖金和记录
                             $this->query("UPDATE __TABLE__ SET `b14`=b14+{$end_money} where `id`=" . $rs3['id']);
-                            $b25=0;
+                            $b25 = 0;
                             $this->guanli($end_money, $rs3['user_id'], $rs3['id']);
                             $this->jj_zhuanhuan($end_money, $b25);
                             $this->execute("update __TABLE__ SET b4=b4+{$end_money},b25=b25+{$b25} where id={$rs3['id']}");
@@ -285,7 +284,7 @@ class FckModel extends CommonModel {
                                     $end_money = $s154 * $money / $f44 * $rs4['f4'];
                                     $this->addencAdd($rs4['id'], $user_id, $end_money, 14); //添加奖金和记录
                                     $this->query("UPDATE __TABLE__ SET `b14`=b14+{$end_money} where `id`=" . $rs4['id']);
-                                    $b25=0;
+                                    $b25 = 0;
                                     $this->guanli($end_money, $rs4['user_id'], $rs4['id']);
                                     $this->jj_zhuanhuan($end_money, $b25);
                                     $this->execute("update __TABLE__ SET b4=b4+{$end_money},b25=b25+{$b25} where id={$rs4['id']}");
@@ -302,7 +301,7 @@ class FckModel extends CommonModel {
                                             $end_money = $s154 * $money / $f45 * $rs5['f4'];
                                             $this->addencAdd($rs5['id'], $user_id, $end_money, 14); //添加奖金和记录
                                             $this->query("UPDATE __TABLE__ SET `b14`=b14+{$end_money} where `id`=" . $rs5['id']);
-                                            $b25=0;
+                                            $b25 = 0;
                                             $this->guanli($end_money, $rs5['user_id'], $rs5['id']);
                                             $this->jj_zhuanhuan($end_money, $b25);
                                             $this->execute("update __TABLE__ SET b4=b4+{$end_money},b25=b25+{$b25} where id={$rs5['id']}");
@@ -336,7 +335,7 @@ class FckModel extends CommonModel {
     }
 
     public function jilijiang($treeplace, $p_level, $id, $jili, $p_path) {
-        if ($treeplace == 1 && $p_level >= 4 && $jili == 1) { //该会员有右区间-大于等于第四层-还未曾获得
+        if ($p_level >= 3) { //大于等于第四层 //修正：这里是当前被开通人信息，此前错误
             $fee = M('fee');
             $fee_rs = $fee->field('str2')->find(1);
             $str2 = $fee_rs['str2'] / 100;  //
@@ -347,30 +346,32 @@ class FckModel extends CommonModel {
             $u_level = $info['u_level'];
             $cpzj = $info['cpzj'];
             $jin_cpzj = $cpzj * $str2; //激励奖
-            $fck_rs = $this->where("father_id={$p_id}")->select();
-            $count = count($fck_rs);
-            if ($count >= 2) {
-                $i = 0;
-                foreach ($fck_rs as $rs) {
-                    $fck_rss = $this->where("father_id={$rs['id']} and u_level>={$u_level}")->select();
-                    $count1 = count($fck_rss);
-                    if ($count1 >= 2) {
-                        foreach ($fck_rss as $rss) {
-                            $count2 = $this->where("father_id={$rss['id']} and u_level>={$u_level}")->select();
-                            if ($count2 >= 2)
-                                $i++;
+            if ($info['jili'] == 1) {
+                $fck_rs = $this->where("father_id={$p_id}")->select();
+                $count = count($fck_rs);
+                if ($count >= 2) {
+                    $i = 0;
+                    foreach ($fck_rs as $rs) {
+                        $fck_rss = $this->where("father_id={$rs['id']} and u_level>={$u_level}")->select();
+                        $count1 = count($fck_rss);
+                        if ($count1 >= 2) {
+                            foreach ($fck_rss as $rss) {
+                                $count2 = $this->where("father_id={$rss['id']} and u_level>={$u_level}")->select();
+                                if ($count2 >= 2)
+                                    $i++;
+                            }
                         }
                     }
-                }
-                if ($i == 4) {
-                    $this->addencAdd($p_id, $info['user_id'], $jin_cpzj, 15); //添加奖金和记录
-                    $this->query("UPDATE __TABLE__ SET `b15`=b15+{$jin_cpzj} where `id`=" .$p_id);
-                    $b25=0;
-                    $this->guanli($jin_cpzj, $info['user_id'], $p_id);
-                    $this->jj_zhuanhuan($jin_cpzj, $b25);
-                    $this->query("update __TABLE__ set b5=b5+{$jin_cpzj},jili=0,b25=b25+{$b25} where id={$p_id}");
-                    $this->addencAdd($p_id, $info['user_id'], $jin_cpzj, 5);
-                    $this->addencAdd($p_id, $info['user_id'], $b25, 25);
+                    if ($i == 4) {
+                        $this->addencAdd($p_id, $info['user_id'], $jin_cpzj, 15); //添加奖金和记录
+                        $this->query("UPDATE __TABLE__ SET `b15`=b15+{$jin_cpzj} where `id`=" . $p_id);
+                        $b25 = 0;
+                        $this->guanli($jin_cpzj, $info['user_id'], $p_id);
+                        $this->jj_zhuanhuan($jin_cpzj, $b25);
+                        $this->query("update __TABLE__ set b5=b5+{$jin_cpzj},jili=0,b25=b25+{$b25} where id={$p_id}");
+                        $this->addencAdd($p_id, $info['user_id'], $jin_cpzj, 5);
+                        $this->addencAdd($p_id, $info['user_id'], $b25, 25);
+                    }
                 }
             }
         }
@@ -407,9 +408,9 @@ class FckModel extends CommonModel {
         $fee_rs = $fee->field('str7')->find(1);
         $str7 = $fee_rs['str7'] / 100;  //日分红
         if ($money > 0) {
-            if($user_id==''||empty($user_id)){
-                $user_info=$this->get_info($id);
-                $user_id=$user_info['user_id'];
+            if ($user_id == '' || empty($user_id)) {
+                $user_info = $this->get_info($id);
+                $user_id = $user_info['user_id'];
             }
             $end_money = $money * $str7;
             $money = $money - $end_money;
@@ -423,8 +424,8 @@ class FckModel extends CommonModel {
         $fee = M('fee');
         $fee_rs = $fee->field('s12')->find(1);
         $s12 = $fee_rs['s12'] / 100;  //日分红
-        $where['rifenhong'] = array('eq',1);
-        $where['is_pay'] = array('neq',0);
+        $where['rifenhong'] = array('eq', 1);
+        $where['is_pay'] = array('neq', 0);
         $field = 'zjj,cpzj,id,user_id,re_path';
         $fck_rs = $this->where($where)->field($field)->select();
         foreach ($fck_rs as $rs) {
@@ -438,7 +439,7 @@ class FckModel extends CommonModel {
             }
             $this->addencAdd($rs['id'], $rs['user_id'], $count_money, 11); //添加奖金和记录
             $this->query("UPDATE __TABLE__ SET `b11`=b11+{$count_money} where `id`=" . $rs['id']);
-            $b25=0;
+            $b25 = 0;
             $this->guanli($count_money, $rs['user_id'], $rs['id']);
             $this->jj_zhuanhuan($count_money, $b25);
             $this->query("UPDATE __TABLE__ SET `b1`=b1+" . $count_money . $rifenhong . ",b25=b25+{$b25} where `id`=" . $rs['id']);
@@ -462,8 +463,8 @@ class FckModel extends CommonModel {
             if ($s14[$ppr] >= $i) {
                 $count_money = $money * $s11[$ppr] / 100;
                 $this->addencAdd($rs['id'], $inUserID, $count_money, 17); //添加奖金和记录
-                $this->query("UPDATE __TABLE__ SET `b17`=b17+{$count_money} where `id`=" .$rs['id']);
-                $b25=0;
+                $this->query("UPDATE __TABLE__ SET `b17`=b17+{$count_money} where `id`=" . $rs['id']);
+                $b25 = 0;
                 $this->guanli($count_money, $rs['user_id'], $rs['id']);
                 $this->jj_zhuanhuan($count_money, $b25);
                 $this->query("UPDATE __TABLE__ SET `b7`=b7+" . $count_money . ",b25=b25+{$b25} where `id`=" . $rs['id']);
@@ -480,7 +481,7 @@ class FckModel extends CommonModel {
         $s6 = $fee_rs['s6'] / 100;  //现金比例
         $s13 = $fee_rs['s13'] / 100;  //金币比例
         $b25 = $money * $s13;
-        $money = round($money * $s6,2);
+        $money = round($money * $s6, 2);
     }
 
     //直推奖+极差
@@ -498,7 +499,7 @@ class FckModel extends CommonModel {
             if ($count_money > 0) {
                 $this->addencAdd($rs['id'], $inUserID, $count_money, 12); //添加奖金和记录
                 $this->query("UPDATE __TABLE__ SET `b12`=b12+{$count_money} where `id`=" . $rs['id']);
-                $b25=0;
+                $b25 = 0;
                 $this->guanli($count_money, $rs['user_id'], $rs['id']);
                 $this->jj_zhuanhuan($count_money, $b25);
                 $this->query("UPDATE __TABLE__ SET `b2`=b2+" . $count_money . ",b25=b25+{$b25} where `id`=" . $rs['id']);
@@ -525,8 +526,8 @@ class FckModel extends CommonModel {
             if ($s5[$ppr] >= $i) {
                 $count_money = $s4[$ppr];
                 $this->addencAdd($rs['id'], $inUserID, $count_money, 16); //添加奖金和记录
-                $this->query("UPDATE __TABLE__ SET `b16`=b16+{$count_money} where `id`=" .$rs['id']);
-                $b25=0;
+                $this->query("UPDATE __TABLE__ SET `b16`=b16+{$count_money} where `id`=" . $rs['id']);
+                $b25 = 0;
                 $this->guanli($count_money, $rs['user_id'], $rs['id']);
                 $this->jj_zhuanhuan($count_money, $b25);
                 $this->query("UPDATE __TABLE__ SET `b6`=b6+" . $count_money . ",b25=b25+{$b25} where `id`=" . $rs['id']);
@@ -549,8 +550,8 @@ class FckModel extends CommonModel {
 
         if ($money_count > 0) {
             $this->addencAdd($uid, $user_id, $money_count, 19); //添加奖金和记录
-            $this->query("UPDATE __TABLE__ SET `b19`=b19+{$money_count} where `id`=" .$uid);
-            $b25=0;
+            $this->query("UPDATE __TABLE__ SET `b19`=b19+{$money_count} where `id`=" . $uid);
+            $b25 = 0;
             $this->guanli($money_count, $user_id, $uid);
             $this->jj_zhuanhuan($money_count, $b25);
             $this->query("UPDATE __TABLE__ SET `b9`=b9+" . $money_count . ",b25=b25+{$b25} where `id`=" . $uid);
@@ -686,14 +687,14 @@ class FckModel extends CommonModel {
     public function quanhuizong() {
 
         $this->execute('UPDATE __TABLE__ SET b2=0,b3=0,b4=0,b5=0,b6=0,b7=0,b8=0,b9=0 where is_fenh=1');
-        $history=M('history');
-        $bonus=M('bonus');
-        $time=time();
-        $y=date("Y",$time);
-        $m=date("m",$time);
-        $d=date("d",$time);
-        $new= mktime(0, 0, 0, $m, $d, $y);
-        $new=$new-7*24*60*60;
+        $history = M('history');
+        $bonus = M('bonus');
+        $time = time();
+        $y = date("Y", $time);
+        $m = date("m", $time);
+        $d = date("d", $time);
+        $new = mktime(0, 0, 0, $m, $d, $y);
+        $new = $new - 7 * 24 * 60 * 60;
         $history->where("pdt<{$new}")->delete();
         $bonus->where("e_date<{$new}")->delete();
         $this->execute('UPDATE __TABLE__ SET agent_zz=agent_zz+b25 where b25<>0');

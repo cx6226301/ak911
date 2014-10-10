@@ -228,7 +228,7 @@ class BackupAction extends CommonAction {
 	}
 
 	public function sql_query($dir="",&$errmsg="",&$msg="",$n=0,$maxt=0){
-
+            set_time_limit(0);
 		import ( "@.ORG.KuoZhan" );  //导入扩展类
         $KuoZhan = new KuoZhan();
 		if ($KuoZhan->is_utf8($dir) == true){
@@ -287,7 +287,7 @@ class BackupAction extends CommonAction {
 				}
 			}
 		}
-		usleep(100000);//0.5秒
+//		usleep(100000);//0.5秒
 
 		if ($err>0){
 			$C_path = $this->Check_C_config();
