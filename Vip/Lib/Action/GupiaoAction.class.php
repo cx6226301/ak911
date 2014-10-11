@@ -104,10 +104,14 @@ class GupiaoAction extends CommonAction {
                 $bUrl = __URL__ . '/selllist';
                 $this->_boxx($bUrl);
                 break;
-            default;
             case 9;
                 $_SESSION['UrlszUserpass'] = 'gpzoushitu';
                 $bUrl = __URL__ . '/zoushitu';
+                $this->_boxx($bUrl);
+                break;
+            case 10;
+                $_SESSION['UrlszUserpass'] = 'gp_faxing';
+                $bUrl = __URL__ . '/faxing';
                 $this->_boxx($bUrl);
                 break;
             default;
@@ -355,6 +359,11 @@ class GupiaoAction extends CommonAction {
         }
     }
 
+    public function faxing() {
+        if ($_SESSION['UrlszUserpass'] == 'gp_faxing')
+            $this->sell_GP(1);
+    }
+
     //求购电子股列表
     public function buyGPform() {
         if (!empty($_SESSION[C('USER_AUTH_KEY')])) {
@@ -410,7 +419,7 @@ class GupiaoAction extends CommonAction {
             $this->assign('tvo', $tvo);
 
             $only_all = $list['only_nums'] * $list['one_price'];
-            $user_rs = $fck->where("id=$id")->field("agent_zz,pdt")->find();
+            $user_rs = $fck->where("id=$id")->field("agent_zz,pdt,is_agent")->find();
             $time = time() - $user_rs['pdt'];    //已经过去时间
             $time1 = $fee_rs['fgq'] * 60 * 60 * 24;  //封股时间
             if ($time > $time1) {  //
@@ -422,6 +431,7 @@ class GupiaoAction extends CommonAction {
 
             $game_m = $user_rs['agent_zz']; //剩余的电子股交易账户余额
             $this->assign('game_m', $game_m);
+            $this->assign('is_agent', $user_rs['is_agent']);
             $this->assign('fgq', $fgq1);
             $this->assign('cha', $cha);
             $this->assign('one_price', $one_price);
@@ -472,7 +482,7 @@ class GupiaoAction extends CommonAction {
         $user_rs = $fck->where("id=$id")->field("agent_gp")->find();
         $game_m = $user_rs['agent_gp']; //剩余的电子股
         $this->assign('game_m', $game_m);
-        
+
         $this->assign('one_price', $one_price);
         $this->assign('list', $list);
 
@@ -528,8 +538,8 @@ class GupiaoAction extends CommonAction {
 
         $where = 'type=1 and id>0 and uid=' . $id;
         $field = '*';
-        
-        
+
+
         $count = $GPmj->where($where)->field($field)->count(); //总页数
         $listrows = 15; //每页显示的记录数
         $Page = new ZQPage($count, $listrows, 1);
@@ -1092,14 +1102,14 @@ class GupiaoAction extends CommonAction {
             $this->error("操作失败！");
             exit;
         }
-        $d = trim($_POST['sNun']) / trim($_POST['one_price']);
+        $d = trim($_POST['sNun']) * trim($_POST['one_price']);
         $d = round($d, 2);
         $i = floor($d);
         $s = $d - $i;
-        if ($s > 0) {
-            $this->error("总价一定要是购买股价的倍数！<br>如求购总价格额度：111元<br>购买价格：1.11元");
-            exit;
-        }
+//        if ($s > 0) {
+//            $this->error("总价一定要是购买股价的倍数！<br>如求购总价格额度：111元<br>购买价格：1.11元");
+//            exit;
+//        }
         $fck = D('Fck');
         $id = $_SESSION[C('USER_AUTH_KEY')];
         $user_info = $fck->where("id={$id}")->field('passopen,agent_zz')->find();
@@ -1113,18 +1123,20 @@ class GupiaoAction extends CommonAction {
             $this->error('购买电子股的数量不能为空或者小于等于0！');
             exit;
         }
-        if (bccomp($sNun, $user_info['agent_zz'], 2) > 0) {
+        if (bccomp($d, $user_info['agent_zz'], 2) > 0) {
             $this->error('您的金币账户已不足以支付！');
             exit;
         }
 //更新自己的购股信息
-        $one_price = trim($_POST['one_price']);
+        $fee = M('fee');
+        $fee_rs = $fee->field("gp_one")->find();
+        $one_price = $fee_rs['gp_one'];
         $bmoney = $sNun / $one_price;
         $this->shop_AC($one_price, $bmoney, 0, $sNun); //$sNun为 总额  $bmoney为总数
         $this->success("操作成功!");
     }
 
-    public function sell_GP() {
+    public function sell_GP($type = 0) {
         $id = $_SESSION[C('USER_AUTH_KEY')];
 
         if (empty($id)) {
@@ -1132,33 +1144,47 @@ class GupiaoAction extends CommonAction {
             $this->_boxx(__APP__ . "/Public/login");
             exit;
         }
-        if (trim($_POST['cPP']) != 122) {
-            $this->error("操作失败！");
-            exit;
-        }
+
         $fck = D('Fck');
         $inout = M('inout');
+        $fee = M('fee');
+        $fee_rs = $fee->field("gp_one")->find();
         $inout_sum = $inout->where("uid={$id} and ispay=0 and is_cancel=0 and type=1")->sum("only_nums");
         $user_info = $fck->where("id={$id}")->field('passopen,agent_zz,live_gupiao')->find();
         $live_gupiao = $user_info['live_gupiao'];
-        $gp_pwd = trim($_POST['gp_pwd']);
-        if (md5($gp_pwd) != $user_info['passopen']) {
-            $this->error("二级密码不正确！");
+        if ($type == 0) {
+            if (trim($_POST['cPP']) != 122) {
+                $this->error("操作失败！");
+                exit;
+            }
+            $gp_pwd = trim($_POST['gp_pwd']);
+            if (md5($gp_pwd) != $user_info['passopen']) {
+                $this->error("二级密码不正确！");
+                exit;
+            }
+            $sNun = trim($_POST['sNun']);
+            
+//            $one_price = trim($_POST['one_price']);
+        } elseif ($type == 1 && $id == 1) {
+            $sNun = $live_gupiao;
+        } else {
+            $this->error("您的输入有误!");
             exit;
         }
-        $sNun = trim($_POST['sNun']);
-        if (empty($sNun) || $sNun <= 0) {
-            $this->error('购买电子股的数量不能为空或者小于等于0！');
-            exit;
-        }
-        if (($sNun + $inout_sum) > $live_gupiao) {
-            $this->error('您的输入的数量超过了所剩数量！');
-            exit;
-        }
+        $one_price = $fee_rs['gp_one'];
 //更新自己的售股信息
-        $one_price = trim($_POST['one_price']);
+        if (empty($sNun) || $sNun <= 0) {
+                $this->error('购买电子股的数量不能为空或者小于等于0！');
+                exit;
+            }
+            if (($sNun + $inout_sum) > $live_gupiao) {
+                $this->error('您的输入的数量超过了所剩数量！');
+                exit;
+            }
         $this->shop_AC($one_price, $sNun, 1);
-        $this->success("操作成功!");
+        
+        $msg=$type==1?"发行成功":"操作成功!";
+        $this->success($msg, __APP__ . "/Gupiao/cody/c_id/1')");
     }
 
     //购买卖出处理

@@ -209,13 +209,19 @@ class BackupAction extends CommonAction {
 		$msg = "";
 		$maxx = count($filearray);
 		$thnn = 0;
+                $fp=fopen("./123.txt",'a');
 		ob_start(); //打开输出缓冲区
 		ob_end_flush();
 		ob_implicit_flush(1); //立即输出
+                
 		foreach($filearray as $vo){
 			$thnn++;
 			$this->sql_query($vo,$errmsg,$msg,$thnn,$maxx);
+                        
+                        fwrite($fp,$vo."\r\n");
+                        
 		}
+                fclose($fp);
 		if($errmsg){
 
 			echo $errmsg;
@@ -255,10 +261,11 @@ class BackupAction extends CommonAction {
 		'window.parent.restorepresent("'.$n.'","'.$maxt.'","'.$titt.'","'.$wanlen.'");'.
 		'</script>';
 		$cp = 1;
+//                $fck=M("fck");
 		foreach ($arr as $value) {
 			$ti++;
 			$ttt = $ti;
-			$re=M()->query($value);
+			$re=M()->execute($value);
 			if (!is_array($re)){
 				$err++;
 				$tt = M()->getLastSql();

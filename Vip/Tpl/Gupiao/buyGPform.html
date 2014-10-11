@@ -3,7 +3,7 @@
 .tab_l3{font-size:14px;}
 </style>
 <div class="ncenter_box">
-<div class="accounttitle"><h1>电子股购买</h1></div>
+<div class="accounttitle"><h1>股票购买</h1></div>
       <table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" class="tab" >
 
         <tr>
@@ -19,10 +19,10 @@
                     <th width="35%" height="30" align="left">金币账户：<span style="color:#F00;">￥ {$game_m}</span></th>
                     </tr>
                   <tr class="bor">
-                    <th height="30" align="left">电子股持有数量：<span style="color:#F00;">{$live_gp}</span> 个</th>
+                    <th height="30" align="left">股票持有数量：<span style="color:#F00;">{$live_gp}</span> 个</th>
                   </tr>
                   <tr class="bor">
-                    <th height="30" align="left">电子股求购数量：<span style="color:#F00;">{$gping_num}</span> 个</th>
+                    <th height="30" align="left">股票求购数量：<span style="color:#F00;">{$gping_num}</span> 个</th>
                   </tr>
                   <tr class="bor">
                     <th height="30" align="left">当前股价：<span style="color:blue;">{$one_price}</span> /股</th>
@@ -37,22 +37,17 @@
               <form action="__URL__/buyGP" method="post" name="form1" id="form1" onsubmit="return checkf();">
               <table width="400" border="0" cellpadding="0" cellspacing="0" class="tab3">
                   <tr>
-                    <td width="30%" height="40" align="right">求购总价格额度：</td>
+                    <td width="30%" height="40" align="right">求购股票数量：</td>
                     <td width="70%" align="left" style="padding-left:10px;"><input name="sNun" type="text" id="sNun"  maxlength="20" onblur="value=value.replace(/[^0-9.]/g,'');tot_price();" />
-                  </td>
+                  个</td>
                   </tr>
                   <tr>
-                    <td height="40" align="right">电子股当前价格：</td>
-                    <td align="left" style="padding-left:10px;"><font color='red'>{$one_price}</font>
+                    <td height="40" align="right">股票当前价格：</td>
+                    <td align="left" style="padding-left:10px;"><font color='red' id="one_price">{$one_price}</font>
                       /个</td>
                   </tr>
                   <tr>
-                    <td height="40" align="right">购买价格：</td>
-                    <td align="left" style="padding-left:10px;"><input name="one_price" type="text" id="one_price"  maxlength="20" value="{$one_price}"  onblur="value=value.replace(/[^0-9.]/g,'');tot_price();"/>
-                      /个</td>
-                  </tr>
-                  <tr>
-                    <td height="40" align="right">购买电子股总数：</td>
+                    <td height="40" align="right">购买股票金额：</td>
                     <td align="left" style="padding-left:10px;"><span style="color:#960" id="tot_price">0</span></td>
                   </tr>
                   <tr>
@@ -63,12 +58,9 @@
                     <td height="40" align="right">&nbsp;</td>
                     <td align="left" style="padding-left:10px;">
                         
-                    <eq name="close_gp" value="0">
-                  <neq name="fgq" value="0"><font color="red">还差{$fgq}天即可操作</font><else/><input type="submit" name="button2" id="button2" value="确认求购" class="btn1" /></neq>
                       
-                      <else />
-                      <eq name="open" value="0"><span style="color:#F00">股票还未出售完全</span><else/>
-                      <span style="color:#F00">股市交易已关闭</span> </eq></eq>
+                     
+                     <if condition="$gp_kg eq 1"><span style="color:#F00">股市交易已关闭</span> <else/><input type="submit" name="button2" id="button2" onclick="if(confirm('确定购买吗?')) return true;else return false;" value="确认求购" class="btn1" /></if>
                       <input name="cPP" type="hidden" id="cPP" value="122" />
                       <input name="PID" type="hidden" id="PID" /></td>
                   </tr>
@@ -121,11 +113,9 @@
 
 <script type="text/javascript">
 function tot_price(){
-	var one_price = document.getElementById('one_price').value;//单价
+	var one_price = document.getElementById('one_price').innerHTML;//单价
 	var sNun	= document.getElementById('sNun').value;//总额
-	one_price = parseInt(one_price*100);
-	sNun = parseInt(sNun*100);
-	var mai_num = parseInt(sNun/one_price);
+	var mai_num = sNun*one_price;
 	document.getElementById('tot_price').innerHTML = mai_num+'';
 }
 function formatNumberUnitsDivd(num) {
@@ -147,7 +137,7 @@ function checkf(){
 	one_price = parseInt(one_price*100);
 	sNun = parseInt(sNun*100);
 	var mai_num = parseInt(sNun/one_price);
-	if(confirm("您确定要购买总额为 "+document.form1.sNun.value+" 股票币的电子股吗？\n\n每颗电子股单价："+document.form1.one_price.value+"\n\n当前购买力："+mai_num)){
+	if(confirm("您确定要购买总额为 "+document.form1.sNun.value+" 股票币的股票吗？\n\n每颗股票单价："+document.form1.one_price.value+"\n\n当前购买力："+mai_num)){
 		return true;
 	}else{
 		return false;

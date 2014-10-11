@@ -1,0 +1,627 @@
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run CheckRoute Behavior [ RunTime:0.000780s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ route_check ] --END-- [ RunTime:0.000881s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000675s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000758s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007819s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1637' ) AND ( `user_id` = '111' ) LIMIT 1   [ RunTime:0.000338s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005519s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000259s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_gp` [ RunTime:0.005261s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_gupiao` [ RunTime:0.004322s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `gp_one`,`gp_fxnum`,`gp_senum`,`gp_cnum` FROM `xt_fee` LIMIT 1   [ RunTime:0.000222s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_xml` [ RunTime:0.004191s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_gp` WHERE id=1 LIMIT 1   [ RunTime:0.000312s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_gp set yt_sellnum=gp_quantity,gp_quantity=0,closing=opening where id=1 and gp_quantity= [ RunTime:0.000197s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_gp set today=opening,most_g=opening,most_d=opening,f_date='
+
+1413020662' where id=1 [ RunTime:0.000500s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_xml` WHERE x_date>=1325347200 ORDER BY x_date desc  [ RunTime:0.000460s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] Invalid argument supplied for foreach() GupiaoAction.class.php 第 2168 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] file_put_contents(./Public/U/data2.csv) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory GupiaoAction.class.php 第 2177 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8] Undefined index: one_price GupiaoAction.class.php 第 1105 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007373s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `passopen`,`agent_zz` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000270s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `gp_one` FROM `xt_fee` LIMIT 1   [ RunTime:0.000155s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_inout` [ RunTime:0.004617s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007986s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `gp_perc` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000293s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fck set agent_zz=agent_zz-100 where id=1637 [ RunTime:0.000253s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_inout` (`uid`,`one_price`,`price`,`all_nums`,`only_nums`,`buy_s`,`type`,`status`,`add_time`) VALUES ('1637','1.00',100,100,100,'100',0,1,1413020662) [ RunTime:0.035891s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_inout` WHERE id>0 ORDER BY id desc LIMIT 1   [ RunTime:0.000393s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_inout` WHERE ( `type` = 1 ) AND ( `status` = 1 ) AND ( `only_nums` > 0 ) AND ( `ispay` = 0 ) ORDER BY add_time asc  [ RunTime:0.000238s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `user_id` FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000192s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_inout set only_nums=only_nums-100  where id=21 [ RunTime:0.035338s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_history` [ RunTime:0.008239s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead FckModel.class.php 第 89 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_history` (`user_id`,`uid`,`action_type`,`pdt`,`epoints`,`bz`,`did`,`type`,`allp`) VALUES ('100000','1',18,1413020662,100,18,0,1,0) [ RunTime:0.000286s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b18`=b18+100 where `id`=1 [ RunTime:0.000260s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8] Undefined index: user_id GupiaoAction.class.php 第 1254 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007905s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `str7` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000551s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.001327s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b10`=b10-10 where `id`=1 [ RunTime:0.000442s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead FckModel.class.php 第 89 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_history` (`user_id`,`uid`,`action_type`,`pdt`,`epoints`,`bz`,`did`,`type`,`allp`) VALUES ('100000','1',10,1413020662,-10,10,0,1,0) [ RunTime:0.000504s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `s6`,`s13` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000360s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b8`=b8+54,b25=b25+36 where `id`=1 [ RunTime:0.000328s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead FckModel.class.php 第 89 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_history` (`user_id`,`uid`,`action_type`,`pdt`,`epoints`,`bz`,`did`,`type`,`allp`) VALUES ('100000','1',8,1413020662,54,8,0,1,0) [ RunTime:0.000371s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead FckModel.class.php 第 89 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_history` (`user_id`,`uid`,`action_type`,`pdt`,`epoints`,`bz`,`did`,`type`,`allp`) VALUES ('100000','1',25,1413020662,36,25,0,1,0) [ RunTime:0.001238s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_inout set only_nums=only_nums-100,ispay=1 where id=24 [ RunTime:0.027303s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fck set live_gupiao=live_gupiao+100 where id=1637 [ RunTime:0.000332s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fee set zjyl=zjyl+100 where id=1 [ RunTime:0.000220s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `zjyl`,`cha_zjyl`,`zl`,`gpzjgl`,`zhang_one` FROM `xt_fee` LIMIT 1   [ RunTime:0.000210s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_times` [ RunTime:0.004742s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007288s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_times` WHERE ( `benqi` = 1413043199 ) AND ( `type` = 0 ) LIMIT 1   [ RunTime:0.000281s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b0`=b1+b2+b3+b4+b5+b6+b7+b8+b9+b10 [ RunTime:0.000262s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET b2=0,b3=0,b4=0,b5=0,b6=0,b7=0,b8=0,b9=0 where is_fenh=1 [ RunTime:0.000204s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_bonus` [ RunTime:0.005571s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: DELETE FROM `xt_history` WHERE pdt<1412352000 [ RunTime:0.000250s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: DELETE FROM `xt_bonus` WHERE e_date<1412352000 [ RunTime:0.000202s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET agent_zz=agent_zz+b25 where b25<>0 [ RunTime:0.000239s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b0`=b1+b2+b3+b4+b5+b6+b7+b8+b9 [ RunTime:0.000204s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `id` FROM `xt_times` WHERE ( `type` = 0 ) ORDER BY id desc LIMIT 1   [ RunTime:0.000410s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_fck` WHERE ( `is_tj` = 0 ) AND ( `is_pay` > 0 ) AND ( b0<>0 or b1<>0 or b2<>0 or b3<>0 or b4<>0 or b5<>0 or b6<>0 or b7<>0 or b8<>0 or b9<>0 or b10<>0 ) ORDER BY id asc  [ RunTime:0.000659s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fck set agent_use=agent_use+54.00,zjj=zjj+b11+b12+b13+b14+b15+b16+b17+b18+b19,is_tj=1 where id=1 and b0=54.00 and is_tj=0 [ RunTime:0.000290s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_bonus` WHERE ( `did` = '103' ) AND ( `uid` = '1' ) LIMIT 1   [ RunTime:0.000280s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_bonus set `b0`=b0+54.00,`b1`=b1+0.00,`b2`=b2+0.00,`b3`=b3+0.00,`b4`=b4+0.00,`b5`=b5+0.00,`b6`=b6+0.00,`b7`=b7+0.00,`b8`=b8+54.00,`b9`=b9+0.00,`b10`=b10+-10.00,`b11`=b11+0.00,`b12`=b12+0.00,`b13`=b13+0.00,`b14`=b14+0.00,`b15`=b15+0.00,`b16`=b16+0.00,`b17`=b17+0.00,`b18`=b18+100.00,`b19`=b19+0.00,`b25`=b25+36.00,`b20`=b20+0.00 where `id`=2275 [ RunTime:0.000243s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fck set b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0,b7=0,b8=0,b9=0,b10=0,b11=0,b12=0,b13=0,b14=0,b15=0,b16=0,b17=0,b18=0,b19=0,b20=0,b25=0,is_tj=0 where id=1 [ RunTime:0.000218s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_times_bonus` [ RunTime:0.003842s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `b0`,`b1`,`b2`,`b3`,`b4`,`b5`,`b6`,`b7`,`b8`,`b9`,`b10` FROM `xt_fee` LIMIT 1   [ RunTime:0.000178s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_times` ORDER BY id desc LIMIT 1   [ RunTime:0.000200s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b0) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000202s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b1) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000172s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b2) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000167s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b3) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000167s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b4) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000163s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b5) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000182s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b6) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000356s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b7) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000269s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b8) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000206s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_times_bonus` WHERE did=0 LIMIT 1   [ RunTime:0.000301s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_times_bonus` (`b0`,`b1`,`b2`,`b3`,`b4`,`b5`,`b6`,`b7`,`b8`,`did`,`s_date`,`e_date`) VALUES ('677.70','0.00','16.20','0.00','0.00','0.00','13.50','0.00','648.00','103','1262275200','1413043199') [ RunTime:0.000248s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run LocationTemplate Behavior [ RunTime:0.000726s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_template ] --END-- [ RunTime:0.000803s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ParseTemplate Behavior [ RunTime:0.008381s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_parse ] --END-- [ RunTime:0.008476s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ContentReplace Behavior [ RunTime:0.000425s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run TokenBuild Behavior [ RunTime:0.000572s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000944s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ShowRuntime Behavior [ RunTime:0.000857s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003088s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ShowPageTrace Behavior [ RunTime:0.000680s ]
+[ 2014-10-11T17:44:22+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_end ] --END-- [ RunTime:0.000782s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run CheckRoute Behavior [ RunTime:0.001008s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --END-- [ RunTime:0.001113s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000673s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000756s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007439s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1637' ) AND ( `user_id` = '111' ) LIMIT 1   [ RunTime:0.000341s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005922s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000300s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gp` [ RunTime:0.004955s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gupiao` [ RunTime:0.006386s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`gp_fxnum`,`gp_senum`,`gp_cnum` FROM `xt_fee` LIMIT 1   [ RunTime:0.001119s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_xml` [ RunTime:0.003810s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_gp` WHERE id=1 LIMIT 1   [ RunTime:0.000330s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set yt_sellnum=gp_quantity,gp_quantity=0,closing=opening where id=1 and gp_quantity= [ RunTime:0.000144s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set today=opening,most_g=opening,most_d=opening,f_date='
+
+1413020663' where id=1 [ RunTime:0.000201s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_xml` WHERE x_date>=1325347200 ORDER BY x_date desc  [ RunTime:0.000273s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() GupiaoAction.class.php 第 2168 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] file_put_contents(./Public/U/data2.csv) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory GupiaoAction.class.php 第 2177 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_inout` [ RunTime:0.004911s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_kg` FROM `xt_fee` LIMIT 1   [ RunTime:0.000906s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`fgq`,`open`,`gpzjgl`,`zjyl`,`cha_zjyl` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000390s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_fxnum GupiaoAction.class.php 第 383 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_senum GupiaoAction.class.php 第 384 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `live_gupiao`,`all_in_gupiao`,`all_out_gupiao` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000368s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT SUM(only_nums) AS tp_sum FROM `xt_inout` WHERE uid=1637 and type=0 and ispay=0 LIMIT 1   [ RunTime:0.000405s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT COUNT(*) AS tp_count FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 LIMIT 1   [ RunTime:0.000329s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.000283s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: only_nums GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: one_price GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `agent_zz`,`pdt`,`is_agent` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000229s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run LocationTemplate Behavior [ RunTime:0.000891s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --END-- [ RunTime:0.000977s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: System_namex a0d4576e439681fe58029f92b90a126c.php 第 5 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: gp_kg a0d4576e439681fe58029f92b90a126c.php 第 94 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ParseTemplate Behavior [ RunTime:0.013629s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --END-- [ RunTime:0.013704s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ContentReplace Behavior [ RunTime:0.000518s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run TokenBuild Behavior [ RunTime:0.000560s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000363s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowRuntime Behavior [ RunTime:0.000559s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002200s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowPageTrace Behavior [ RunTime:0.000478s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --END-- [ RunTime:0.000551s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run CheckRoute Behavior [ RunTime:0.001491s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --END-- [ RunTime:0.001641s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000789s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000888s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007980s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1637' ) AND ( `user_id` = '111' ) LIMIT 1   [ RunTime:0.000294s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.006167s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000248s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gp` [ RunTime:0.005539s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gupiao` [ RunTime:0.003768s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`gp_fxnum`,`gp_senum`,`gp_cnum` FROM `xt_fee` LIMIT 1   [ RunTime:0.000175s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_xml` [ RunTime:0.004340s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_gp` WHERE id=1 LIMIT 1   [ RunTime:0.000341s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set yt_sellnum=gp_quantity,gp_quantity=0,closing=opening where id=1 and gp_quantity= [ RunTime:0.000132s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set today=opening,most_g=opening,most_d=opening,f_date='
+
+1413020663' where id=1 [ RunTime:0.000210s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_xml` WHERE x_date>=1325347200 ORDER BY x_date desc  [ RunTime:0.000410s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() GupiaoAction.class.php 第 2168 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] file_put_contents(./Public/U/data2.csv) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory GupiaoAction.class.php 第 2177 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_inout` [ RunTime:0.004824s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_kg` FROM `xt_fee` LIMIT 1   [ RunTime:0.000250s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`fgq`,`open`,`gpzjgl`,`zjyl`,`cha_zjyl` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000218s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_fxnum GupiaoAction.class.php 第 383 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_senum GupiaoAction.class.php 第 384 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `live_gupiao`,`all_in_gupiao`,`all_out_gupiao` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000222s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT SUM(only_nums) AS tp_sum FROM `xt_inout` WHERE uid=1637 and type=0 and ispay=0 LIMIT 1   [ RunTime:0.000243s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT COUNT(*) AS tp_count FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 LIMIT 1   [ RunTime:0.000334s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.000293s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: only_nums GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: one_price GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `agent_zz`,`pdt`,`is_agent` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000216s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run LocationTemplate Behavior [ RunTime:0.000925s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --END-- [ RunTime:0.001001s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: System_namex a0d4576e439681fe58029f92b90a126c.php 第 5 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: gp_kg a0d4576e439681fe58029f92b90a126c.php 第 94 行.
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ParseTemplate Behavior [ RunTime:0.014931s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --END-- [ RunTime:0.015005s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ContentReplace Behavior [ RunTime:0.000606s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run TokenBuild Behavior [ RunTime:0.000658s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000421s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowRuntime Behavior [ RunTime:0.000747s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002661s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowPageTrace Behavior [ RunTime:0.000637s ]
+[ 2014-10-11T17:44:23+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --END-- [ RunTime:0.000709s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run CheckRoute Behavior [ RunTime:0.001237s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --END-- [ RunTime:0.001371s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000652s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000754s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007670s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1637' ) AND ( `user_id` = '111' ) LIMIT 1   [ RunTime:0.000370s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005981s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000392s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gp` [ RunTime:0.004551s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gupiao` [ RunTime:0.004043s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`gp_fxnum`,`gp_senum`,`gp_cnum` FROM `xt_fee` LIMIT 1   [ RunTime:0.000199s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_xml` [ RunTime:0.003549s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_gp` WHERE id=1 LIMIT 1   [ RunTime:0.000343s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set yt_sellnum=gp_quantity,gp_quantity=0,closing=opening where id=1 and gp_quantity= [ RunTime:0.000123s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set today=opening,most_g=opening,most_d=opening,f_date='
+
+1413020705' where id=1 [ RunTime:0.000191s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_xml` WHERE x_date>=1325347200 ORDER BY x_date desc  [ RunTime:0.000268s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() GupiaoAction.class.php 第 2168 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] file_put_contents(./Public/U/data2.csv) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory GupiaoAction.class.php 第 2177 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_inout` [ RunTime:0.004439s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_kg` FROM `xt_fee` LIMIT 1   [ RunTime:0.000231s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`fgq`,`open`,`gpzjgl`,`zjyl`,`cha_zjyl` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000229s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_fxnum GupiaoAction.class.php 第 383 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_senum GupiaoAction.class.php 第 384 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `live_gupiao`,`all_in_gupiao`,`all_out_gupiao` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000205s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT SUM(only_nums) AS tp_sum FROM `xt_inout` WHERE uid=1637 and type=0 and ispay=0 LIMIT 1   [ RunTime:0.000235s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT COUNT(*) AS tp_count FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 LIMIT 1   [ RunTime:0.000257s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.000268s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: only_nums GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: one_price GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `agent_zz`,`pdt`,`is_agent` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000195s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run LocationTemplate Behavior [ RunTime:0.000537s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --END-- [ RunTime:0.000609s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: System_namex a0d4576e439681fe58029f92b90a126c.php 第 5 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: gp_kg a0d4576e439681fe58029f92b90a126c.php 第 94 行.
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ParseTemplate Behavior [ RunTime:0.013058s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --END-- [ RunTime:0.013133s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ContentReplace Behavior [ RunTime:0.000465s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run TokenBuild Behavior [ RunTime:0.000508s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000277s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowRuntime Behavior [ RunTime:0.000532s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --END-- [ RunTime:0.001979s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowPageTrace Behavior [ RunTime:0.000434s ]
+[ 2014-10-11T17:45:05+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --END-- [ RunTime:0.000501s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | INFO: Run CheckRoute Behavior [ RunTime:0.000768s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | INFO: Tag[ route_check ] --END-- [ RunTime:0.000868s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000565s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000639s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.009615s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000475s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.009437s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000617s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | SQL: SELECT `id`,`user_id` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `is_boss` > 0 ) LIMIT 1   [ RunTime:0.000456s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/YouZi/codys/Urlsz/7 | NOTIC: [8] Undefined index: Urlsz YouZiAction.class.php 第 36 行.
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/Backup/ | INFO: Run CheckRoute Behavior [ RunTime:0.000770s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.000901s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/Backup/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000618s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000704s ]
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/Backup/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:45:14+08:00 ] /ak911/index.php/Backup/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.008997s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000428s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.007248s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000997s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | SQL: SELECT `id`,`user_id` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `is_boss` > 0 ) LIMIT 1   [ RunTime:0.000527s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Run LocationTemplate Behavior [ RunTime:0.000812s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.000924s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Run ParseTemplate Behavior [ RunTime:0.010221s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.010304s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Run ContentReplace Behavior [ RunTime:0.000461s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Run TokenBuild Behavior [ RunTime:0.000487s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000304s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000506s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.001957s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000402s ]
+[ 2014-10-11T17:45:15+08:00 ] /ak911/index.php/Backup/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.000473s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run CheckRoute Behavior [ RunTime:0.001064s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001178s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000747s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000834s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.011619s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000529s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.009264s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000528s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | SQL: SELECT `id`,`user_id` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `is_boss` > 0 ) LIMIT 1   [ RunTime:0.000284s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run LocationTemplate Behavior [ RunTime:0.001359s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.001540s ]
+[ 2014-10-11T17:46:33+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ParseTemplate Behavior [ RunTime:0.011026s ]
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.011115s ]
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ContentReplace Behavior [ RunTime:0.000620s ]
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run TokenBuild Behavior [ RunTime:0.000638s ]
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000370s ]
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000553s ]
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002419s ]
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000565s ]
+[ 2014-10-11T17:46:34+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.000646s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run CheckRoute Behavior [ RunTime:0.000984s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --END-- [ RunTime:0.001085s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000612s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000686s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007957s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1637' ) AND ( `user_id` = '111' ) LIMIT 1   [ RunTime:0.000732s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005830s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000358s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gp` [ RunTime:0.006086s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gupiao` [ RunTime:0.004695s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`gp_fxnum`,`gp_senum`,`gp_cnum` FROM `xt_fee` LIMIT 1   [ RunTime:0.000871s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_xml` [ RunTime:0.004437s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_gp` WHERE id=1 LIMIT 1   [ RunTime:0.000416s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set yt_sellnum=gp_quantity,gp_quantity=0,closing=opening where id=1 and gp_quantity= [ RunTime:0.000143s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set today=opening,most_g=opening,most_d=opening,f_date='
+
+1413020796' where id=1 [ RunTime:0.000453s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_xml` WHERE x_date>=1325347200 ORDER BY x_date desc  [ RunTime:0.000921s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() GupiaoAction.class.php 第 2168 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] file_put_contents(./Public/U/data2.csv) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory GupiaoAction.class.php 第 2177 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_inout` [ RunTime:0.005442s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_kg` FROM `xt_fee` LIMIT 1   [ RunTime:0.000321s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`fgq`,`open`,`gpzjgl`,`zjyl`,`cha_zjyl` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000226s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_fxnum GupiaoAction.class.php 第 383 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_senum GupiaoAction.class.php 第 384 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `live_gupiao`,`all_in_gupiao`,`all_out_gupiao` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000214s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT SUM(only_nums) AS tp_sum FROM `xt_inout` WHERE uid=1637 and type=0 and ispay=0 LIMIT 1   [ RunTime:0.000256s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT COUNT(*) AS tp_count FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 LIMIT 1   [ RunTime:0.000276s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.000324s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: only_nums GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: one_price GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `agent_zz`,`pdt`,`is_agent` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000224s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run LocationTemplate Behavior [ RunTime:0.000881s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --END-- [ RunTime:0.000957s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: System_namex a0d4576e439681fe58029f92b90a126c.php 第 5 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: gp_kg a0d4576e439681fe58029f92b90a126c.php 第 94 行.
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ParseTemplate Behavior [ RunTime:0.013057s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --END-- [ RunTime:0.013131s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ContentReplace Behavior [ RunTime:0.000534s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run TokenBuild Behavior [ RunTime:0.000577s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000383s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowRuntime Behavior [ RunTime:0.000564s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002272s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowPageTrace Behavior [ RunTime:0.000479s ]
+[ 2014-10-11T17:46:36+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --END-- [ RunTime:0.000553s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run CheckRoute Behavior [ RunTime:0.000912s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ route_check ] --END-- [ RunTime:0.001022s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000637s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000711s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 153 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.008555s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1637' ) AND ( `user_id` = '111' ) LIMIT 1   [ RunTime:0.000416s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.008979s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000295s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_gp` [ RunTime:0.006102s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_gupiao` [ RunTime:0.003871s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `gp_one`,`gp_fxnum`,`gp_senum`,`gp_cnum` FROM `xt_fee` LIMIT 1   [ RunTime:0.000192s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_xml` [ RunTime:0.003807s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_gp` WHERE id=1 LIMIT 1   [ RunTime:0.000325s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_gp set yt_sellnum=gp_quantity,gp_quantity=0,closing=opening where id=1 and gp_quantity= [ RunTime:0.000133s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_gp set today=opening,most_g=opening,most_d=opening,f_date='
+
+1413020833' where id=1 [ RunTime:0.000205s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_xml` WHERE x_date>=1325347200 ORDER BY x_date desc  [ RunTime:0.000271s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] Invalid argument supplied for foreach() GupiaoAction.class.php 第 2168 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] file_put_contents(./Public/U/data2.csv) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory GupiaoAction.class.php 第 2177 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8] Undefined index: one_price GupiaoAction.class.php 第 1105 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007558s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `passopen`,`agent_zz` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000310s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `gp_one` FROM `xt_fee` LIMIT 1   [ RunTime:0.000173s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_inout` [ RunTime:0.004726s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.007319s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `gp_perc` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000265s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fck set agent_zz=agent_zz-2000 where id=1637 [ RunTime:0.000250s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_inout` (`uid`,`one_price`,`price`,`all_nums`,`only_nums`,`buy_s`,`type`,`status`,`add_time`) VALUES ('1637','1.00',2000,2000,2000,'2000',0,1,1413020833) [ RunTime:0.024718s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_inout` WHERE id>0 ORDER BY id desc LIMIT 1   [ RunTime:0.000334s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_inout` WHERE ( `type` = 1 ) AND ( `status` = 1 ) AND ( `only_nums` > 0 ) AND ( `ispay` = 0 ) ORDER BY add_time asc  [ RunTime:0.000231s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `user_id` FROM `xt_fck` WHERE id=1 LIMIT 1   [ RunTime:0.000200s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_inout set only_nums=only_nums-2000  where id=21 [ RunTime:0.022921s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_history` [ RunTime:0.007880s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead FckModel.class.php 第 89 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_history` (`user_id`,`uid`,`action_type`,`pdt`,`epoints`,`bz`,`did`,`type`,`allp`) VALUES ('100000','1',18,1413020833,2000,18,0,1,0) [ RunTime:0.000536s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b18`=b18+2000 where `id`=1 [ RunTime:0.000500s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [8] Undefined index: user_id GupiaoAction.class.php 第 1254 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.015494s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `str7` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000386s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_fck` WHERE ( `id` = '1' ) LIMIT 1   [ RunTime:0.000763s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b10`=b10-200 where `id`=1 [ RunTime:0.000364s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead FckModel.class.php 第 89 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_history` (`user_id`,`uid`,`action_type`,`pdt`,`epoints`,`bz`,`did`,`type`,`allp`) VALUES ('100000','1',10,1413020833,-200,10,0,1,0) [ RunTime:0.000258s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `s6`,`s13` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000270s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b8`=b8+1080,b25=b25+720 where `id`=1 [ RunTime:0.000284s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead FckModel.class.php 第 89 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_history` (`user_id`,`uid`,`action_type`,`pdt`,`epoints`,`bz`,`did`,`type`,`allp`) VALUES ('100000','1',8,1413020833,1080,8,0,1,0) [ RunTime:0.000452s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead FckModel.class.php 第 89 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_history` (`user_id`,`uid`,`action_type`,`pdt`,`epoints`,`bz`,`did`,`type`,`allp`) VALUES ('100000','1',25,1413020833,720,25,0,1,0) [ RunTime:0.000310s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_inout set only_nums=only_nums-2000,ispay=1 where id=25 [ RunTime:0.020568s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fck set live_gupiao=live_gupiao+2000 where id=1637 [ RunTime:0.000347s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fee set zjyl=zjyl+2000 where id=1 [ RunTime:0.000251s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `zjyl`,`cha_zjyl`,`zl`,`gpzjgl`,`zhang_one` FROM `xt_fee` LIMIT 1   [ RunTime:0.000361s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fee set gp_one=gp_one+0.1,cha_zjyl=cha_zjyl+100000,zhang_nums=zhang_nums+1 where id=1 [ RunTime:0.000380s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_fee` LIMIT 1   [ RunTime:0.000404s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_times` [ RunTime:0.005123s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.010199s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_times` WHERE ( `benqi` = 1413043199 ) AND ( `type` = 0 ) LIMIT 1   [ RunTime:0.000313s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b0`=b1+b2+b3+b4+b5+b6+b7+b8+b9+b10 [ RunTime:0.000300s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET b2=0,b3=0,b4=0,b5=0,b6=0,b7=0,b8=0,b9=0 where is_fenh=1 [ RunTime:0.000216s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_bonus` [ RunTime:0.006647s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: DELETE FROM `xt_history` WHERE pdt<1412352000 [ RunTime:0.000272s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: DELETE FROM `xt_bonus` WHERE e_date<1412352000 [ RunTime:0.000170s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET agent_zz=agent_zz+b25 where b25<>0 [ RunTime:0.000236s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: UPDATE xt_fck SET `b0`=b1+b2+b3+b4+b5+b6+b7+b8+b9 [ RunTime:0.000205s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `id` FROM `xt_times` WHERE ( `type` = 0 ) ORDER BY id desc LIMIT 1   [ RunTime:0.000265s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_fck` WHERE ( `is_tj` = 0 ) AND ( `is_pay` > 0 ) AND ( b0<>0 or b1<>0 or b2<>0 or b3<>0 or b4<>0 or b5<>0 or b6<>0 or b7<>0 or b8<>0 or b9<>0 or b10<>0 ) ORDER BY id asc  [ RunTime:0.000776s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fck set agent_use=agent_use+1080.00,zjj=zjj+b11+b12+b13+b14+b15+b16+b17+b18+b19,is_tj=1 where id=1 and b0=1080.00 and is_tj=0 [ RunTime:0.000290s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_bonus` WHERE ( `did` = '103' ) AND ( `uid` = '1' ) LIMIT 1   [ RunTime:0.000269s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_bonus set `b0`=b0+1080.00,`b1`=b1+0.00,`b2`=b2+0.00,`b3`=b3+0.00,`b4`=b4+0.00,`b5`=b5+0.00,`b6`=b6+0.00,`b7`=b7+0.00,`b8`=b8+1080.00,`b9`=b9+0.00,`b10`=b10+-200.00,`b11`=b11+0.00,`b12`=b12+0.00,`b13`=b13+0.00,`b14`=b14+0.00,`b15`=b15+0.00,`b16`=b16+0.00,`b17`=b17+0.00,`b18`=b18+2000.00,`b19`=b19+0.00,`b25`=b25+720.00,`b20`=b20+0.00 where `id`=2275 [ RunTime:0.000269s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: update xt_fck set b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0,b7=0,b8=0,b9=0,b10=0,b11=0,b12=0,b13=0,b14=0,b15=0,b16=0,b17=0,b18=0,b19=0,b20=0,b25=0,is_tj=0 where id=1 [ RunTime:0.000271s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SHOW COLUMNS FROM `xt_times_bonus` [ RunTime:0.003856s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT `b0`,`b1`,`b2`,`b3`,`b4`,`b5`,`b6`,`b7`,`b8`,`b9`,`b10` FROM `xt_fee` LIMIT 1   [ RunTime:0.000181s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_times` ORDER BY id desc LIMIT 1   [ RunTime:0.000197s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b0) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000260s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b1) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000318s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b2) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000424s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b3) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000276s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b4) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000241s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b5) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000257s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b6) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000189s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b7) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000191s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT SUM(b8) AS tp_sum FROM `xt_bonus` WHERE ( `did` = '103' ) LIMIT 1   [ RunTime:0.000193s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: SELECT * FROM `xt_times_bonus` WHERE did=0 LIMIT 1   [ RunTime:0.000521s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | SQL: INSERT INTO `xt_times_bonus` (`b0`,`b1`,`b2`,`b3`,`b4`,`b5`,`b6`,`b7`,`b8`,`did`,`s_date`,`e_date`) VALUES ('1757.70','0.00','16.20','0.00','0.00','0.00','13.50','0.00','1728.00','103','1262275200','1413043199') [ RunTime:0.000352s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run LocationTemplate Behavior [ RunTime:0.000755s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_template ] --END-- [ RunTime:0.000838s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ParseTemplate Behavior [ RunTime:0.008614s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_parse ] --END-- [ RunTime:0.008708s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ContentReplace Behavior [ RunTime:0.000468s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run TokenBuild Behavior [ RunTime:0.000484s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000342s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ShowRuntime Behavior [ RunTime:0.000543s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002022s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Run ShowPageTrace Behavior [ RunTime:0.000474s ]
+[ 2014-10-11T17:47:13+08:00 ] /ak911/index.php/Gupiao/buyGP | INFO: Tag[ view_end ] --END-- [ RunTime:0.000540s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run CheckRoute Behavior [ RunTime:0.000824s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ route_check ] --END-- [ RunTime:0.000931s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000636s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000724s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: post CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() CommonAction.class.php 第 152 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8192] Function eregi() is deprecated CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] eregi() expects parameter 2 to be string, array given CommonAction.class.php 第 160 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.008392s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1637' ) AND ( `user_id` = '111' ) LIMIT 1   [ RunTime:0.000352s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.005488s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000610s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gp` [ RunTime:0.004546s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_gupiao` [ RunTime:0.004469s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`gp_fxnum`,`gp_senum`,`gp_cnum` FROM `xt_fee` LIMIT 1   [ RunTime:0.000255s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_xml` [ RunTime:0.004113s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_gp` WHERE id=1 LIMIT 1   [ RunTime:0.000341s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set yt_sellnum=gp_quantity,gp_quantity=0,closing=opening where id=1 and gp_quantity= [ RunTime:0.000146s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: update xt_gp set today=opening,most_g=opening,most_d=opening,f_date='
+
+1413020834' where id=1 [ RunTime:0.000209s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 132 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given DbMysql.class.php 第 97 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_xml` WHERE x_date>=1325347200 ORDER BY x_date desc  [ RunTime:0.000295s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] Invalid argument supplied for foreach() GupiaoAction.class.php 第 2168 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [2] file_put_contents(./Public/U/data2.csv) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory GupiaoAction.class.php 第 2177 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SHOW COLUMNS FROM `xt_inout` [ RunTime:0.004345s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_kg` FROM `xt_fee` LIMIT 1   [ RunTime:0.000249s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `gp_one`,`fgq`,`open`,`gpzjgl`,`zjyl`,`cha_zjyl` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000236s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_fxnum GupiaoAction.class.php 第 383 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: gp_senum GupiaoAction.class.php 第 384 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `live_gupiao`,`all_in_gupiao`,`all_out_gupiao` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000246s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT SUM(only_nums) AS tp_sum FROM `xt_inout` WHERE uid=1637 and type=0 and ispay=0 LIMIT 1   [ RunTime:0.000284s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT COUNT(*) AS tp_count FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 LIMIT 1   [ RunTime:0.000390s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT * FROM `xt_inout` WHERE type=0 and id>0 and uid=1637 ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.000441s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: only_nums GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined index: one_price GupiaoAction.class.php 第 421 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | SQL: SELECT `agent_zz`,`pdt`,`is_agent` FROM `xt_fck` WHERE id=1637 LIMIT 1   [ RunTime:0.000280s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run LocationTemplate Behavior [ RunTime:0.000824s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_template ] --END-- [ RunTime:0.000900s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: System_namex a0d4576e439681fe58029f92b90a126c.php 第 5 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | NOTIC: [8] Undefined variable: gp_kg a0d4576e439681fe58029f92b90a126c.php 第 94 行.
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ParseTemplate Behavior [ RunTime:0.011882s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_parse ] --END-- [ RunTime:0.011956s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ContentReplace Behavior [ RunTime:0.000466s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run TokenBuild Behavior [ RunTime:0.000474s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000286s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowRuntime Behavior [ RunTime:0.000478s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_filter ] --END-- [ RunTime:0.001898s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowPageTrace Behavior [ RunTime:0.000426s ]
+[ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --END-- [ RunTime:0.000511s ]

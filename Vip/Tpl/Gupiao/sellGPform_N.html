@@ -4,7 +4,7 @@
 .tab_l3{font-size:14px;}
 </style>
 <div class="ncenter_box">
-<div class="accounttitle"><h1>电子股出售</h1></div>
+<div class="accounttitle"><h1>股票出售</h1></div>
       <table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" class="tab" >
 
         <tr>
@@ -45,13 +45,8 @@
                   </tr>
                   <tr>
                     <td height="40" align="right">当前价格：</td>
-                    <td align="left" style="padding-left:10px;"><font color='red'>{$one_price}</font>
+                    <td align="left" style="padding-left:10px;"><font color='red' id="one_price">{$one_price}</font>
                       /个</td>
-                  </tr>
-                  <tr>
-                    <td height="40" align="right">卖出价格：</td>
-                    <td align="left" style="padding-left:10px;"><input name="one_price" type="text" id="one_price"  maxlength="20" value="{$one_price}" onblur="value=value.replace(/[^0-9.]/g,'');tot_price();" />
-                        /个&nbsp;&nbsp;<font color="red" id="one_prices"></font></td>
                   </tr>
                   <tr>
                     <td height="40" align="right">总售价：</td>
@@ -66,7 +61,7 @@
                     <td align="left" style="padding-left:10px;"><eq name="close_gp" value="0">
                         <if condition="($open eq 0) and ($is_boss eq 0)"><span style="color:#F00">发行期尚不能进行交易</span>
                         <elseif condition="($gp_kg eq 1) and ($is_boss eq 0)"/><span style="color:#F00">股市交易已关闭</span>
-                        <else/><input type="submit" name="button2" id="button2" value="确认求购" class="btn1" />
+                        <else/><input type="submit" name="button2" id="button2" onclick="if(confirm('确定售出吗?')) return true;else return false;" value="确认售出" class="btn1" />
                         </if>
 
                       <input name="cPP" type="hidden" id="cPP" value="122" />

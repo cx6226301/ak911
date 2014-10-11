@@ -346,7 +346,7 @@ class FckModel extends CommonModel {
             $u_level = $info['u_level'];
             $cpzj = $info['cpzj'];
             $jin_cpzj = $cpzj * $str2; //激励奖
-            if ($info['jili'] == 1) {
+            if ($info['jili'] == 1) { //证明还未获得激励奖
                 $fck_rs = $this->where("father_id={$p_id}")->select();
                 $count = count($fck_rs);
                 if ($count >= 2) {
@@ -435,6 +435,7 @@ class FckModel extends CommonModel {
             $rifenhong = '';
             if ($count_money + $zjj > 3 * $cpzj) {
                 $count_money = 3 * $cpzj - $zjj;
+                $count_money=$count_money<0?0:$count_money;
                 $rifenhong = ',rifenhong=0';
             }
             $this->addencAdd($rs['id'], $rs['user_id'], $count_money, 11); //添加奖金和记录
