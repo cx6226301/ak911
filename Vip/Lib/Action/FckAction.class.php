@@ -62,7 +62,7 @@ class FckAction extends CommonAction {
 
             $list2 = $jydt->where("uid!={$myid} and status=0")->order('time asc')->limit('0,1')->select();
 
-            $map3="user_id='{$fck_rs['user_id']}' and status=1 or status=2";
+            $map3="user_id='{$fck_rs['user_id']}' and status in(1,2)";
             $count3 = $jydt->where($map3)->count(); //总页数
             $listrows = C('ONE_PAGE_RE'); //每页显示的记录数
             $listrows = 10; //每页显示的记录数

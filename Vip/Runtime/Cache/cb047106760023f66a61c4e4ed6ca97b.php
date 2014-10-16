@@ -30,20 +30,18 @@ function CheckAll(form)
 </head>
 <body onLoad="loadBar(0)">
 
-<style>
-.content { line-height:200%; text-indent: 2em; width:95%; text-align:left; word-wrap: break-word; word-break: normal;}
-</style>
 <div class="ncenter_box">
-<div class="accounttitle"><h1>新闻内容&nbsp;&nbsp;[<a href='javascript:history.back()'>返回列表</a>] </h1></div>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tab4">
-          <tr>
-            <td align="center" style="padding:10px !important;"><span style=" font-size:14px; font-weight:bold;"><?php echo ($vo['title']); ?></span><hr></td>
-          </tr>
-          <tr>
-            <td align="center"><div class="content"><?php echo ($vo['content']); ?></div></td>
-          </tr>
-        </table>
-<div class="bar_foot">[ <a href="javascript:history.back()">返回列表</a> ]</div>
+<div class="accounttitle"><h1>验证 </h1></div>
+<style>
+    p{line-height: 30px; padding-left: 400px;}
+</style>
+<form action='' method="post">
+<div >
+    <p>密保问题：<?php echo ($list["wt1"]); ?></p>
+    <p>密保答案：<input type="password" name="da"></p>
+    <p><input type="submit" value='验证' class="btn1"><input type="hidden" name="action" value='post'></p>
+</div>
+</form>
 </div>
 </body>
 </html>

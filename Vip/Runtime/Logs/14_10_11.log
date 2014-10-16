@@ -625,3 +625,32 @@
 [ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --START--
 [ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Run ShowPageTrace Behavior [ RunTime:0.000426s ]
 [ 2014-10-11T17:47:14+08:00 ] /ak911/index.php/Gupiao/buyGPform | INFO: Tag[ view_end ] --END-- [ RunTime:0.000511s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ route_check ] --START--
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run CheckRoute Behavior [ RunTime:0.000948s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ route_check ] --END-- [ RunTime:0.001064s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ app_begin ] --START--
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000641s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000725s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 105 行.
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | NOTIC: [2048] mktime() [<a href='function.mktime'>function.mktime</a>]: You should be using the time() function instead CommonAction.class.php 第 110 行.
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | SQL: SHOW COLUMNS FROM `xt_fck` [ RunTime:0.021717s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | SQL: SELECT `user_id`,`password`,`user_type` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `user_id` = '100000' ) LIMIT 1   [ RunTime:0.000426s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | SQL: SHOW COLUMNS FROM `xt_fee` [ RunTime:0.006221s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | SQL: SELECT `i3` FROM `xt_fee` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000285s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | NOTIC: [8] Undefined index: user_type CommonAction.class.php 第 81 行.
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | SQL: SELECT `id`,`user_id` FROM `xt_fck` WHERE ( `id` = '1' ) AND ( `is_boss` > 0 ) LIMIT 1   [ RunTime:0.000240s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_template ] --START--
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run LocationTemplate Behavior [ RunTime:0.000738s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.000824s ]
+[ 2014-10-11T18:01:26+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_parse ] --START--
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ParseTemplate Behavior [ RunTime:0.010666s ]
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.010755s ]
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_filter ] --START--
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ContentReplace Behavior [ RunTime:0.000831s ]
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run TokenBuild Behavior [ RunTime:0.000912s ]
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000551s ]
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000647s ]
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003212s ]
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_end ] --START--
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000533s ]
+[ 2014-10-11T18:01:27+08:00 ] /ak911/index.php/Backup/index/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.000607s ]

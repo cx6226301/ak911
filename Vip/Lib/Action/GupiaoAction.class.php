@@ -1102,7 +1102,8 @@ class GupiaoAction extends CommonAction {
             $this->error("操作失败！");
             exit;
         }
-        $d = trim($_POST['sNun']) * trim($_POST['one_price']);
+        $info=$this->get_cha();
+        $d = trim($_POST['sNun']) * $info['one_price'];
         $d = round($d, 2);
         $i = floor($d);
         $s = $d - $i;
@@ -1131,8 +1132,8 @@ class GupiaoAction extends CommonAction {
         $fee = M('fee');
         $fee_rs = $fee->field("gp_one")->find();
         $one_price = $fee_rs['gp_one'];
-        $bmoney = $sNun / $one_price;
-        $this->shop_AC($one_price, $bmoney, 0, $sNun); //$sNun为 总额  $bmoney为总数
+//        $bmoney = $sNun / $one_price;
+        $this->shop_AC($one_price, $sNun, 0, $sNun); //$sNun为 总额  $bmoney为总数
         $this->success("操作成功!");
     }
 
@@ -1186,6 +1187,17 @@ class GupiaoAction extends CommonAction {
         $msg=$type==1?"发行成功":"操作成功!";
         $this->success($msg, __APP__ . "/Gupiao/cody/c_id/1')");
     }
+    
+    public function get_cha(){
+        $fee_1 = M('fee');
+        $fee_rs_1 = $fee_1->field("*")->find(1);
+        $gpzjgl=$fee_rs_1['gpzjgl'];
+        $zjyl=$fee_rs_1['zjyl'];
+        $fee_rs_1['cha']=$gpzjgl-$zjyl%$gpzjgl;
+        unset($fee_1);
+        return $fee_rs_1;
+        
+    }
 
     //购买卖出处理
     public function shop_AC($one_price = 0, $bmoney = 0, $type = 0, $allmoney = 0) {
@@ -1222,23 +1234,31 @@ class GupiaoAction extends CommonAction {
             $where['ispay'] = array('eq', 0);
             $inout_rs = $inout->where($where)->order("add_time asc")->select();  //获取 条件一致的出售信息
             foreach ($inout_rs as $rs) {
-                $ispay = '';
+                $only_nums=round($rs['only_nums'], 0);
+                $ispay = '';                     //$bmoney为需求量  ,$rs['only_nums']为此出售单的剩余量
                 $ispays = '';
-                if (round($bmoney, 0) < round($rs['only_nums'], 0)) {
+                $cha=$this->get_cha();
+                if($cha['cha']<$bmoney){  //$cha为升级剩余量  2000<5000
+                    $end_bmoney=$bmoney-$cha['cha']; //3000
+                    $bmoney=$cha['cha']; //2000
+                    $one_price=$cha['one_price'];  //1.0
+                }
+                $bmoney=round($bmoney, 0)
+                if ( $bmoney< $only_nums) {  //第一种情况: 需求量已满足
                     $nums = round($bmoney, 0);
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
                     $ispay = ",ispay=1";
-                    $ss = 1;
-                } else if (round($bmoney, 0) == round($rs['only_nums'], 0)) {
-                    $nums = round($bmoney, 0);
+                    $ss = 0;
+                } else if ($bmoney == $only_nums) {//第二种情况: 需求量刚好满足并结束
+                    $nums = $bmoney;
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
                     $ispays = ",ispay=1";
                     $ispay = ",ispay=1";
-                    $ss = 1;
-                } else {
-                    $nums = round($rs['only_nums'], 0);
+                    $ss = 0;
+                } else {//第三种情况: 需求量无法满足进入下个出售单遍历
+                    $nums = $only_nums;
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
                     $ispays = ',ispay=1';
@@ -1247,7 +1267,6 @@ class GupiaoAction extends CommonAction {
                 $rss = $fck->where("id=" . $rs['uid'])->field('user_id')->find();
 
                 $inout->execute("update __TABLE__ set only_nums=only_nums-{$nums}{$ispays}  where id={$rs['id']}");  //先处理对应的出售信息
-//                $fck->addencAdd($rs['uid'], $rss['user_id'], -$sui, 6);
                 $fck->addencAdd($rs['uid'], $rss['user_id'], $end_money, 18); //添加奖金和记录
                 $fck->query("UPDATE __TABLE__ SET `b18`=b18+{$end_money} where `id`=" . $rs['uid']);
                 $b25 = 0;
@@ -1319,7 +1338,7 @@ class GupiaoAction extends CommonAction {
         $this->_clearing();
     }
 
-    public function jyl_AC($nums) {  //未解决
+    public function jyl_AC($nums) {  
         if ($nums > 0) {
             $fee = M('fee');
             $fee->execute("update __TABLE__ set zjyl=zjyl+{$nums} where id=1");

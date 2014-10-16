@@ -92,7 +92,7 @@ function CheckAll(form)
                     <td align="left" style="padding-left:10px;"><eq name="close_gp" value="0">
                         <?php if(($open == 0) and ($is_boss == 0)): ?><span style="color:#F00">发行期尚不能进行交易</span>
                         <?php elseif(($gp_kg == 1) and ($is_boss == 0)): ?><span style="color:#F00">股市交易已关闭</span>
-                        <?php else: ?><input type="submit" name="button2" id="button2" value="确认求购" class="btn1" /><?php endif; ?>
+                        <?php else: ?><input type="submit" name="button2" id="button2" onclick="if(confirm('确定售出吗?')) return true;else return false;" value="确认售出" class="btn1" /><?php endif; ?>
 
                       <input name="cPP" type="hidden" id="cPP" value="122" />
                       <input name="PID" type="hidden" id="PID" /></td>
