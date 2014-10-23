@@ -10,7 +10,8 @@ class NewsAction extends CommonAction{
         $list = $plan->find(1);
 		$this->assign('list',$list);
 		$this->us_fckeditor('content',$list['content'],400,"100%");
-		$this->display();
+                $display=$_SESSION[C('_l')]=='english'?'plan_en':'';
+		$this->display($display);
 	}
 	public function planTwo(){
 		$plan   =  M ('plan');
@@ -190,8 +191,8 @@ class NewsAction extends CommonAction{
         $list = $form->where($map)->field($field)->order('baile desc,create_time desc,id desc')->page($Page->getPage().','.$listrows)->select();
         $this->assign('list',$list);//数据输出到模板
         //=================================================
-
-		$this->display();
+$display=$_SESSION[C('_l')]=='english'?'index_en':'';
+		$this->display($display);
 	}
 
 	public function News(){

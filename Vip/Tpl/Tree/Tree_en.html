@@ -1,0 +1,26 @@
+<include file="../Public/header" />
+<load href="__PUBLIC__/Js/tree.js" />
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Recommend diagram </h1></div>
+
+    <table width="100%" border="0" cellpadding="5" cellspacing="0" class="tab3">
+      <form method='post' action="__URL__/Tree">
+      <tr>
+        <td>{$User_namex}：
+            <input type="text" name="UserID" title="Member query"  >
+            <input type="submit" name="Submit" value="Query" class="button_text"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="MzTreeView.prototype.expandAll.call(tree);">On all nodes</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="__URL__/Tree/UID/{$ID}">Close all nodes</a>
+        </td>
+      </tr>
+      </form>
+      <tr>
+        <td><div id="thisTree" style="padding:15px;"></div></td>
+      </tr>
+      <tr>
+        <td>instructions：<img src="__PUBLIC__/Images/tree/center.gif" width="18" height="18" /> Declaration for center&nbsp;&nbsp; <img src="__PUBLIC__/Images/tree/Official.gif" width="18" height="18" /> Has been opened&nbsp;&nbsp; <img src="__PUBLIC__/Images/tree/trial.gif" width="18" height="18" /> Did not open</td>
+      </tr>
+    </table>
+</div>
+</body>
+</html>
+{$rs['0']}

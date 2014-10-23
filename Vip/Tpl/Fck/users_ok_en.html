@@ -1,0 +1,27 @@
+<include file="../Public/header" />
+<div class="login">
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Registered successfully </h1></div>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+              <tr>
+                <td class="zc_hong" style="line-height:30px;" align="center" colspan="2">{$alert_msg}</td>
+              </tr>
+              <tr>
+                <td class="zc_hong" style="line-height:30px;" align="center" colspan="2">{$s17}</td>
+              </tr>
+              <tr>
+                <td width="20%" style="line-height:30px;" align="right">Membership number：</td>
+                <td width="80%" class="zc_hong" style="line-height:30px;">{$myrs['user_id']}</td>
+              </tr>
+              <tr>
+                <td style="line-height:30px;" align="right">Registration fee：</td>
+                <td class="zc_hong" style="line-height:30px;">{$myrs['cpzj']}</td>
+              </tr>
+              <tr >
+                <td height="30" align="center" colspan="2"><input name="submit" type="submit" class="button_text" onclick="location.href='{$gourl}'" value="To complete the registration"></td>
+              </tr>
+            </table>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<include file="../Public/header" />
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Declaration center management </h1></div>
+&nbsp;
+<form name="form3" method="post" action="__URL__/adminAgentsAC">
+<table width="100%" class="tab3" border="0" cellpadding="3" cellspacing="1" id="tb1" bgcolor="#b9c8d0">
+	<thead>
+    <tr class="content_td" align="center">
+        <th nowrap></th>
+        <th nowrap><span>Membership number</span></th>
+        <th nowrap><span>Member name</span></th>
+        <th nowrap><span>To apply for time</span></th>
+        <th nowrap><span>Set the time</span></th>
+        <th nowrap><span>The remaining electronic currency</span></th>
+        <th nowrap><span>Remark</span></th>
+        <th nowrap><span>Stutas</span></th>
+    </tr>
+    </thead>
+    <volist name="list" id="vo" key='k'>
+    <tr align="center">
+        <td><input type="checkbox" name="tabledb[]" value="{$vo['id']}" class="btn2" /></td>
+        <td><a href="__APP__/Fck/menber/bj_id/{$vo['id']}/eth/2">{$vo['user_id']}</a>&nbsp;</td>
+        <td><span class="STYLE1">{$vo['user_name']}</span>&nbsp;</td>
+        <td>{$vo.idt|date='Y-m-d H:i:s',###}&nbsp;</td>
+        <td><eq name="vo['is_agent']" value="2">{$vo.adt|date='Y-m-d H:i:s',###}</eq>&nbsp;</td>
+        <td>{$vo['agent_cash']}</td>
+        <td><a href="__URL__/adminAgentsShow/Sid/{$vo['id']}/">Click to view</a></td>
+        <td><gt name="vo['is_agent']" value="1"><font color="#009900">Have been confirmed</font><else /><font color="#FF0000">unconfirmed</font></gt>&nbsp;</td>
+    </tr>
+    </volist>
+</table>
+<table width="100%" class="tab3_bottom" border="0" cellpadding="0" cellspacing="1">
+<tr>
+    	<td width="50%">&nbsp;&nbsp;
+          <input name="All" type="button" class="button_text" id="All" onclick="CheckAll(this.form)" value="All" />&nbsp;&nbsp;
+          <input type="submit" name="action" value="Confirm" class="button_text" onclick="{if(confirm('Confirm?')){return true;}return false;}">&nbsp;&nbsp;
+          <input type="submit" name="action" value="Delete" class="button_text" onclick="{if(confirm('Delete is?')){return true;}return false;}">&nbsp;&nbsp;
+          <input name="button3" type="button" onclick="window.location.href='__URL__/financeDaoChu_BD/'" value="Declaration center export Excel spreadsheet" class="button_text" />
+          </td>
+        <td width="50%">{$page}</td>
+    </tr>
+</table>
+</form>
+<table width="600" align="center">
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <td align="center"><form method='post' action="__URL__/adminAgents/">Search for members：<input type="text" name="UserID" title="Account query">
+    <input type="submit" name="Submit" value="Query"  class="button_text"/>
+    </form></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
+<script>new TableSorter("tb1");</script>

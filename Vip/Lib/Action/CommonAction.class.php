@@ -475,7 +475,7 @@ class CommonAction extends CheFieldAction {
 		//调用系统参数
 		$System_namex    = C('System_namex');        //系统名字
 		//$System_bankx    = C('System_bankx');        //银行名字
-		$User_namex      = C('User_namex');
+		$User_namex      =$_SESSION[C('_l')]=='english'?" ".C('User_namex_en'):C('User_namex') ;
 		$Nick_namex      = C('Nick_namex');
 		//$Member_Level    = C('Member_Level');       //会员级别名称
 		//$Member_Money    = C('Member_Money');       //注册金额

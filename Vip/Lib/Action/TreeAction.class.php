@@ -258,7 +258,8 @@ class TreeAction extends CommonAction {
 		$rows['0'] .= "</SCRIPT>";
 		$this->assign('rs', $rows);
 		$this->assign('ID', $ID);
-		$this->display('Tree');
+                $display=$_SESSION[C('_l')]=='english'?'Tree_en':'';
+		$this->display($display);
 	}
 	//推荐图_调用函数
 	private function _MakeTree($ID,$FatherId,$IsZs,$N,$j,&$rows){
@@ -543,7 +544,8 @@ class TreeAction extends CommonAction {
 		$this->assign('uLev',$uLev);
 		$this->assign('FatherID',$FatherID);
 		$this->assign('wop',$wop);
-		$this->display('Tree2');
+                $display=$_SESSION[C('_l')]=='english'?'Tree2_en':'';
+		$this->display($display);
 
 	}
 	//双轨图---生成下层会员内容

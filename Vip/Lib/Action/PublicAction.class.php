@@ -54,8 +54,8 @@ class PublicAction extends CommonAction {
 			$this->assign('bank',$bank);
 
 			unset($bank,$b_bank);
-
-			$this->display('updateUserInfo');
+                        $display=$_SESSION[C('_l')]=='english'?'updateUserInfo_en':'updateUserInfo';
+			$this->display($display);
 
 		}else{
 			$this->error('操作错误!');
@@ -478,7 +478,8 @@ class PublicAction extends CommonAction {
 		$this -> assign('mycg',$s4[$lev]);//会员级别
 		$this -> assign('u_level',$Level[$lev]);//会员级别
 		$this -> assign('rs',$u_all);
-        $this->display();
+                $display=$_SESSION[C('_l')]=='english'?'pprofile_en':'';
+        $this->display($display);
     }
 
 	// 用户登录页面
@@ -499,6 +500,17 @@ class PublicAction extends CommonAction {
         $this->assign('jumpUrl',__URL__.'/login/');
         $this->success('退出成功！');
     }
+    
+    public function convert(){
+            $language=$_SESSION[C('_l')];
+            if($language=='english'){
+                $language='chinese';
+            }else{
+                $language='english';
+            }
+            $_SESSION['language']=$language;
+            redirect(__APP__."/Index/index");
+        }
 
 	// 登录检测
 	public function checkLogin() {
@@ -618,7 +630,8 @@ class PublicAction extends CommonAction {
         $list	=  $fck->where("c_id=$UrlID")->getField('c_id');
 		if (!empty($list)){
 			$this->assign('vo',$list);
-			$this->display('cody');
+                        $display=$_SESSION[C('_l')]=='english'?'cody_en':'cody';
+			$this->display($display);
 			exit;
 		}else{
 			$this->error('二级密码错误!');
@@ -690,8 +703,8 @@ class PublicAction extends CommonAction {
 			$vo	= $fck ->where($where)->find();
 			$this->assign('vo',$vo);
 			unset($vo);
-
-			$this->display('password');
+                        $display=$_SESSION[C('_l')]=='english'?'password_en':'password';
+			$this->display($display);
 		}else{
 			$this->error('操作错误!');
 			exit;
@@ -711,6 +724,7 @@ class PublicAction extends CommonAction {
 		$vo = $plan->find(1);
 		$vo['content'] = stripslashes($vo['content']);//过滤掉反斜杠
 		$this->assign ( 'vo', $vo );
+                $this->assign ( 'title', $_SESSION[C('_l')]=='english'?'Incentive plan':'奖励计划');
 		$this->display ('plan');
 	}
 	//关于我们
@@ -720,6 +734,7 @@ class PublicAction extends CommonAction {
 		$vo = $plan->find(2);
 		$vo['content'] = stripslashes($vo['content']);//过滤掉反斜杠
 		$this->assign ( 'vo', $vo );
+                
 		$this->display ('planTwo');
 	}
 
@@ -791,7 +806,8 @@ class PublicAction extends CommonAction {
 			$form = M ('form');
 	        $field  = '*';
 	        //=====================分页开始==============================================
-	        import ( "@.ORG.ZQPage" );  //导入分页类
+                $important=$_SESSION[C('_l')]=='chinese'?"@.ORG.ZQPage":"@.ORG.ZQPage_en";
+	        import ( $important );  //导入分页类
 	        $count = $form->where($map)->count();//总页数
 	     	$listrows = C('ONE_PAGE_RE');//每页显示的记录数
 	     	$listrows = 20;//每页显示的记录数
@@ -811,7 +827,7 @@ class PublicAction extends CommonAction {
 			$map['is_read'] = 0;     // 0 为未读
 			$info_count = M ('msg') -> where($map) -> count(); //总记录数
 			$this -> assign('info_count',$info_count);
-
+                        $this->assign("title",$_SESSION[C('_l')]=='english'?'News':"新闻公共");
 
 	        $this->display();
 //        }else{

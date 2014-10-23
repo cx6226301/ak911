@@ -1,0 +1,36 @@
+<include file="../Public/header" />
+<div class="ncenter_box">
+<div class="accounttitle"><h1>inbox </h1></div>&nbsp;
+<form name="form1" method="post" action="__URL__/messagesDelAC/bUrl/inMessages">
+<table width="100%" class="tab3" border="0" cellpadding="3" cellspacing="1" id="tb1" bgcolor="#b9c8d0">
+  <tr>
+    <th align="center"><input type="checkbox" name="chkall" value="checkbox" onclick="CheckAll(this.form)"  class="btn2" id="chkall" /></th>
+    <th align="center">type</th>
+    <th align="center">The sender</th>
+    <th align="center">The theme</th>
+    <th align="center">time</th>
+  </tr>
+  <volist name="list" id="vo">
+    <tr>
+    <td align="center"><input type="checkbox" name="tabledb[]" value="{$vo['id']}" class="btn2" /></td>
+    <td align="center">
+    <eq name="vo['is_read']" value="0"><span class="STYLE1" >Did not read</span></eq>
+    <eq name="vo['is_read']" value="1"><span class="STYLE2" >Have read</span></eq>
+    </td>
+    <td align="center">{$vo['r_user_id']|conname}</td>
+    <td align="center"><a href="__URL__/messagesShow/Pid/{$vo['id']}">{$vo['title']}</a></td>
+    <td align="center">{$vo.pdt|date='Y-m-d H:i:s',###}</td>
+  </tr>
+  </volist>
+    <tr>
+      <td colspan="5">&nbsp;&nbsp;
+      <input name="all" type="button" class="button_text" id="all" onclick="CheckAll(this.form)" value="all" />        &nbsp;&nbsp;
+        <input type="submit" name="action" value="Delete the letters" onclick="return allcheckbox();"  class="button_text" /></td>
+    </tr>
+    <tr><td colspan="5" align="center">{$page}</td></tr>
+</table>
+</form>
+</div>
+</body>
+</html>
+<script>new TableSorter("tb1");</script>

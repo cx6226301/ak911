@@ -1,0 +1,83 @@
+<include file="../Public/header" />
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Stock market</h1></div>
+<table width="100%" border="0" cellspacing="2" cellpadding="0">
+  <tr>
+    <td align="center"><span style="font-size:14px; line-height:30px; font-weight:bold">Sell stock</span></td>
+  </tr>
+  <tr>
+    <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" class="tab3">
+      <tr align="center">
+        <th width="10%" height="24" class="tabr">id</th>
+        <th width="15%" class="tabr">The seller number</th>
+        <th width="15%" class="tabr">Hang in total</th>
+        <th width="15%" class="tabr">Hang in price</th>
+        <th width="15%" class="tabr">volume</th>
+        <th width="15%" class="tabr">Hang the remaining</th>
+        <th width="15%" class="tabr">state</th>
+      </tr>
+      <volist name="list" id="vo"  key="i">
+        <tr align="center">
+          <td nowrap="nowrap" height="24">{$i}</td>
+          <td nowrap="nowrap">{$vo.user_id|conname}</td>
+          <td nowrap="nowrap">{$vo.all_nums}</td>
+          <td nowrap="nowrap">{$vo.one_price}</td>
+          <td nowrap="nowrap">{$vo['all_nums']-$vo['only_nums']}</td>
+          <td nowrap="nowrap">{$vo.only_nums}</td>
+          <td nowrap="nowrap"><eq name="vo['ispay']" value="0"><font color='red'>Waiting for the transaction</font>
+            <else/>
+            <font color='green'>A successful deal</font></eq></td>
+        </tr>
+      </volist>
+      <tr align="center">
+          <td height="2" colspan="7"></td>
+          </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="100%" class="tab3_bottom" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  <td>{$page}</td>
+  </tr>
+</table>
+<br />
+<table width="100%" border="0" cellspacing="2" cellpadding="0">
+  <tr>
+    <td align="center"><span style="font-size:14px; line-height:30px; font-weight:bold">buy stock</span></td>
+  </tr>
+  <tr>
+    <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" class="tab3">
+      <tr align="center">
+        <th width="15%" height="24" class="tabr">id</th>
+        <th width="15%" class="tabr">Buyer number</th>
+        <th width="15%" class="tabr">the number</th>
+        <th width="15%" class="tabr">the unit price</th>
+        <th width="15%" class="tabr">the unit price</th>
+        <th width="15%" class="tabr">type</th>
+        </tr>
+      <volist name="list1" id="vo1" key="i">
+        <tr align="center">
+          <td height="24" nowrap="nowrap">{$i}</td>
+          <td nowrap="nowrap">{$vo1.user_id|conname}</td>
+          <td nowrap="nowrap">{$vo1.all_nums}</td>
+          <td nowrap="nowrap">{$vo1.one_price}</td>
+          <td nowrap="nowrap">{$vo1.only_nums}</td>
+          <td nowrap="nowrap"><eq name="vo1['ispay']" value="0"><font color='blue'>Is commissioned</font>
+            <else/>
+            <font color='green'>A successful deal</font></eq></td>
+          </tr>
+      </volist>
+      <tr align="center">
+          <td height="2" colspan="6"></td>
+          </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="100%" class="tab3_bottom" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  <td>{$page1}</td>
+  </tr>
+</table>
+</div></div>
+</body>
+</html>

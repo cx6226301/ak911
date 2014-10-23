@@ -1,0 +1,66 @@
+<include file="../Public/header" />
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Member of the audit </h1></div>
+&nbsp;
+<form name="form3" method="post" action="__URL__/auditMenberAC">
+<table width="100%" class="tab3" border="0" cellpadding="3" cellspacing="1" id="tb1" bgcolor="#b9c8d0">
+	<thead>
+    <tr align="center">
+        <th nowrap></th>
+        <th nowrap><span>Membership number</span></th>
+        <th nowrap><span>Member name</span></th>
+        <th nowrap><span>bank</span></th>
+        <th nowrap><span>Bank card number</span></th>
+        <!--<th nowrap><span>开户姓名</span></th>-->
+        <th nowrap><span>Contact address</span></th>
+        <th nowrap><span>Contact phone number</span></th>
+        <th nowrap><span>Registration time</span></th>
+        <th nowrap><span>Registered amount</span></th>
+        <!--<th nowrap><span>会员级别</span></th>-->
+        <th nowrap><span>type</span></th>
+    </tr>
+    </thead>
+    <volist name="list" id="vo">
+    <tr align="center">
+        <td><input type="checkbox" name=tabledb[] value="{$vo['id']}" class="btn2"></td>
+        <td><a href="__URL__/adminuserData/PT_id/{$vo['id']}">{$vo['user_id']}</a></td>
+        <td>{$vo['user_name']}</td>
+        <td>{$vo['bank_name']}</td>
+        <td>{$vo['bank_card']}</td>
+        <!--<td>{$vo['user_name']}</td>-->
+        <td>{$vo['user_address']}</td>
+        <td>{$vo['user_tel']}</td>
+        <td>{$vo.rdt|date='Y-m-d H:i:s',###}</td>
+        <td>{$vo['cpzj']}</td>
+        <!--<td>{$voo[$vo['u_level']]}</td>-->
+        <td><eq name="vo['is_pay']" value='0'><span style="color: #FF0000;">Did not open</span><else />Has been opened</eq></td>
+    </tr>
+    </volist>
+</table>
+<table width="100%" class="tab3_bottom" border="0" cellpadding="0" cellspacing="1">
+    <tr>
+    	<td width="50%"><input name="all" type="button" class="button_text" id="全选" onClick="CheckAll(this.form)" value="all">
+      &nbsp;&nbsp;
+	  <input type="submit" name="action" value="Opening of the member" onclick="{if(confirm('Determine the opening member?')){return true;}return false;}" class="button_text">
+	  &nbsp;&nbsp;
+	  <input type="submit" name="action" value="Set to an empty list" onclick="{if(confirm('Determines the member is set to an empty list?')){return true;}return false;}" class="button_text">
+	  &nbsp;&nbsp;
+	  <input type="submit" name="action" value="Delete members" onclick="{if(confirm('Sure to delete members?')){return true;}return false;}" class="button_text"></td>
+        <td width="50%">{$page}</td>
+    </tr>
+</table>
+</form>
+<table width="600" align="center">
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <td align="center"><form method='post' action="__URL__/auditMenber/">Search for members：<input type="text" name="UserID" title="Account query">
+    <input type="submit" name="Submit" value="query"  class="button_text"/>
+    </form></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
+<script>new TableSorter("tb1");</script>

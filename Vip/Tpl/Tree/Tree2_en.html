@@ -1,0 +1,83 @@
+<include file="../Public/header" />
+<style>
+.tu_box{width:100px;background-color:#aaa;color:#000;}
+.tu_box td{text-align:center;line-height:24px; height:24px;}
+.tu_ko{ height:40px;line-height:40px !important;background-color:#FFF; }
+.tu_l{ width:35%;}
+.tu_z{ width:30%;}
+.tu_r{ width:35%;}
+</style>
+<div class="ncenter_box">
+<div class="accounttitle"><h1>The network structure </h1></div>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <form method='post' action="__URL__/Tree2">
+      <tr>
+        <td>{$User_namex}：
+            <input type="text" name="UserID" title="Account query"  >
+            <input type="submit" name="Submit" value="Query" class="btn1"/>
+
+            <select name='level' onChange="window.location.href='__URL__/Tree2/ID/{$FatherID}/uLev/'+this.value;">
+            <option value="{$uLev}">The {$uLev+1} layer</option>
+            <option value="2">The 3 layer</option>
+            <option value="3">The 4 layer</option>
+            <option value="4">The 5 layer</option>
+            <option value="5">The 6 layer</option>
+            <option value="6">The 7 layer</option>
+            <option value="7">The 8 layer</option>
+            <option value="8">The 9 layer</option>
+            <option value="9">The 10 layer</option>
+            </select>
+            　　<a href="__URL__/Tree2/uLev/{$uLev}">top</a>　　<a href="__URL__/Tree2/ID/{$FatherID}/uLev/{$uLev}">lase layer</a></td>
+      </tr>
+      </form>
+      <tr>
+        <td>{$wop}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center">
+				<table border="0" cellspacing="1" cellpadding="0" bgcolor="#66CC99">
+             <tr align="center" style="color:#000;">
+                <td bgcolor="#FFFFFF" width="80" height="30">lase layer</td>
+                <volist name='ColorUA' id='vo'>
+				<td style="background:{$ColorUA[$key]};" width="100">{$AC_Color[$key]}</td>
+                </volist>
+              </tr>
+            </table>
+              <!--<table width="90%" border="0" cellspacing="1" cellpadding="0" bgcolor="#66CC99">
+              <tr align="center" style="color:#000;">
+                <td bgcolor="#FFFFFF">上layer</td>
+                <volist name='Level' id='vo'>
+                <td style="background:{$ColorUA[$key+1]};">{$Level[$key]}</td>
+                </volist>
+              </tr>
+            </table>-->
+
+            </td>
+            <td align="center">
+
+            <table border="0" cellspacing="1" cellpadding="0" bgcolor="#66CC99">
+             <tr align="center" style="color:#000;">
+                <td bgcolor="#FFFFFF" width="80" height="30">next layer</td>
+                <volist name='TU_MiCheng' id='vo'>
+                <td style="background:{$TU_Color[$key]};" width="100">{$TU_MiCheng[$key]}</td>
+                </volist>
+              </tr>
+            </table></td>
+          </tr>
+        </table>
+
+        </td>
+      </tr>
+    </table>
+
+</div>
+</body>
+</html>

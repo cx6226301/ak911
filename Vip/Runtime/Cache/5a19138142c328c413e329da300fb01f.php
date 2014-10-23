@@ -31,7 +31,7 @@ function CheckAll(form)
 <body onLoad="loadBar(0)">
 
 <div class="ncenter_box">
-<div class="accounttitle"><h1>新闻公告 </h1></div>
+<div class="accounttitle"><h1><?php echo ($title); ?></h1></div>
         <table width="100%" border="0" cellspacing="3" cellpadding="0" class="tab5">
           <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
             <td height="28">&nbsp;&nbsp;<img src="__PUBLIC__/Images/li.gif">&nbsp;&nbsp;<a href="__URL__/News_show/NewID/<?php echo ($vo["id"]); ?>"><?php if(($vo["baile"]) == "1"): ?><font color=red>[置顶] </font><?php endif; echo ($vo['title']); ?></a></td>

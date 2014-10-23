@@ -142,7 +142,7 @@ function CheckAll(form)
 function tot_price(){
 	var one_price = document.getElementById('one_price').innerHTML;//单价
 	var sNun	= document.getElementById('sNun').value;//总额
-	var mai_num = sNun*one_price;
+	var mai_num = Math.round(sNun*one_price*100)/100;
 	document.getElementById('tot_price').innerHTML = mai_num+'';
 }
 function formatNumberUnitsDivd(num) {

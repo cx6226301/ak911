@@ -32,7 +32,12 @@ function CheckAll(form)
 
 <script type="text/javascript" src="__PUBLIC__/Js/Ajax/ThinkAjax-1.js"></script>
 <script type="text/javascript" src="__PUBLIC__/Js/UserJs.js"></script>
+<!-- Begin TranslateThis Button -->
+<div id='MicrosoftTranslatorWidget' class='Dark' style='color:white;background-color:#555555'></div><script type='text/javascript'>setTimeout(function(){{var s=document.createElement('script');s.type='text/javascript';s.charset='UTF-8';s.src=((location && location.href && location.href.indexOf('https') == 0)?'https://ssl.microsofttranslator.com':'http://www.microsofttranslator.com')+'/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=True&ui=true&settings=Auto&from=zh-CHS';var p=document.getElementsByTagName('head')[0]||document.documentElement;p.insertBefore(s,p.firstChild); }},0);</script>
+<!-- End TranslateThis Button --> 
+
 <script language="javascript">
+     LanguageMenu.onclick('en');
 	function yhServer(Ful,lx){
 		var str = $F(Ful).replace(/^\s+|\s+$/g,"");
 		var re = /[^(\w){6,20}$]/g;
@@ -55,7 +60,6 @@ function CheckAll(form)
 </script>
 <div class="ncenter_box">
 <div class="accounttitle"><h1>注册会员 </h1></div>
-
       <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tab1">
       <tr>
         <td>

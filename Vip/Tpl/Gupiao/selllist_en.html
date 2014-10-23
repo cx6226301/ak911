@@ -1,0 +1,45 @@
+<include file="../Public/header" />
+<style>
+.tab_l3{font-size:14px;}
+</style>
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Selling list</h1></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#b9c8d0" class="tab3" id="tb1">
+<tr>
+  <th width="12%"><span>Membership number</span></th>
+  <th width="18%" height="28"><span>Selling time</span></th>
+  <th width="12%"><span>The total</span></th>
+  <th width="12%"><span>Has sold</span></th>
+  <th width="11%"><span>The remaining</span></th>
+  <th width="12%"><span>sales</span></th>
+  <th width="10%"><span>type</span></th>
+  <th width="13%"><span>function</span></th>
+</tr>
+<volist name="list" id="vo">
+<tr align="center">
+  <td nowrap="nowrap">{$vo.uid|user_id}</td>
+  <td height="25" nowrap="nowrap">{$vo.add_time|date='Y-m-d H:i:s',###}</td>
+  <td>{$vo.all_nums}</td>
+  <td>{$vo['all_nums']-$vo['only_nums']}</td>
+  <td>{$vo.only_nums}</td>
+  <td>{$vo['all_nums']*$vo['one_price']-$vo['only_nums']*$vo['one_price']}</td>
+  <td>
+  <eq name="vo.is_cancel" value="1"><span style="color:#0F0">Deal to cancel</span></eq>
+  <eq name="vo.is_cancel" value="0">
+  <eq name="vo.ispay" value="1">The deal<else /><span style="color:#F00">Waiting for the transaction</span></eq>
+  </eq>
+  </td>
+  <td>
+  <eq name="vo.is_cancel" value="1">undo{$vo['only_nums']}</eq>
+  </td>
+</tr>
+</volist>
+</table>
+<table width="100%" class="tab3_bottom" border="0" cellpadding="0" cellspacing="1">
+    <tr>
+        <td>{$page}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

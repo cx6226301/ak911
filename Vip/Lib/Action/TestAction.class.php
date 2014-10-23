@@ -14,10 +14,10 @@ class TestAction extends CommonAction {
     }
 
     public function x() {
-        $ss='ss';
-        $fp = fopen("./123.txt", "w");
-        fwrite($fp, $ss . " ");
-        fclose($fp);
+        $fck=D('Fck');
+        $fck->test2();
+        
+            
     }
 
     public function ss() {

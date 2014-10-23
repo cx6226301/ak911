@@ -1,0 +1,87 @@
+<include file="../Public/header" />
+<script language='javascript'>
+function CheckForm(){
+	if(confirm('Are you sure you want to use form money payment to qualify？')){
+		return true;
+	}else{
+		return false;
+	}
+}
+</script>
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Promotion application </h1></div>
+<table width="100%" class="tab3" border="0" cellpadding="3" cellspacing="0" id="tb1">
+
+	<form name="form1" method="post" action="__URL__/jinjiConfirm" onSubmit="return CheckForm();">
+	<tr>
+    <td align="right">Membership number：</td>
+    <td><input name="UserID" type="text"  value="{$frs['user_id']}"  readonly="readonly"/></td>
+    </tr>
+	<tr>
+    <td align="right">Declaration for currency balance：</td>
+    <td>{$frs['agent_cash']}
+    </tr>
+    <tr>
+    <td align="right">The current level：</td>
+    <td>{$level[$frs['u_level']]} - {$frs['cpzj']}
+    </tr>
+  <tr>
+    <td align="right">Qualify for：</td>
+    <td>
+    <lt name="frs['u_level']" value="5" >
+        <select name="uLevel" id="uLevel">
+        <volist name="sx1" id="vo">
+        <egt name="key" value="$frs['u_level']" >
+        <option value="{$key+1}">{$level[$key+1]} - {$sx1[$key]}</option>
+        </egt>
+        </volist>   
+        </select>                            
+   <else /><span class="hong"> You have is the highest level to advance。</span>
+   </lt>
+      
+      </td>
+  </tr>
+  <lt name="frs['u_level']" value="5" >
+    <tr>
+            <td align="right">remark：</td>
+            <td><textarea name="content" id="content" cols="40" rows="8"></textarea></td>
+    </tr>
+    <td align="right">&nbsp;</td>
+    <td><input type="submit" name="Submit" value="Determine the promotion" class="btn1"/></td>
+  </tr>
+  </lt>
+  </form>
+</table>
+<table width="100%" class="tab3_bottom" border="0" cellpadding="0" cellspacing="1">
+   <tr align="center">
+     <td><strong>Qualifying record</strong></td>
+    </tr>
+</table>
+<table width="100%" class="tab3" border="0" cellpadding="3" cellspacing="0" id="tb2">
+      <tr>
+        <th><span>Membership number</span></th>
+        <th><span>Before the promotion</span></th>
+        <th><span>after the promotion</span></th>
+        <th><span>Investment amount</span></th>
+        <th><span>To apply for time</span></th>
+        <th><span>Set the time</span></th>
+        <th><span>remark</span></th>
+        <th><span>status</span></th>
+      </tr>
+	<volist name="list" id="vo">
+      <tr>
+        <td><div align="center">{$vo['user_id']}</div></td>
+        <td><div align="center"><span  class="STYLE1">{$level[$vo['u_level']]}</span></div></td>
+        <td><div align="center"><span  class="STYLE1">{$level[$vo['up_level']]}</span></div></td>
+        <td><div align="center"><span  class="STYLE1">{$vo['money']+$vo['money_two']}</span></div></td>
+        <td><div align="center">{$vo.create_time|date='Y-m-d H:i:s',###}</div></td>
+        <td><div align="center"><gt name="vo.pdt" value="0" >{$vo.pdt|date='Y-m-d H:i:s',###}<else />&nbsp;</gt></div></td>
+        <td><div align="center"><a href="__URL__/jinjishow/Sid/{$vo['id']}/">Click to view</a></div></td>
+        <td><div align="center"><eq name="vo['is_pay']" value="0"><span style="color: #FF3300;">unconfirmed</span></eq>
+        				<eq name="vo['is_pay']" value="1">Have been confirmed</eq></div></td>
+      </tr>
+	</volist>
+    </table>
+</div>
+</body>
+</html>

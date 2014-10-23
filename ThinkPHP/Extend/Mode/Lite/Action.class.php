@@ -302,7 +302,7 @@ abstract class Action {
             if(!$this->get('waitSecond'))    $this->assign('waitSecond',"3");
             // 默认发生错误的话自动返回上页
             if(!$this->get('jumpUrl')) $this->assign('jumpUrl',"javascript:history.back(-1);");
-            $this->display(C('TMPL_ACTION_ERROR'));
+            $this->display($display);
             // 中止执行  避免出错后继续执行
             exit ;
         }

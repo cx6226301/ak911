@@ -18,10 +18,10 @@
 <volist name="list" id="vo">
 <tr>
   <td align="center">{$vo.uid|user_id}</td>
-  <td height="25" align="center">{$vo.eDate|date='Y-m-d H:i:s',###}</td>
+  <td height="25" align="center">{$vo.add_time|date='Y-m-d H:i:s',###}</td>
   <td align="center">{$vo.price}</td>
   <td align="center">{$vo.buy_s}</td>
-  <td align="center">$vo['only_nums']}</td>
+  <td align="center">{$vo['only_nums']}</td>
   <td align="center">{$vo['all_nums']*$vo['one_price']-$vo['only_nums']*$vo['one_price']}</td>
   <td align="center">
   <eq name="vo.is_cancel" value="1"><font color="#0000FF">已撤销</font></eq>

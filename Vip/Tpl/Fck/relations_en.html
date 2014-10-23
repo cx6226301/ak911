@@ -1,0 +1,45 @@
+<include file="../Public/header" />
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Direct driving system table </h1></div>
+<!-- 功能操作区域结束 -->
+<table width="100%" class="tab3" border="0" cellpadding="3" cellspacing="1" id="tb1" bgcolor="#b9c8d0">
+  <tr>
+    <td colspan="10" class="tabletd">
+    <form method='post' action="__URL__/relations">
+Member number：<input type="text" name="UserID" title="member query" class="medium" >
+  <input type="submit" name="Submit" value="query" class="button_text"/ >
+</form></td>
+    </tr>
+  <tr>
+    <th><div align="center">Member number</div></th>
+    <th><div align="center">Bank</div></th>
+    <th><div align="center">Bank card number</div></th>
+    <th><div align="center">Name</div></th>
+    <th><div align="center">Telephone</div></th>
+    <th><div align="center">Registration time</div></th>
+    <th><div align="center">open time</div></th>
+    <th><div align="center">Purchase quantity</div></th>
+    <th><div align="center">Registered amount</div></th>
+    <th><div align="center">level</div></th>
+  </tr>
+<volist name="list" id="vo">
+    <tr>
+      <td><div align="center">{$vo['user_id']}</div></td>
+      <td><div align="center">{$vo['bank_name']}</div></td>
+      <td><div align="center">{$vo['bank_card']}</div></td>
+      <td><div align="center">{$vo['user_name']}</div></td>
+      <td><div align="center">{$vo['user_tel']}</div></td>
+      <td><div align="center">{$vo.rdt|date='Y-m-d',###}</div></td>
+    <td><div align="center">{$vo.pdt|date='Y-m-d',###}</div></td>
+    <td><div align="center"><span class="STYLE1">{$vo['f4']}</span></div></td>
+    <td><div align="center"><span class="STYLE1">{$vo['cpzj']}</span></div></td>
+    <td><div align="center">{$voo[$vo['u_level']]}</div></td>
+  </tr>
+  </volist>
+<tr>
+<td colspan="10"><div align="center">{$page}</div></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

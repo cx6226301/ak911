@@ -353,26 +353,32 @@ abstract class Action {
         if($ajax || $this->isAjax()) $this->ajaxReturn($ajax,$message,$status);
         if(!empty($jumpUrl)) $this->assign('jumpUrl',$jumpUrl);
         // 提示标题
-        $this->assign('msgTitle',$status? L('_OPERATION_SUCCESS_') : L('_OPERATION_FAIL_'));
+        $error= $_SESSION[C('_l')]=='english'?'Error!':L('_OPERATION_FAIL_');
+        $success=$_SESSION[C('_l')]=='english'?'Success!':L('_OPERATION_SUCCESS_');
+        $this->assign('msgTitle',$status? $success : $error);
         //如果设置了关闭窗口，则提示完毕后自动关闭窗口
         if($this->view->get('closeWin'))    $this->assign('jumpUrl','javascript:window.close();');
         $this->assign('status',$status);   // 状态
         //保证输出不受静态缓存影响
         C('HTML_CACHE_ON',false);
+        $display=$_SESSION[C('_l')]=='english'?C('TMPL_ACTION_ERROR').'_en':C('TMPL_ACTION_ERROR');
         if($status) { //发送成功信息
-            $this->assign('message',$message);// 提示信息
+           $messages= $_SESSION[C('_l')]=='english'?'Your operation is successful.':$message; 
+            $this->assign('message',$messages);// 提示信息
             // 成功操作后默认停留1秒
             if(!$this->view->get('waitSecond'))    $this->assign('waitSecond','1');
             // 默认操作成功自动返回操作前页面
             if(!$this->view->get('jumpUrl')) $this->assign("jumpUrl",$_SERVER["HTTP_REFERER"]);
-            $this->display(C('TMPL_ACTION_SUCCESS'));
+            $this->display($display);
         }else{
-            $this->assign('error',$message);// 提示信息
+            $messages= $_SESSION[C('_l')]=='english'?'Was banned for some reason.':$message; 
+            $this->assign('error',$messages);// 提示信息
             //发生错误时候默认停留3秒
             if(!$this->view->get('waitSecond'))    $this->assign('waitSecond','3');
             // 默认发生错误的话自动返回上页
             if(!$this->view->get('jumpUrl')) $this->assign('jumpUrl',"javascript:history.back(-1);");
-            $this->display(C('TMPL_ACTION_ERROR'));
+            
+            $this->display($display);
             // 中止执行  避免出错后继续执行
             exit ;
         }

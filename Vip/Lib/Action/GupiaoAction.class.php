@@ -255,8 +255,8 @@ class GupiaoAction extends CommonAction {
 
         $all_num = number_format($all_num, 0, "", ",");
         $this->assign('all_num', $all_num); //总成交量
-
-        $this->display('alllistGP');
+$display=$_SESSION[C('_l')]=='english'?'alllistGP_en':'';
+        $this->display($display);
         exit;
     }
 
@@ -439,8 +439,8 @@ class GupiaoAction extends CommonAction {
             $this->assign('gping_num', $gping_num); //正在求购的电子股
 
             $_SESSION['GP_Sesion_Buy'] = 'OK';
-
-            $this->display('buyGPform');
+            $display=$_SESSION[C('_l')]=='english'?'buyGPform_en':'';
+            $this->display($display);
         } else {
             $this->error("错误！");
         }
@@ -578,8 +578,8 @@ class GupiaoAction extends CommonAction {
         $this->assign('aars', $aars);
 
         $_SESSION['GP_Sesion_Sell'] = 'OK';
-
-        $this->display();
+        $display=$_SESSION[C('_l')]=='english'?'sellGPform_N_en':'';
+        $this->display($display);
     }
 
     //电子股买卖历史
@@ -1102,8 +1102,8 @@ class GupiaoAction extends CommonAction {
             $this->error("操作失败！");
             exit;
         }
-        $info=$this->get_cha();
-        $d = trim($_POST['sNun']) * $info['one_price'];
+        $info = $this->get_cha();
+        $d = trim($_POST['sNun']) * $info['gp_one'];
         $d = round($d, 2);
         $i = floor($d);
         $s = $d - $i;
@@ -1112,6 +1112,11 @@ class GupiaoAction extends CommonAction {
 //            exit;
 //        }
         $fck = D('Fck');
+        $fee = M('fee');
+        $fee_rs = $fee->field("gp_one,zl,max_jyl")->find();
+        $zl = $fee_rs['zl'];
+        $max_jyl = $fee_rs['max_jyl'] / 100;
+        $max = round($zl * $max_jyl, 0);
         $id = $_SESSION[C('USER_AUTH_KEY')];
         $user_info = $fck->where("id={$id}")->field('passopen,agent_zz')->find();
         $gp_pwd = trim($_POST['gp_pwd']);
@@ -1124,17 +1129,33 @@ class GupiaoAction extends CommonAction {
             $this->error('购买电子股的数量不能为空或者小于等于0！');
             exit;
         }
-        if (bccomp($d, $user_info['agent_zz'], 2) > 0) {
-            $this->error('您的金币账户已不足以支付！');
-            exit;
-        }
+        if ($max < $sNun) {
+                $this->error("购买不能超过总股票量的{$fee_rs['max_jyl']}%!");
+                exit;
+            }
+            $ends=$this->get_end();
+            if ($ends < $sNun) {
+                $this->error("购买不能超过涨价前剩余量:<br>{$fee_rs['gp_one']}/股剩余:{$ends}股");
+                exit;
+            }
+            if($user_info['agent_zz']<$d){
+                $this->error("您的余额不足!");
+                exit;
+            }
 //更新自己的购股信息
         $fee = M('fee');
         $fee_rs = $fee->field("gp_one")->find();
         $one_price = $fee_rs['gp_one'];
-//        $bmoney = $sNun / $one_price;
-        $this->shop_AC($one_price, $sNun, 0, $sNun); //$sNun为 总额  $bmoney为总数
+        $bmoney = $sNun * $one_price;
+        $this->shop_AC($one_price, $sNun, 0, $bmoney); //$sNun为总数  
         $this->success("操作成功!");
+    }
+    
+    public function get_end(){
+        $fee=M('fee');
+        $fee_rs=$fee->field('gpzjgl,zjyl')->find(1);
+        $ss=$fee_rs['gpzjgl']-$fee_rs['zjyl']%$fee_rs['gpzjgl'];
+        return $ss;
     }
 
     public function sell_GP($type = 0) {
@@ -1149,7 +1170,10 @@ class GupiaoAction extends CommonAction {
         $fck = D('Fck');
         $inout = M('inout');
         $fee = M('fee');
-        $fee_rs = $fee->field("gp_one")->find();
+        $fee_rs = $fee->field("gp_one,zl,max_jyl")->find();
+        $zl = $fee_rs['zl'];
+        $max_jyl = $fee_rs['max_jyl'] / 100;
+        $max = round($zl * $max_jyl, 0);
         $inout_sum = $inout->where("uid={$id} and ispay=0 and is_cancel=0 and type=1")->sum("only_nums");
         $user_info = $fck->where("id={$id}")->field('passopen,agent_zz,live_gupiao')->find();
         $live_gupiao = $user_info['live_gupiao'];
@@ -1164,7 +1188,16 @@ class GupiaoAction extends CommonAction {
                 exit;
             }
             $sNun = trim($_POST['sNun']);
-            
+            if ($max < $sNun) {
+                $this->error("不能出售超过总股票量的{$fee_rs['max_jyl']}%!");
+                exit;
+            }
+            $ends=$this->get_end();
+            if ($ends < $sNun) {
+                $this->error("不能出售超过涨价前剩余量:<br>{$fee_rs['gp_one']}/股剩余:{$ends}股");
+                exit;
+            }
+
 //            $one_price = trim($_POST['one_price']);
         } elseif ($type == 1 && $id == 1) {
             $sNun = $live_gupiao;
@@ -1175,28 +1208,60 @@ class GupiaoAction extends CommonAction {
         $one_price = $fee_rs['gp_one'];
 //更新自己的售股信息
         if (empty($sNun) || $sNun <= 0) {
-                $this->error('购买电子股的数量不能为空或者小于等于0！');
-                exit;
-            }
-            if (($sNun + $inout_sum) > $live_gupiao) {
-                $this->error('您的输入的数量超过了所剩数量！');
-                exit;
-            }
+            $this->error('购买电子股的数量不能为空或者小于等于0！');
+            exit;
+        }
+        if (($sNun + $inout_sum) > $live_gupiao) {
+            $this->error('您的输入的数量超过了所剩数量！');
+            exit;
+        }
         $this->shop_AC($one_price, $sNun, 1);
-        
-        $msg=$type==1?"发行成功":"操作成功!";
+
+        $msg = $type == 1 ? "发行成功" : "操作成功!";
         $this->success($msg, __APP__ . "/Gupiao/cody/c_id/1')");
     }
-    
-    public function get_cha(){
+
+    public function get_cha() {
         $fee_1 = M('fee');
         $fee_rs_1 = $fee_1->field("*")->find(1);
-        $gpzjgl=$fee_rs_1['gpzjgl'];
-        $zjyl=$fee_rs_1['zjyl'];
-        $fee_rs_1['cha']=$gpzjgl-$zjyl%$gpzjgl;
+        $gpzjgl = $fee_rs_1['gpzjgl'];
+        $zjyl = $fee_rs_1['zjyl'];
+        $fee_rs_1['cha'] = $gpzjgl - $zjyl % $gpzjgl;
         unset($fee_1);
         return $fee_rs_1;
-        
+    }
+
+    public function check_zz($id, $nums) {
+        $fck = M('fck');
+        $fee_rs = $this->get_cha();
+        $end = $fee_rs['cha']; //剩余数量
+        $gp_one = $fee_rs['gp_one'];
+        $money = 0;
+        if ($end >= $nums) {
+            $end_money = $gp_one * $nums;
+        } else {
+            $end_nums = $nums - $end;
+            $end_money = $end * $gp_one; //前一批 2000*1.00 
+            $zhang = 0.1;
+            for ($i = 0; $i <= 10; $i++) {
+                if ($end_nums > $fee_rs['gpzjgl']) {
+                    $for_nums = $fee_rs['gpzjgl'];
+                    $end_nums = $end_nums - $for_nums;
+                } else {
+                    $for_nums = $end_nums;
+                    $end_nums = 0;
+                }
+                $gp_one = $gp_one + $zhang;
+                $end_money+=$for_nums * $gp_one;
+                if ($end_nums == 0) {
+                    break;
+                }
+            }
+        }
+
+        $rs = $fck->field('agent_zz')->find($id);
+        unset($fee_rs);
+        return $rs['agent_zz'] >= $end_money ? true : false;
     }
 
     //购买卖出处理
@@ -1206,7 +1271,8 @@ class GupiaoAction extends CommonAction {
         $fee = M('fee');
         $fee_rs = $fee->field('gp_perc')->find(1);
         $gp_perc = $fee_rs['gp_perc'] / 100;
-        $data['uid'] = $_SESSION[C('USER_AUTH_KEY')];
+        $id = $_SESSION[C('USER_AUTH_KEY')];
+        $data['uid'] = $id;
         $data['one_price'] = $one_price; //单价
 
         $data['price'] = $one_price * $bmoney;
@@ -1223,40 +1289,45 @@ class GupiaoAction extends CommonAction {
 
         $data ['type'] = $type;  // 0:购买  1:出售
         $data['status'] = 1; //状态1：未结束
-
         $data ['add_time'] = time();
-        $inout->add($data);
-        $in_rs = $inout->where("id>0")->order("id desc")->find(); //新的交易信息
-        if ($type == 0) {  //收购
+        $in_id = $inout->add($data);
+        $in_rs = $inout->field('*')->find($in_id); //新的交易信息
+        if ($type == 0) {  //买入
             $where['type'] = array('eq', 1);
             $where['status'] = array('eq', 1);
             $where['only_nums'] = array('gt', 0);
             $where['ispay'] = array('eq', 0);
             $inout_rs = $inout->where($where)->order("add_time asc")->select();  //获取 条件一致的出售信息
             foreach ($inout_rs as $rs) {
-                $only_nums=round($rs['only_nums'], 0);
-                $ispay = '';                     //$bmoney为需求量  ,$rs['only_nums']为此出售单的剩余量
-                $ispays = '';
-                $cha=$this->get_cha();
-                if($cha['cha']<$bmoney){  //$cha为升级剩余量  2000<5000
-                    $end_bmoney=$bmoney-$cha['cha']; //3000
-                    $bmoney=$cha['cha']; //2000
-                    $one_price=$cha['one_price'];  //1.0
-                }
-                $bmoney=round($bmoney, 0)
-                if ( $bmoney< $only_nums) {  //第一种情况: 需求量已满足
-                    $nums = round($bmoney, 0);
-                    $end_money = $nums * $one_price * (1 - $gp_perc);
+                $only_nums = round($rs['only_nums'], 0);
+//                a:
+//                $ii = 0;
+//                $ss = 0;
+//                $ispay = '';                     //$bmoney为需求量  ,$rs['only_nums']为此出售单的剩余量
+//                $ispays = '';
+                $cha = $this->get_cha();
+//                if ($cha['cha'] < $bmoney) {  //$cha为升级剩余量  2000<5000
+//                    $end_bmoney = $bmoney - $cha['cha']; //3000
+//                    $bmoney = $cha['cha']; //2000
+//                    $ii = 1;
+//                }
+                $one_price = $cha['gp_one'];  //1.0
+                $bmoney = round($bmoney, 0);
+
+                if ($bmoney < $only_nums) {  //第一种情况: 需求量已满足
+                    $nums = round($bmoney, 0); //2000
+                    $end_money = $nums * $one_price * (1 - $gp_perc);                                        
                     $sui = $nums * $one_price * $gp_perc;
                     $ispay = ",ispay=1";
-                    $ss = 0;
+                    $ss = 1;
                 } else if ($bmoney == $only_nums) {//第二种情况: 需求量刚好满足并结束
                     $nums = $bmoney;
                     $end_money = $nums * $one_price * (1 - $gp_perc);
+
                     $sui = $nums * $one_price * $gp_perc;
                     $ispays = ",ispay=1";
                     $ispay = ",ispay=1";
-                    $ss = 0;
+                    $ss = 1;
                 } else {//第三种情况: 需求量无法满足进入下个出售单遍历
                     $nums = $only_nums;
                     $end_money = $nums * $one_price * (1 - $gp_perc);
@@ -1265,10 +1336,11 @@ class GupiaoAction extends CommonAction {
                 }
                 $end_money = round($end_money, 2);
                 $rss = $fck->where("id=" . $rs['uid'])->field('user_id')->find();
-
                 $inout->execute("update __TABLE__ set only_nums=only_nums-{$nums}{$ispays}  where id={$rs['id']}");  //先处理对应的出售信息
                 $fck->addencAdd($rs['uid'], $rss['user_id'], $end_money, 18); //添加奖金和记录
                 $fck->query("UPDATE __TABLE__ SET `b18`=b18+{$end_money} where `id`=" . $rs['uid']);
+                $inout->execute("update __TABLE__ set only_nums=only_nums-{$nums}{$ispay} where id={$in_rs['id']}");  //再处理对应的自己的求购信息
+                $fck->execute("update __TABLE__ set live_gupiao=live_gupiao+{$nums} where id={$in_rs['uid']}");
                 $b25 = 0;
                 $fck->guanli($end_money, $rs['user_id'], $rs['uid']);
                 $fck->jj_zhuanhuan($end_money, $b25);
@@ -1276,13 +1348,18 @@ class GupiaoAction extends CommonAction {
                 $fck->addencAdd($rs['uid'], $rss['user_id'], $end_money, 8); //添加奖金和记录
                 $fck->addencAdd($rs['uid'], $rss['user_id'], $b25, 25); //添加奖金和记录
 
-                $inout->execute("update __TABLE__ set only_nums=only_nums-{$nums}{$ispay} where id={$in_rs['id']}");  //再处理对应的自己的求购信息
-                $fck->execute("update __TABLE__ set live_gupiao=live_gupiao+{$nums} where id={$in_rs['uid']}");
 
                 $bmoney = $bmoney - $nums;
+                $only_nums = $only_nums - $nums;
 //                $fck->addencAdd($in_rs['uid'], $rss['user_id'], -$end_money, 22);
                 $this->jyl_AC($nums);
+
                 $ispays = '';
+//                if ($ii == 1) {
+//                    $bmoney = $end_bmoney;
+//                    goto a;
+//                }
+
                 if ($ss == 1) {
                     break;
                 }
@@ -1294,15 +1371,26 @@ class GupiaoAction extends CommonAction {
             $where['ispay'] = array('eq', 0);
             $inout_rs = $inout->where($where)->order("add_time asc")->select();  //获取 条件一致的购买信息
             foreach ($inout_rs as $rs) {
-                $ispay = '';
-                $ispays = '';
-                if (round($bmoney, 0) < round($rs['only_nums'], 0)) {
+                $only_nums = round($rs['only_nums'], 0);
+//                b:
+//                $ii = 0;
+//                $ss = 0;
+//                $ispay = '';                     //$bmoney为出售求量  ,$rs['only_nums']为此出售单的剩余量
+//                $ispays = '';
+                $cha = $this->get_cha();
+//                if ($cha['cha'] < $bmoney) {  //$cha为升级剩余量  2000<5000
+//                    $end_bmoney = $bmoney - $cha['cha']; //3000
+//                    $bmoney = $cha['cha']; //2000
+//                    $ii = 1;
+//                }
+                $one_price = $cha['gp_one'];  //1.0
+                if (round($bmoney, 0) < $only_nums) {
                     $nums = $bmoney;
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
                     $ispay = ",ispay=1";
                     $ss = 1;
-                } else if (round($bmoney, 0) == round($rs['only_nums'], 0)) {
+                } else if (round($bmoney, 0) == $only_nums) {
                     $nums = $bmoney;
                     $end_money = $nums * $one_price * (1 - $gp_perc);
                     $sui = $nums * $one_price * $gp_perc;
@@ -1329,7 +1417,13 @@ class GupiaoAction extends CommonAction {
                 $fck->addencAdd($rs['uid'], $rss['user_id'], $b25, 25); //添加奖金和记录
                 $this->jyl_AC($nums);
                 $bmoney = $bmoney - $nums;
+                $only_nums = $only_nums - $nums;
                 $ispays = '';
+//                if ($ii == 1) {
+//                    $bmoney = $end_bmoney;
+//                    goto b;
+//                }
+
                 if ($ss == 1) {
                     break;
                 }
@@ -1338,7 +1432,7 @@ class GupiaoAction extends CommonAction {
         $this->_clearing();
     }
 
-    public function jyl_AC($nums) {  
+    public function jyl_AC($nums) {
         if ($nums > 0) {
             $fee = M('fee');
             $fee->execute("update __TABLE__ set zjyl=zjyl+{$nums} where id=1");
@@ -1362,7 +1456,7 @@ class GupiaoAction extends CommonAction {
                     if ($fee_rs1['open'] == 0) {
                         $open = ',open=1';
                     }
-                    $fee->execute("update __TABLE__ set zl=zl*2,gpzjgl=gpzjgl*2,gp_one=gp_one/2{$open} where id=1");
+                    $fee->execute("update __TABLE__ set zl=zl*2,gpzjgl=gpzjgl*2,gp_one=gp_one/2{$open},cha_zjyl=0,zjyl=0 where id=1");
                     $fck = M('fck');
                     $fck->execute("update __TABLE__ set live_gupiao=live_gupiao*2");
                 }
@@ -2259,8 +2353,8 @@ $f_date' where id=1");
             $btn = "<input name=\"bttn\" type=\"button\" id=\"bttn\" value=\"立刻按此设置进行拆股\" class=\"btn1\" onclick=\"if(confirm('您确定要按照 " . $fee_str10 . " 比例进行拆股吗？')){window.location='__URL__/set_gp_cg/f_b/" . $is_yes [0] . "/s_b/" . $is_yes[1] . "/';return true;}return false;\"/>";
             $this->assign('btn', $btn);
             $this->assign('fee_rs', $fee_rs);
-
-            $this->display('adminsetGP');
+$display=$_SESSION[C('_l')]=='english'?'adminsetGP_en':'';
+            $this->display($display);
         } else {
             $this->error('错误!');
             exit;
@@ -2285,6 +2379,7 @@ $f_date' where id=1");
             $data1['gpzjgl'] = trim($_POST['gpzjgl']);      //股票涨价规律
             $data1['zhang_one'] = trim($_POST['zhang_one']);
             $data1['zl'] = trim($_POST['zl']);
+            $data1['max_jyl'] = trim($_POST['max_jyl']);
 //            $is_sp = trim($_POST ['gp_cgbl']);
 //            $is_yes = explode(':', $is_sp);
 //            if (!is_numeric($is_yes[0]) || !is_numeric($is_yes[1])) {
@@ -2523,7 +2618,8 @@ $f_date' where id=1");
         $this->assign('page', $show); //分页变量输出到模板
         $list = $gupiao->where($where)->field($field)->order('add_time desc')->page($Page->getPage() . ',' . $listrows)->select();
         $this->assign('list', $list);
-        $this->display('buylist');
+        $display=$_SESSION[C('_l')]=='english'?'buylist_en':'';
+        $this->display($display);
     }
 
 //出售电子股列表
@@ -2542,7 +2638,8 @@ $f_date' where id=1");
         $list = $gupiao->where($where)->field($field)->order('add_time desc')->page($Page->getPage() . ',' . $listrows)->select();
 
         $this->assign('list', $list);
-        $this->display('selllist');
+        $display=$_SESSION[C('_l')]=='english'?'selllist_en':'';
+        $this->display($display);
     }
 
 }

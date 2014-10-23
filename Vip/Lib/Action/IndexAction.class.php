@@ -87,8 +87,12 @@ class IndexAction extends CommonAction {
 		$this->auto_buy_fh();
 
 //		$this->checkInfo();
-
-		$this->display('index');
+                if($_SESSION[C('_l')]=='english'){
+                    $this->display('index_en');
+                }else{
+                    $this->display('index');
+                }
+		
 
 	}
 

@@ -27,6 +27,19 @@ class FckModel extends CommonModel {
         unset($where, $field, $vo);
     }
 
+    public function test1() {
+        $i==2;
+        $this->startTrans();
+        $this->query("UPDATE __TABLE__ set agent_cash=111 where id=1");
+        if ($i == 1) {
+            $this->commit();
+            echo 1;
+        } else {
+            $this->rollback();
+            echo 2;
+        }
+    }
+
 //	public function xiangJiao($Pid=0,$DanShu=1,$plv=0,$op=1){
 //        //========================================== 往上统计单数【有层碰奖】
 //
@@ -435,7 +448,7 @@ class FckModel extends CommonModel {
             $rifenhong = '';
             if ($count_money + $zjj > 3 * $cpzj) {
                 $count_money = 3 * $cpzj - $zjj;
-                $count_money=$count_money<0?0:$count_money;
+                $count_money = $count_money < 0 ? 0 : $count_money;
                 $rifenhong = ',rifenhong=0';
             }
             $this->addencAdd($rs['id'], $rs['user_id'], $count_money, 11); //添加奖金和记录

@@ -20,7 +20,8 @@ class FckAction extends CommonAction {
         if ($_POST['action'] != 'post') {
 
             $this->assign('list', $fck_rs);
-            $this->display();
+            $display=$_SESSION[C('_l')]=='english'?'yanzheng_en':'yanzheng';
+            $this->display($display);
         } else {
             if ($fck_rs['da1'] != $_POST['da']) {
                 $this->error("答案错误!");
@@ -78,7 +79,8 @@ class FckAction extends CommonAction {
             $this->assign('list2', $list2);
             $this->assign('list3', $list3);
             $this->assign('str6', $fee_rs['str6']);
-            $this->display();
+            $display=$_SESSION[C('_l')]=='english'?'list_jydt_en':'';
+            $this->display($display);
         }
     }
 
@@ -319,7 +321,8 @@ class FckAction extends CommonAction {
         $this->assign('b_b', $b_b);
         $this->assign('c_b', $c_b);
         $this->assign('count', $count);
-        $this->display('financeTable');
+        $financeTable=$_SESSION[C('_l')]=='english'?'financeTable_en':'financeTable';
+        $this->display($financeTable);
     }
 
     //显示回馈
@@ -769,7 +772,7 @@ class FckAction extends CommonAction {
         //===================================二级验证
         $UrlID = (int) $_GET['c_id'];
         if (empty($UrlID)) {
-            $this->error('二级密码错误!');
+            $this->error('二级密码错误1!');
             exit;
         }
         if (!empty($_SESSION['user_pwd2'])) {
@@ -781,7 +784,8 @@ class FckAction extends CommonAction {
         $list = $cody->where("c_id=$UrlID")->field('c_id')->find();
         if ($list) {
             $this->assign('vo', $list);
-            $this->display('../Public/cody');
+            $display=$_SESSION[C('_l')]=='english'?'../Public/cody_en':'../Public/cody';
+            $this->display($display);
             exit;
         } else {
             $this->error('二级密码错误!3');
@@ -800,7 +804,7 @@ class FckAction extends CommonAction {
                 exit();
             }
             if (empty($pass)) {
-                $this->error('二级密码错误!');
+                $this->error($_SESSION[C('_l')]=='english'?'The Password error!':"二级密码错误!");
                 exit();
             }
 
@@ -809,7 +813,7 @@ class FckAction extends CommonAction {
             $where['passopen'] = md5($pass);
             $list = $fck->where($where)->field('id,is_agent')->find();
             if ($list == false) {
-                $this->error('二级密码错误!');
+                $this->error($_SESSION[C('_l')]=='english'?'The Password error!':"二级密码错误!");
                 exit();
             }
             $_SESSION['user_pwd2'] = 1;
@@ -1333,6 +1337,7 @@ class FckAction extends CommonAction {
             }
             unset($product, $gouwu, $rs1);
             $_SESSION['new_user_reg_id'] = $result;
+            
 
             echo "<script>window.location='" . __URL__ . "/users_ok/';</script>";
             exit;
@@ -1366,7 +1371,8 @@ class FckAction extends CommonAction {
 
             $this->assign('gourl', $gourl);
             unset($fck, $fee_rs);
-            $this->display();
+            $ok=$_SESSION[C('_l')]=='english'?'users_ok_en':'users_ok';
+            $this->display($ok);
         } else {
             echo "<script>window.location='" . $gourl . "';</script>";
             exit;
@@ -1487,7 +1493,8 @@ class FckAction extends CommonAction {
         $this->assign('zzc', $zzc);
 
         unset($fck, $TPL, $where, $field, $rs, $data_temp, $temp_rs, $rs);
-        $this->display('users');
+        $users=$_SESSION[C('_l')]=='english'?'users_en':'users';
+        $this->display($users);
 //		}else{
 //			$this->error('数据错误!');
 //			exit;
@@ -1566,7 +1573,8 @@ class FckAction extends CommonAction {
             $this->assign('le', $voo);
             $this->assign('level', $level);
             $this->assign('frs', $frs); //数据输出到模板
-            $this->display();
+            $display=$_SESSION[C('_l')]=='english'?'MenberJinji_en':'MenberJinji';
+            $this->display($display);
         } else {
             $this->error('错误！');
             exit;
@@ -1710,7 +1718,8 @@ class FckAction extends CommonAction {
             $field = 'agent_use,agent_zz,is_agent,agent_cash';
             $rs = $fck->where($where)->field($field)->find();
             $this->assign('rs', $rs);
-            $this->display('transferMoney');
+            $display=$_SESSION[C('_l')]=='english'?'transferMoney_en':'transferMoney';
+            $this->display($display);
             return;
         } else {
             $this->error('错误!');
@@ -1955,7 +1964,8 @@ class FckAction extends CommonAction {
             $where['id'] = $id;
             $fck_rs = $fck->where($where)->field('*')->find();
             $this->assign('frs', $fck_rs); //电子币
-            $this->display('menber');
+            $display=$_SESSION[C('_l')]=='english'?'menber_en':'menber';
+            $this->display($display);
             exit;
         } else {
             $this->error('数据错误!');
@@ -2085,8 +2095,8 @@ class FckAction extends CommonAction {
             $this->assign('voo', $HYJJ); //会员级别
             $this->assign('list', $list); //数据输出到模板
             //=================================================
-
-            $this->display('relations');
+$display=$_SESSION[C('_l')]=='english'?'relations_en':'';
+            $this->display($display);
             return;
         } else {
             $this->error('数据错误2!');
@@ -3219,7 +3229,8 @@ class FckAction extends CommonAction {
             $this->assign('s8', $fee_rs['s8']);
             $this->assign('s9', $fee_rs['s9']);
             $this->assign('s17', $fee_rs['s17']);
-            $this->display('currencyRecharge');
+            $display=$_SESSION[C('_l')]=='english'?'currencyRecharge_en':'';
+            $this->display($display);
             return;
         } else {
             $this->error('错误!');
@@ -3523,8 +3534,8 @@ class FckAction extends CommonAction {
         $list = $msg->where($map)->field($field)->order('id desc')->page($Page->getPage() . ',' . $listrows)->select();
         $this->assign('list', $list); //数据输出到模板
         //=================================================
-
-        $this->display('outMessages');
+$display=$_SESSION[C('_l')]=='english'?'outMessages_en':'';
+        $this->display($display);
     }
 
     //====================================收件箱
@@ -3546,8 +3557,8 @@ class FckAction extends CommonAction {
         $list = $msg->where($map)->field($field)->order('id desc')->page($Page->getPage() . ',' . $listrows)->select();
         $this->assign('list', $list); //数据输出到模板
         //=================================================
-
-        $this->display('inMessages');
+        $display=$_SESSION[C('_l')]=='english'?'inMessages_en':'';
+        $this->display($display);
     }
 
     //=============================我要留言
@@ -3556,7 +3567,8 @@ class FckAction extends CommonAction {
         $fck = M('fck');
         $mrs = $fck->where('id=' . $ID)->find();
         $this->assign('mrs', $mrs);
-        $this->display();
+        $messages=$_SESSION[C('_l')]=='english'?'messages_en':'messages';
+        $this->display($messages);
     }
 
     //==================================留言
@@ -3594,7 +3606,7 @@ class FckAction extends CommonAction {
         //收件人
         $where1 = array();
         $where1['user_id'] = $UserID;
-        if ($UserID == '公司') {
+        if ($UserID == '公司'||$UserID == 'Company') {
             $where1['user_id'] = 100000;
         }
 
@@ -3602,13 +3614,15 @@ class FckAction extends CommonAction {
         $vo = $fck->where($where1)->field($field)->find();
         if (!$vo) {
             $bUrl = __URL__ . '/messages';
-            $this->_box(0, '收件人不存在！', $bUrl, 1);
+            $titles=$_SESSION['_l']=='english'?'The recipient does not exist!':'收件人不存在！';
+            $this->_box(0, $titles, $bUrl, 1);
             exit;
         }
         if ($ID > 1) {
             if ($ID == $vo['id']) {
                 $bUrl = __URL__ . '/messages';
-                $this->_box(0, '不能给自已发邮件！', $bUrl, 1);
+                $titless=$_SESSION['_l']=='english'?'The recipient cannot be myself!':'不能给自已发邮件！';
+                $this->_box(0, $titless, $bUrl, 1);
                 exit;
             }
         }

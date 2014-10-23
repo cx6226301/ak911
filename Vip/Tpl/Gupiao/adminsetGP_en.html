@@ -1,0 +1,103 @@
+<include file="../Public/header" />
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Stock parameter Settings</h1></div>&nbsp;
+<form method='post' id="myform" action="__URL__/setGPSave" >
+<table width="100%" cellpadding=5 cellspacing=0 border=0 class="list">
+<tr  class="content_td">
+		<td width="25%" height="30" class="tabr">&nbsp;</td>
+		<td width="75%">&nbsp;</td>
+</tr>
+
+<tr>
+		<td height="30" align="right" class="tabr"><span style="color:#00C">The price of the stock</span>：</td>
+		<td class="center"><input name="gp_one" type="text" id="gp_one" value="{$fee_rs['gp_one']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+                    <input name="gpprice" type="hidden" id="gpprice" value="{$fee_rs['gp_one']}"/>Rise in price of nums：<font color='red'>{$fee_rs['zhang_nums']}</font>
+        </td>
+</tr>
+<tr style="display:none">
+		<td height="30" align="right" class="tabr"><span style="color:#00C">今日开盘价</span>：</td>
+		<td class="center"><input name="gp_open" type="text" id="gp_open" value="{$fee_rs['gp_one']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+        </td>
+</tr>
+<tr style="display:none">
+		<td height="30" align="right" class="tabr"><span style="color:#00C">今日关盘价</span>：</td>
+		<td class="center"><input name="gp_close" type="text" id="gp_close" value="{$fee_rs['gp_close']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+        </td>
+</tr>
+<tr>
+		<td height="30" align="right" class="tabr"><span style="color:#00C">poundage</span>：</td>
+		<td class="center"><input name="gp_perc" type="text" id="gp_perc" value="{$fee_rs['gp_perc']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+        %</td>
+</tr>
+<tr>
+		<td height="30" align="right" class="tabr"><span style="color:#00C">The total amount of stock</span>：</td>
+		<td class="center"><input name="zl" type="text" id="fgq" value="{$fee_rs['zl']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+         </td>
+</tr>
+<tr>
+		<td height="30" align="right" class="tabr"><span style="color:#00C">Stock trading volume increases</span>：</td>
+		<td class="center"><input name="gpzjgl" type="text" id="gpzjgl" value="{$fee_rs['gpzjgl']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+                     </td>
+</tr>
+<tr>
+		<td height="30" align="right" class="tabr"><span style="color:#00C">Price increases</span>：</td>
+		<td class="center"><input name="zhang_one" type="text" id="gp_inm" value="{$fee_rs['zhang_one']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+        ￥</td>
+</tr>
+<tr>
+		<td height="30" align="right" class="tabr"><span style="color:#00C">Maximum volume</span>：</td>
+		<td class="center"><input name="max_jyl" type="text" id="fgq" value="{$fee_rs['max_jyl']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+         %</td>
+</tr>
+<tr style="display:none">
+		<td height="30" align="right" class="tabr"><span style="color:#00C">第一次拆分清仓</span>：</td>
+		<td class="center"><input name="gp_inn" type="text" id="gp_inn" value="{$fee_rs['gp_inn']}" size="8" maxlength="12" onkeyup="guolv(this.name);"/>
+        % (第一次拆分票时清仓的比例)</td>
+</tr>
+<tr style="display:none">
+		<td height="30" align="right" class="tabr"><span style="color:#00C">拆分票（比率）</span>：</td>
+		<td class="center">
+        <input name="gp_cgbl" type="text" id="gp_cgbl" value="{$fee_rs['gp_cgbl']}" size="8" maxlength="12" onblur="cur_price();" onkeyup="value=value.replace(/[^0-9.:]/g,'');"/>
+        【拆分后的价格：<span style="color:#F00" id="cur_p"></span>，如果不拆分请填写<span style="color:#36f">1:1</span>】
+        {$btn}</td>
+</tr>
+<tr>
+		<td colspan="2" style="height:5px;"><hr></td>
+</tr>
+<tr>
+		<td height="30" align="right" class="tabr"><span style="color:#00C">Stock switch</span>：</td>
+		<td class="center">
+    	<input type="radio" name="gp_kg" value="0" <eq name="fee_rs['gp_kg']" value="0">checked</eq> />open&nbsp;
+    	<input type="radio" name="gp_kg" value="1" <eq name="fee_rs['gp_kg']" value="1">checked</eq> />close
+		&nbsp; <span>(The closure will not be able to trade)</span>
+		</td>
+</tr>
+<tr>
+		<td height="30">&nbsp;</td>
+		<td class="center">
+    	<input type="submit" value="change" class="btn1">
+    	<input type="reset" value="reduction" class="btn1">
+        </td>
+</tr>
+</table>
+</form>
+</div></div>
+</body>
+</html>
+<script type="text/javascript">
+function guolv(Ful){
+	var str = $F(Ful).replace(/^\s+|\s+$/g,"");
+	var re = /[^0-9.]/g;
+	str = str.replace(re,"");
+	document.getElementById(Ful).value = str;
+}
+function cur_price(){
+	var old_price = document.getElementById('gp_one').value;//之前的价格
+	var xtox =  document.getElementById('gp_cgbl').value;//拆分票的比率
+	var x_arr = xtox.split(":");
+	var cur_p = old_price*x_arr[0]/x_arr[1];
+	cur_p = cur_p.toFixed(4);
+	document.getElementById('cur_p').innerHTML = cur_p+'';
+}
+cur_price();//页面加载完，先运行一次
+</script>

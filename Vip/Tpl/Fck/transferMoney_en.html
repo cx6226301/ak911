@@ -1,0 +1,119 @@
+<include file="../Public/header" />
+<load href="__PUBLIC__/Js/Ajax/ThinkAjax-1.js" />
+<load href="__PUBLIC__/Js/UserJs_en.js" />
+<script language='javascript'>
+function CheckForm(){
+	if(document.form1.ePoints.value==""){
+		alert("The amount can't be empty！");
+		return false;
+	}
+	if(document.form1.select.value==1){
+		if(confirm(' '+document.form1.ePoints.value+' to '+document.form1.UserID.value+'）？'))
+		{
+			return true;
+		}else{
+			alert('You cancelled the operation');
+			return false;
+		}
+	}
+}
+
+function yhServer(Ful){
+	str = $F(Ful).replace(/^\s+|\s+$/g,"");
+	ThinkAjax.send('__URL__/check_CCuser/','ajax=1&userid='+str,'',Ful+'1');
+}
+</script>
+<div class="ncenter_box">
+<div class="accounttitle"><h1>Account transfer </h1></div>&nbsp;
+    <form name="form1" method="post" action="__URL__/transferMoneyAC" onSubmit="{return CheckForm();}">
+      <table width="100%" border="0" cellpadding="3" cellspacing="0">
+          <tr>
+            <td align="right">Declaration for currency： </td>
+            <td colspan="2" width="80%"><span class="hong">{$rs.agent_cash}</span></td>
+          </tr>
+          <tr>
+            <td align="right">Commission account： </td>
+            <td colspan="2" width="80%"><span class="hong">{$rs.agent_use}</span></td>
+          </tr>
+		  <tr>
+            <td align="right">Gold account： </td>
+            <td colspan="2" width="80%"><span class="hong">{$rs.agent_zz}</span></td>
+          </tr>
+          <tr>
+            <td align="right">type：</td>
+            <td colspan="2">
+            <select name="select" id="select" onchange="Selev(this.value)" onpropertychange="Selev(this.value)">
+              <option value="1"> bonus to  Other members </option>
+              <option value="2"> bonus to Gold</option>
+              <option value="3"> bonus to Declaration for currency </option>
+              <option value="5"> Declaration for currency to Other members </option>
+			  <option value="4"> Declaration for currency to Gold </option>
+                          
+              
+            </select>
+            </td>
+          </tr>
+          <tr id="Selev">
+            <td align="right">{$User_namex}：</td>
+            <td><input name="UserID" type="text" id="UserID" class="ipt" onblur="javascript:yhServer(this.name);" onfocus="notice('0','')" /></td>
+            <td><div id="UserID1" class="info"><div id="0" class="focus_r" style="display:none;"><div class="msg_tip">The serial number of the member。</div></div></div></td>
+          </tr>
+          <tr>
+            <td align="right">Amount of quantity：</td>
+            <td><input name="ePoints" type="text" id="ePoints" class="ipt" onkeyup="javascript:Null_Int(this.name)" onfocus="notice('1','')"  onblur="notice('1','none')"/></td>
+            <td><div id="ePoints1" class="info"><div id="1" class="focus_r" style="display:none;"><div class="msg_tip">Amount of quantity。</div></div></div></td>
+          </tr>
+          <tr>
+            <td align="right">remark：</td>
+            <td colspan="2"><textarea name="content" cols="40" rows="4" id="content"></textarea></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td colspan="2"><input type="submit" name="Submit" value="confirm" class="button_text" /></td>
+          </tr>
+         
+      </table>
+      </form>
+<br>
+<table width="100%" class="tab3" border="0" cellpadding="3" cellspacing="1" id="tb1" bgcolor="#b9c8d0">
+	<thead>
+		<tr>
+			<th><span>The borrower{$User_namex}</span></th>
+			<th><span>The lender{$User_namex}</span></th>
+			<th><span>time</span></th>
+			<th><span>nums</span></th>
+            <th><span>type</span></th>
+            <th><span>remark</span></th>
+		</tr>
+	</thead>
+    <volist name='list' id='vo'>
+	<tr align="center">
+		<td>{$vo['out_userid']}</td>
+		<td>{$vo['in_userid']}</td>
+		<td>{$vo['rdt']|date='Y-m-d H:i:s',###}</td>
+		<td>{$vo['epoint']}</td>
+        <td><eq name="vo['type']" value="1">bonus to Other members<else/></eq>
+        	<eq name="vo['type']" value="2">bonus to Gold<else/></eq>
+        	<eq name="vo['type']" value="3">bonus toDeclaration for currency<else/></eq>
+        	<eq name="vo['type']" value="4">Declaration for currency to Gold<else/></eq>
+                <eq name="vo['type']" value="5">Declaration for currency to Other members<else/></eq>
+        </td>
+        <td>{$vo['sm']}</td>
+	</tr>
+    </volist>
+</table>
+<table width="100%" class="tab3_bottom" border="0" cellpadding="0" cellspacing="1">
+    <tr>
+        <td align="center">{$page}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
+<script language="javascript">
+function Selev(o){
+	if(o==1||o==5){document.getElementById('Selev').style.display = '';}
+	if(o==2||o==3||o==4){document.getElementById('Selev').style.display = 'none';}
+}
+new TableSorter("tb1");
+</script>

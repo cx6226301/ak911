@@ -34,7 +34,8 @@ class BackupAction extends CommonAction {
 		$ficount = count($list);
 		$this->assign('list',$list);
 		$this->assign('count',$ficount);
-		$this->display();
+                $display=$_SESSION[C('_l')]=='english'?'index_en':'';
+		$this->display($display);
 	}
 
 	//遍历
